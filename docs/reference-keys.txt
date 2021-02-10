@@ -5,6 +5,8 @@ intro
 prerequisites
 new-mac-installing-and-setup
 install-homebrew
+brew-bundle-and-the-brewfile-tips
+using-scripts-to-automate-installs-and-save-time-in-install-and-setup
 literature
 methods
 applications

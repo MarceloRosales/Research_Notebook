@@ -3,18 +3,18 @@
 **Very Important!!!!**
 When opening/starting a new mac for the first time always use the same account name and Home directory name. This will make the running of R code in either machine (folder and file locations) equal, and conflits or modification will be minimal. 
 
-**MBP2015:**
-Account name: Marcelo-Rosales
-Full Name: Marcelo Rosales
-Home directory: /Users/Marcelo-Rosales
-
-**MBP2020: USE THIS BETTER!!!** (Simpler to fill and set)
-Account name: marcelorosales
-Full Name: Marcelo Rosales
-Home directory: /Users/marcelorosales
-
+**MBP2015:**  
+Account name: Marcelo-Rosales  
+Full Name: Marcelo Rosales  
+Home directory: /Users/Marcelo-Rosales  
+  
+**MBP2020:** USE THIS BETTER From nowon!!! (Simpler to fill and set)  
+Account name: marcelorosales  
+Full Name: Marcelo Rosales  
+Home directory: /Users/marcelorosales  
+  
 ## Install Homebrew  
-
+  
 > **Why to Install Homebrew?** Homebrew is a `terminal` program that helps to easily Install, Update, Upgrade, and Automate many tasks in Mac computers.   
 I used Mainly to migrate all my programs from one machine to another.   
 
@@ -183,5 +183,115 @@ brew search heroku
 ```
 brew install heroku
 ```   
+
+****************************************************************************    
+
+## Brew Bundle and the "Brewfile": Tips  
+
+In brew **Install “mas”**, it lets you install and update application from the apple store.   
+```
+brew list mas || brew install mas
+or
+brew install mas
+```
+
+**Install the command "brew bundle"**: With this package you can dump all the programs and applications that you installed with brew over time in a "brew file". <https://twit.tv/shows/hands-on-mac/episodes/9>.   
+
+```
+brew bundle  
+# or  
+brew bundle install   
+```  
+[link here](https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f)  
+
+At first install (or if never done before) there is no brewfile  and **Error: No Brewfile found**. To create a brew file run:
+
+``` brew bundle```  
+
+```brew install bash-completions```
+
+To see the # of packages available in brew.  
+```brew search```   
+
+To see the list of packages, [word count]- list  
+```brew search | wc -l``` 
+
+To search a specific package.  
+
+```{}
+brew search [name of package]
+# Ex. 
+brew search postgres
+```
+
+[Homebrew Tutorial video](https://www.youtube.com/watch?v=SELYgZvAZbU)  
+
+To install a package:  
+```brew install tree```  
+
+To see the path where brew saves the packages:  
+`which [name of package]`  
+Ex  
+```which tree ```  
+
+Output answer in console:  
+/usr/local/bin/tree.  
+
+However, this is not the folder, this is just a symbolic link. To see the real location:  
+`ls -la [symbolic path]`  
+Ex.
+```ls -la /usr/local/bin/tree```  
+Output answer in console:  
+`lrwxr-xr-x  1 marcelorosales  admin  29 Dec 29 20:36 /usr/local/bin/tree -> ../Cellar/tree/1.8.0/bin/tree`  
+This means that the location is in  **/usr/local/Cellar directory.**  
+  
+For more info on the package, if is not installed it will show and also will show the dependencies it needs.   
+`brew info tree`  
+  
+To uninstall a package  
+`brew uninstall tree`  
+  
+To see the version of packages:  
+`grep --version`   
+
+If there is already a native package on the operating system, for instance macOS grep. Then the new package installed will have a “g” prefix. 
+
+$%
+brew update
+brew outdated
+Brew upgrade
+brew clean up
+brew doctor 
+
+To install Mac applications use the “cask” command.
+Example. 
+$%
+brew cask install firefox 
+
+To open the webpages of the application directly use
+$%
+brew home rstudio
+brew home r
+brew home pycharm
+
+
+[ ] hello   
+
+****************************************************************************    
+
+
+## Using Scripts to Automate Installs (and save time in Install and setup)  
+
+[video link](https://www.youtube.com/watch?v=kIdiWut8eD8&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&index=5)  
+**Homebrew must be installed**. In homebrew,　make sure that git is installed,  also, that your Automated scripts are in your repository.
+To check in Terminal run git.
+```
+git
+```   
+If it displays git commands, then git is install and ready to connect.   
+>   
+>   
+
+
 
 ****************************************************************************    

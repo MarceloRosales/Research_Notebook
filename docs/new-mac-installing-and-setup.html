@@ -141,6 +141,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="new-mac-installing-and-setup.html"><a href="new-mac-installing-and-setup.html"><i class="fa fa-check"></i><b>2</b> New Mac: Installing and Setup</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="new-mac-installing-and-setup.html"><a href="new-mac-installing-and-setup.html#install-homebrew"><i class="fa fa-check"></i><b>2.1</b> Install Homebrew</a></li>
+<li class="chapter" data-level="2.2" data-path="new-mac-installing-and-setup.html"><a href="new-mac-installing-and-setup.html#brew-bundle-and-the-brewfile-tips"><i class="fa fa-check"></i><b>2.2</b> Brew Bundle and the “Brewfile”: Tips</a></li>
+<li class="chapter" data-level="2.3" data-path="new-mac-installing-and-setup.html"><a href="new-mac-installing-and-setup.html#using-scripts-to-automate-installs-and-save-time-in-install-and-setup"><i class="fa fa-check"></i><b>2.3</b> Using Scripts to Automate Installs (and save time in Install and setup)</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
@@ -175,13 +177,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 2</span> New Mac: Installing and Setup</h1>
 <p><strong>Very Important!!!!</strong>
 When opening/starting a new mac for the first time always use the same account name and Home directory name. This will make the running of R code in either machine (folder and file locations) equal, and conflits or modification will be minimal.</p>
-<p><strong>MBP2015:</strong>
-Account name: Marcelo-Rosales
-Full Name: Marcelo Rosales
+<p><strong>MBP2015:</strong><br />
+Account name: Marcelo-Rosales<br />
+Full Name: Marcelo Rosales<br />
 Home directory: /Users/Marcelo-Rosales</p>
-<p><strong>MBP2020: USE THIS BETTER!!!</strong> (Simpler to fill and set)
-Account name: marcelorosales
-Full Name: Marcelo Rosales
+<p><strong>MBP2020:</strong> USE THIS BETTER From nowon!!! (Simpler to fill and set)<br />
+Account name: marcelorosales<br />
+Full Name: Marcelo Rosales<br />
 Home directory: /Users/marcelorosales</p>
 <div id="install-homebrew" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Install Homebrew</h2>
@@ -289,6 +291,80 @@ brew tap heroku/brew</code></pre>
 <pre><code>brew search heroku</code></pre>
 <p>3rd.: If present, then install as normal.</p>
 <pre><code>brew install heroku</code></pre>
+<hr />
+</div>
+<div id="brew-bundle-and-the-brewfile-tips" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Brew Bundle and the “Brewfile”: Tips</h2>
+<p>In brew <strong>Install “mas”</strong>, it lets you install and update application from the apple store.</p>
+<pre><code>brew list mas || brew install mas
+or
+brew install mas</code></pre>
+<p><strong>Install the command “brew bundle”</strong>: With this package you can dump all the programs and applications that you installed with brew over time in a “brew file.” <a href="https://twit.tv/shows/hands-on-mac/episodes/9" class="uri">https://twit.tv/shows/hands-on-mac/episodes/9</a>.</p>
+<pre><code>brew bundle  
+# or  
+brew bundle install   </code></pre>
+<p><a href="https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f">link here</a></p>
+<p>At first install (or if never done before) there is no brewfile and <strong>Error: No Brewfile found</strong>. To create a brew file run:</p>
+<p><code>brew bundle</code></p>
+<p><code>brew install bash-completions</code></p>
+<p>To see the # of packages available in brew.<br />
+<code>brew search</code></p>
+<p>To see the list of packages, [word count]- list<br />
+<code>brew search | wc -l</code></p>
+<p>To search a specific package.</p>
+<pre><code>brew search [name of package]
+# Ex. 
+brew search postgres</code></pre>
+<p><a href="https://www.youtube.com/watch?v=SELYgZvAZbU">Homebrew Tutorial video</a></p>
+<p>To install a package:<br />
+<code>brew install tree</code></p>
+<p>To see the path where brew saves the packages:<br />
+<code>which [name of package]</code><br />
+Ex<br />
+<code>which tree</code></p>
+<p>Output answer in console:<br />
+/usr/local/bin/tree.</p>
+<p>However, this is not the folder, this is just a symbolic link. To see the real location:<br />
+<code>ls -la [symbolic path]</code><br />
+Ex.
+<code>ls -la /usr/local/bin/tree</code><br />
+Output answer in console:<br />
+<code>lrwxr-xr-x  1 marcelorosales  admin  29 Dec 29 20:36 /usr/local/bin/tree -&gt; ../Cellar/tree/1.8.0/bin/tree</code><br />
+This means that the location is in <strong>/usr/local/Cellar directory.</strong></p>
+<p>For more info on the package, if is not installed it will show and also will show the dependencies it needs.<br />
+<code>brew info tree</code></p>
+<p>To uninstall a package<br />
+<code>brew uninstall tree</code></p>
+<p>To see the version of packages:<br />
+<code>grep --version</code></p>
+<p>If there is already a native package on the operating system, for instance macOS grep. Then the new package installed will have a “g” prefix.</p>
+<p>$%
+brew update
+brew outdated
+Brew upgrade
+brew clean up
+brew doctor</p>
+<p>To install Mac applications use the “cask” command.
+Example.
+$%
+brew cask install firefox</p>
+<p>To open the webpages of the application directly use
+$%
+brew home rstudio
+brew home r
+brew home pycharm</p>
+<p>[ ] hello</p>
+<hr />
+</div>
+<div id="using-scripts-to-automate-installs-and-save-time-in-install-and-setup" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Using Scripts to Automate Installs (and save time in Install and setup)</h2>
+<p><a href="https://www.youtube.com/watch?v=kIdiWut8eD8&amp;list=RDCMUCCezIgC97PvUuR4_gbFUs5g&amp;index=5">video link</a><br />
+<strong>Homebrew must be installed</strong>. In homebrew,　make sure that git is installed, also, that your Automated scripts are in your repository.
+To check in Terminal run git.</p>
+<pre><code>git</code></pre>
+<p>If it displays git commands, then git is install and ready to connect.<br />
+&gt;<br />
+&gt;</p>
 <hr />
 
 </div>
