@@ -1,9 +1,10 @@
 fig:nice-fig
 tab:nice-tab
 research-notes
-introduction-intro
+intro
 prerequisites
-section
+new-mac-installing-and-setup
+install-homebrew
 literature
 methods
 applications
