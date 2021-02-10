@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub_Repos/Rprojects/Experiments/Research_Notebook/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "2584354839",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1612934766753.0,
@@ -12,16 +12,16 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "51,2",
-        "scrollLine": "23",
-        "docOutlineVisible": "0"
+        "cursorPosition": "15,2",
+        "scrollLine": "0",
+        "docOutlineVisible": "1"
     },
     "folds": "",
-    "lastKnownWriteTime": 1612936896,
+    "lastKnownWriteTime": 1612937962,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1612936896208,
+    "last_content_update": 1612937962820,
     "read_only": false,
     "read_only_alternatives": []
 }

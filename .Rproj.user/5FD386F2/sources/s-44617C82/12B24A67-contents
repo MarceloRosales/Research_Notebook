@@ -13,8 +13,10 @@ description: This is a minimal example of using the bookdown package to write a 
   The output format for this example is bookdown::gitbook.
 ---
 
+# Research Notes  
 
-# Information.  
+
+# Introduction  {intro}
 
 Location: Folder for this R site is in...   
 **MBP2015:** `/Users/Marcelo-Rosales/Documents/GitHub_Repos/Rprojects/Experiments/Research_Notebook`  
@@ -23,8 +25,8 @@ Location: Folder for this R site is in...
 This is also Bookdown GitHub page, you can found it in [https://marcelorosales.github.io/Research_Notebook/](https://marcelorosales.github.io/Research_Notebook/).  
 
 Each time a new entry is finish: **Save, Rebuild, Commit and Push to update webpage.**  
-
-
+  
+  
 ## Prerequisites
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
@@ -48,8 +50,6 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```  
    
-********************************************************************************
-## Introduction {#intro}
 
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
