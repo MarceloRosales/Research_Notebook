@@ -51,7 +51,7 @@ knitr::write_bib(c(
 ```  
    
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro) `(\@ref(intro)` . If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods) `(\@ref(methods)`). To reference chapters use the `\@ref(name of the chapter)`, keep in mind that the **name of the chapter** is the first line `# title` of the .Rmd file. Moreover, the back slash `\` character in the japanese keyboard is made with the keys `Alt/Option + ¥` (¥ is next to the erase/back key). Interestingly `\` works fine in R but does not seems to work for Word or other MS office applications. 
 
 Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
 
