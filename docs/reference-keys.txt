@@ -32,7 +32,12 @@ start-here-zotero-for-r-installation
 for-zotero-r-to-work-properly.
 to-add-referecesbibliography-to-r-bookdown.
 to-automatically-create-a-bib-database-for-r-packages
-introduction-example.
+example-from-the-introduction-file-in-bookdown.
+github-pages-and-bookdown-creating-a-booklike-webpage-with-rstudio.
+to-publish-the-github-page.
+other-method-for-bookdown-and-github-pages
+method-1.-existing-project-github-first
+method-2.-book-down-and-github-pages.
 methods
 applications
 example-one
