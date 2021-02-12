@@ -1,1 +1,689 @@
 # R and Rstudio 
+
+## Rstudio global settings Export/Import. Configurations and settings..  
+After Installing R and Rstudio with homebrew, R studio settings are need. Doing it manually takes time and usually all changes are not performed. 
+
+For more information on RStudio [Link to site](https://blog.rstudio.com/2020/02/18/rstudio-1-3-preview-configuration/).  
+From RStudio 1.3, the settings and configuration were overhaul.  
+
+**User Preferences**  
+All the preferences in the Global Options dialog (and a number of other preferences that aren’t) are now saved in a simple, plain-text JSON file named rstudio-prefs.json. Here’s an example:   
+
+```{}
+    "posix_terminal_shell": "bash",
+    "editor_theme": "Night Owl",
+    "wrap_tab_navigation": false
+```  
+
+
+The example above instructs RStudio to use the bash shell for the Terminal tab, to apply the Night Owl theme to the IDE, and to avoid wrapping around when navigating through tabs. All other settings will have their default values.  
+
+By default, this file lives in AppData/Roaming/RStudio on Windows, and **~/.config/rstudio** on other systems. While RStudio writes this file whenever you change a setting, you can also edit it yourself to change settings. You can back it up, or put it in a version control system. You’re in control!  
+
+If you’re editing this file by hand, you’ll probably want a reference. A full list of RStudio’s settings, along with their data types, allowable values, etc., can be found in the [Session User Settings](https://docs.rstudio.com/ide/server-pro/1.3.820-1/session-user-settings.html) section of the RStudio Server Professional Administration Guide.  
+
+$\color{red}{\text{How to get to the file?}}$  
+1. If file is hidden by attibute, Unhide all files with `Command-Shift-PERIOD`. (To hide the files again, press the same key shortcut).  
+2. Open Terminal> type **`open ~/.config/rstudio`**, this will *open* the a *finder window* showing the folder contaning the file, look for the file **_rstudio-prefs.json_**.  
+3. Examine the file and check if preferences correspond to the ones set in R preferences.  
+4. Then copy/paste the file in Rstudio of the new machine (save a copy of original file before replacing with old preferences or manually modified the file).  
+5. Restart R.  
+
+**Transfer of R global settings successful!!** 
+
+****************************************************************************    
+
+## Copy/Transfer the packages installed on one computer or R version to another using Scripts. 
+
+### Method 1: (!THE ONLY METHOD THAT WORKED) USE THIS ONE!!!!!].  
+[Link to site](https://gist.github.com/florianhartig/10527319)   
+Originally from [here] (http://stackoverflow.com/questions/1401904/painless-way-to-install-a-new-version-of-r-on-windows)
+
+1. Run on old computer / r version (2015MBP)
+
+```{r, echo=TRUE, eval=FALSE}
+
+# update, without prompts for permission/clarification
+update.packages(ask = FALSE)
+
+# Set working directory
+getwd()
+setwd() # "/Users/Marcelo-Rosales/Box Sync/Documents/R/Rmarkdown/"
+getwd()
+
+# List all packages and save in a file. save() command
+packages <- installed.packages()[,"Package"]
+save(packages, file="Rpackages")
+```
+
+2. Run on new computer / r version (2020MBP) txtcol()
+
+```{r, echo=TRUE, eval=FALSE}
+# Set working directory
+getwd()
+setwd() # "/Users/marcelorosales/Box Sync/Documents/R/Rmarkdown"
+getwd()
+
+#Load list of packages and install.
+load("Rpackages")
+for (p in setdiff(packages, installed.packages()[,"Package"]))
+  install.packages(p)
+
+Check <- installed.packages()
+```
+
+****************************************************************************    
+
+### Method 2:  Quick Way of Installing all your old R libraries on a New Device. DOES NOT WORK!!    
+[Link here](https://www.r-bloggers.com/2017/07/quick-way-of-installing-all-your-old-r-libraries-on-a-new-device/).  To install all the libraries that I had installed in my previous laptop. I did the following:
+
+**Step 1:** Save a list of packages installed in your old computing device (from your old device).  **!Warning** Before saving file make sure you are in the right `working directory` and make sure you KNOW WHERE THE FILE IS STORED.  
+
+```{r, echo=TRUE, eval=FALSE}
+
+# Set working directory where the files will be store. 
+ 
+installed <- as.data.frame(installed.packages())
+getwd()
+setwd("/Users/Marcelo-Rosales/Box Sync/Documents/R/Rmarkdown") # modify folder as needed.
+write.csv(installed, 'installed_previously.csv')
+```
+
+This saves information on installed packages in a csv file named installed_previously.csv. Now copy or e-mail this file to your new device and access it from your working directory in R.
+
+**Step 2:** Create a list of libraries from your old list that were not already installed when you freshly download R (from your new device).
+
+```{r, echo=TRUE, eval=FALSE}
+installedPreviously <- read.csv(file.choose(), header=TRUE) # header = true, to avoid Error bad restore magic number. 
+getwd()
+setwd("/Users/Marcelo-Rosales/Box Sync/Documents/R/Rmarkdown") # modify folder as needed. 
+
+baseR <- as.data.frame(installed.packages())
+write.csv(baseR, 'baseR.csv')
+
+toInstall <- setdiff(installedPreviously, baseR)
+
+```
+
+We now have a list of libraries that were installed in your previous computer in addition to the R packages already installed when you download R. So you now go ahead and install these libraries.
+
+**Step 3:** Download this list of libraries.
+
+```{r, echo=TRUE, eval=FALSE}
+
+install.packages(toInstall)
+```
+
+That’s it. Save yourself the trouble installing packages one-by-one all over again.  LIES!!
+
+### Since the code above is not interactive, I modify to suit my needs.**(DOES NOT WORK NEITHER)**  
+Since the function choose.dir is only for Windows and not for Mac. I created a custom dir.choose function 
+
+> Run this script in the old computer.  
+
+```{r, echo=TRUE, eval=FALSE}
+library(rstudioapi) # Need this package for the prompt windows.
+
+# 1. Costume made function to choose a directory interactively.-----------------
+dir.choose <- function() {
+  system("osascript -e 'tell app \"RStudio\" to POSIX path of (choose folder with prompt \"Marcelo asks where to save the file.\")' > /tmp/R_folder",
+         intern = FALSE, ignore.stderr = TRUE)
+  p <- system("cat /tmp/R_folder && rm -f /tmp/R_folder", intern = TRUE)
+  return(ifelse(length(p), p, NA))
+}
+
+# 2. Save the list of all the packages installed in my old computer (old device).
+oldRpks <- as.data.frame(installed.packages())
+outdir <- dir.choose()
+filename <- showPrompt(title = " asks:", message = "Enter name of the file with out extension or special characters", default = "oldRpks")
+  filename
+# As .csv file.
+  write.csv2(oldRpks, 
+            file = print(paste0(outdir, filename, ".csv")),
+            row.names = FALSE)
+
+# 3. Copy the oldRpks to the new computer
+```  
+
+> Run this script in the new computer.  
+
+```{r, eval=FALSE}  
+# 4.Create a list of packages from my new computer (new device), Since Rstudio installation is new, packages are the "basic packages that come form R". I will name the file baseRpks.
+baseRpks <- as.data.frame(installed.packages())
+
+# 5. Load the oldRpks file created in the old Rstudio into the new computer.
+oldRpks <- read.csv(file.choose(), header=TRUE)
+
+# 6. Then by subtract matching packages (setting the difference), the remaining list will be the packages that are not installed in the new computer. /
+toInstall <- setdiff(installedPreviously, baseR)
+
+# 7. Install the packages from the list.
+install.packages(toInstall)
+
+```
+
+### Old method used to transfer (DISCONTINUE).  
+[Link to site](http://hlplab.wordpress.com/2012/06/01/transferring-installed-packages-between-different-installations-of-r/
+)  
+
+*****************************************************  
+
+## Interactive Plots using R Markdown Notebook.  
+[Link to site](https://bookdown.org/flavioadsm/untitled2/Untitled2.html#113_interactive_plots)  
+
+Using Normal ggplot graphics, is possible to add 3d interaction with the **plotly** package.  
+
+> ggplot2 example  
+
+```{r echo=TRUE}
+
+library(ggplot2)
+
+a <- ggplot(iris, aes(x=Sepal.Length, y=Petal.Length, color=Species)) + 
+  geom_jitter() +
+  xlab("Gene Type") +
+  ylab("GFP Mean Intensity") +
+  ggtitle("Microscope images GFP intensity") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+a
+```
+
+> Using ggplotly with in ggplot2, 
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(plotly)
+
+ggplotly(a)
+```
+
+
+> Plotly example
+
+Here a [Plotly R Open Source Graphing Library](https://plotly.com/r/).  
+And [R Figure Reference: Single Page. How are Plotly attributes organized?](https://plotly.com/r/reference/)
+
+```{r, echo=TRUE}
+# Using plotly
+library(plotly)
+
+fig <- plot_ly(iris, type="scatter",  x= ~Sepal.Length, y= ~Petal.Length, color= ~Species, mode="markers") 
+
+fig
+```
+
+
+```{r, echo=TRUE}
+
+library(plotly)
+
+mtcars$am[which(mtcars$am == 0)] <- 'Automatic'
+mtcars$am[which(mtcars$am == 1)] <- 'Manual'
+mtcars$am <- as.factor(mtcars$am)
+
+fig2 <- plot_ly(mtcars, x = ~wt, y = ~hp, z = ~qsec, color = ~am, colors = c('#BF382A', '#0C4B8E'))
+fig2 <- fig2 %>% add_markers()
+fig2 <- fig2 %>% layout(scene = list(xaxis = list(title = 'Weight'),
+                     yaxis = list(title = 'Gross horsepower'),
+                     zaxis = list(title = '1/4 mile time')))
+
+fig2
+```
+
+[Export Plotly graphs into MS PowerPoint](https://community.rstudio.com/t/export-plotly-graphs-into-ms-powerpoint/33789).  
+
+*****************************************************  
+
+## R Markdown, R Notebook, R Bookdown, R Blogdown  
+
+### R Markdown  
+
+Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+> When you click the **Knit** button a document will be generated that includes both **content as well as the output of any embedded R code chunks** within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+#### Including Plots
+
+You can also embed plots, for example:
+
+```{r echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+> It is a way to edit text that can be converted in HTML, PDF, Word with the knit function.
+
+1.	Install markdown from CRAN and use.  
+2.	See for markdown syntax cheat sheets.  
+
+Here a [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/).  
+Includes information of Bookdown in chapter 12 and blogdown in chapter 10. 
+[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/).  
+[Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/).  
+[Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/).  
+[Themes for R Markdown](https://prettydoc.statr.me/).  
+[Using R Markdown Notebook](https://bookdown.org/flavioadsm/untitled2/Untitled2.html#113_interactive_plots).  
+
+Markdown has different options available:  
+
+1. As Document: HTML, PDF, Word.  
+1. Presentation: HTML (ioslides), IITML (Slidy), PDF, PowerPoint.  
+1. Shiny: Shiny Document, Shiny Presentation.  
+1. From Template: Interactive Tutorial, Reprex (lots of features), Reprex (minimal), GitHub Document (Markdown), Package Vignete (HTML).  
+
+**Presentation** in:  
+
+1. HTML (ioslides): HTML presentation viewable with any browser (you can also print ioslides to PDF with Chrome).  
+1. IITML (Slidy): HTML presentation viewable with any browser (you can also print Slidy to PDF with 
+chrome.).  
+1. PDF (Beamer): PDF output requires TeX (MiKTeX on Windows, MacTex 2013+ on OS X, TeX Live 2013+ on Linux).  
+1. PowerPoint: PoverPoint previewing requires an istallation of PowerPoint or OpenOffice.  
+
+**Shiny**:  
+
+1. Shiny Document: Can create an HTML document with interactive Shiny components. Shiny Document Test01.Rmd
+1. Shiny Presentation: Creates an IOSlides presetntion with interactive shiny components. 
+
+**From Template**:  
+
+1. Interactive Tutorial (learn)   
+1. Reprex (lots of features)   
+1. Reprex (minimal)  
+1. GitHub Document (Markdown)  
+1. Package Vignete (HTML)  
+
+****************************************************************************  
+
+### R Notebook
+
+[R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results **appear beneath the code**. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+> When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+A way to organize the Markdown text in section with the ability to preview the text without the need of knitting.  
+1.	File> New file> Notebook.  
+2.	To preview R Notebook, you have to save the file.   
+3.	Once you saved the file, the preview will be available in the Viewer.  
+4.	In the Meta-data leave the output as html_notebook.  
+5.	And then start coding.   
+
+
+*****************************************************
+
+### R Bookdown.
+A way to manage several Rmad files and compile them in a gitbook style, with the possibility of multiple types of outputs, with support of figure/table number crossreference and can embed interactive content like HTML widgets/Shyny apps (if output is not html, take screenshots automatically) and compile as a gitbook.
+
+Bookdown also can be uploaded to github where other collaborators can proof read and commit changes if nessesary.
+
+**DEMO for Authoring Books with R Markdown.¥** 
+
+1. Download the GitHub repository https://github.com/rstudio/bookdown-demo as a Zip file, then unzip it locally.
+
+2. Install the RStudio IDE. Note that you need a version higher than 1.0.0. Please download the latest version if your RStudio version is lower than 1.0.0.
+
+3. Install the R package bookdown:
+
+```{r, echo=TRUE, eval=FALSE}
+
+# stable version on CRAN
+install.packages("bookdown")
+# or development version on GitHub
+# devtools::install_github('rstudio/bookdown')
+
+```
+
+4. Open the bookdown-demo repository you downloaded in RStudio by clicking bookdown-demo.Rproj.
+
+5. Open the R Markdown file index.Rmd and click the button Build Book on the Build tab of RStudio.
+
+
+****************************************************************************    
+
+#### Get started with bookdown
+The easiest way for beginners to get started with writing a book with R Markdown and bookdown is through the demo bookdown-demo on GitHub:
+
+1. Download the GitHub repository https://github.com/rstudio/bookdown-demo as a Zip file, then unzip it locally.
+2. Install the RStudio IDE. Note that you need a version higher than 1.0.0. Please download the latest version if your RStudio version is lower than 1.0.0.
+3. Install the R package bookdown: 
+  - stable version on CRAN
+```
+install.packages("bookdown")
+```
+  - or development version on GitHub  
+`devtools::install_github('rstudio/bookdown')`  
+    a. Here, If you have other windows or projects running, in the right-upper corner of Rstudio main menu, there is  a **Project** dropdown menu.    
+    b. Select **Open project in New session**.   
+    c. A new Rstudio window will open ...[ ]...
+4. Open the bookdown-demo repository you downloaded with RStudio by clicking bookdown-demo.Rproj.  (Or through the Files Pane)  
+5. Open the R Markdown file index.Rmd and click the button Build Book on the Build tab of RStudio.  
+
+`You can check the demo **A Minimal Book Example** in one window while still been able to work in the previews files or projects.`   
+
+> **IMPORTANT!!: FOR ALL THE CHUNCK CODES ALWAYS USE:**  This will show the code but do not run it.  
+
+```{r echo=TRUE, eval=FALSE}
+echo=TRUE, eval=FALSE
+```
+
+Also for **"Helper Functions to Manage TinyTeX, and Compile LaTeX Documents"** go to [The R package tinytex/bookdown degging shoot](https://yihui.org/tinytex/r/#debugging)  
+
+```{r echo=TRUE, eval=FALSE}
+install.packages('tinytex')  
+```
+> Update all your R and LaTeX packages:  
+
+```{r echo=TRUE, eval=FALSE}
+update.packages(ask = FALSE, checkBuilt = TRUE)
+tinytex::tlmgr_update()
+```  
+
+****************************************************************************    
+
+#### R Bookdown quick tutorial
+
+1. **File> New project> New directory> Empty project… [ ]…** Directory name> choose location (subdirectory of…)
+2. Once project is created, open a new R Markdown file: **File> New File> R Markdown> Title of the book> Author > √HTML> OK**  
+3. Save the new R Markdown document as **”index”**. File will be saved as index.Rmd
+4. Then in YAML header set:
+    a. Output: **”bookdown::gitbook”**
+    b. Site: **”bookdown::bookdown_site”**
+    c. Save
+5. **Tools> Project Options …[ ]… > Build tools> set to: website..**
+6. Restart R project so R can recognize file as a book.
+7. Once is restart, a **build** tab will be available in the Environment Panel.  
+8. [Build]> Build Book> … A gitbook will be created. 
+9. The index.rmd is the first chapter of the book.
+10. To add another chapter create a new> R Markdown file> name chapter title. Ex. Chapter02
+11. Then erase YAML and start with the chapter title with **one single hash** tag. Ex. # Hello World!
+12. Rebuilt the book [Build]> Build Book> and the new chapter will be added. 
+
+To reference figures displayed by r code. In the fig code, place a name to the code chunck. Example 
+```
+{r fig-name, fig.cap=’This is the figures caption and you can set the width, aspect, and align’, out.width=’80%’, fig.asp=.75, fig.align=’center’}
+R code for figure
+```
+Then, reference the figure by its code chunk label with the **`fig:`** prefix, example.   
+```
+See figure \@ref(fig:fig-name).  
+```
+†(In the Japanese keyboard option+¥ next to the backspace to make the backslash＼, but if Backslash is not set, go to **symbol System preferences> keyboard> Input Sources> '¥' key generates: Backslash.** In word the ¥ key output is still ¥ but in Rstudio is \. 
+
+For more information see [Bookdown.org](https://bookdown.org).  There is Markdown/Bookdown syntax guide in [Chapter 2](https://bookdown.org/yihui/bookdown/markdown-syntax.html) .  
+
+****************************************************************************    
+### Bookdown Trouble shooting.  
+
+While installing R bookdown, there were several problems. To solve the problem:  
+
+1. Re-install all R packages from the package list of my 2015 MBP. (See 12.0.5 Script to copy the packages installed on one computer or R version to another).  
+1. Then update all packages with Update all your R and LaTeX packages command: (from 14.0.4)  
+
+```{r echo=TRUE, eval=FALSE}
+update.packages(ask = FALSE, checkBuilt = TRUE)
+tinytex::tlmgr_update()
+```  
+1. Some error refered to the citr package and Latex. citr is the R zotero bibliography pack (see 14.0.7),  
+1. When building the page `Make sure that the output is "bookdown::gitbook" and not in "All formats". `  
+1. Other problem is the code chunks, RStudio will run all the code in the page unless specified otherwise. Therefore,  **_Always use the `{r  eval=FALSE}` at the beginning of the chunk code_**  (echo=TRUE is the default setting, no need to type in)
+1. Devtools packages did not installed properly. **Error: installation of package ‘devtools’ had non-zero exit status**.  usethis
+
+```{r eval=FALSE}
+install.packages("cli")
+install.packages("stringi")
+install.packages("devtools")
+install.packages("gert")
+install.packages("git2r")
+install.packages('usethis')
+```
+
+
+****************************************************************************    
+
+## **Useful Tips.**   
+
+
+### Math Formula inputs.  
+In the UI menu // n Add-ins menu, there is the Input LaTeX Math. Write the math formula and a latex source will be generated.
+
+For example*.  
+a\ +\ ß\ =\ \sum_{i=1}^nX_i.   
+
+Then add $ at the beginning and the end of the equation and formula will be display as a professional math formula in the preview.  
+
+$x^2 + y^2$  
+
+$a\ +\ ß\ =\ \sum_{i=1}^nX_i$  
+
+### Displaying Code and Plosts
+
+* **_Always use the `{r  eval=FALSE}` at the beginning of the chunk code_** to stop RStudio automatic run.  
+* To have a better control on how to display the code chunks and plots, use the **chunk Preferences**. It appears in the Editor panel when `{r}` or other code type is at the head of the code chunk.  
+* Click on the gear icon and several option will be available.   
+
+
+### How to add/embed videos and images.  
+
+**Videos**  
+To [embed videos in markdown](https://bookdown.org/yihui/rmarkdown/learnr-videos.html).  
+
+```{r echo=TRUE, eval=FALSE}
+![](https://youtu.be/GAVXVkcpbG0){width="100" height="100"}.  
+```
+OR:
+```{r echo=TRUE, eval=FALSE}
+<iframe width="560" height="315" src="https://youtu.be/GAVXVkcpbG0" frameborder="0" allowfullscreen></iframe>  
+```
+```{r echo=TRUE, eval=FALSE}
+knitr::include_url("https://youtu.be/GAVXVkcpbG0")
+```  
+
+**Images**  
+To add a pictures, use:   
+[source 01](https://stackoverflow.com/questions/25166624/insert-picture-table-in-r-markdown).  
+
+`![Caption for the picture.](/path/to/image.png)`  
+
+But this do not offer the ability to adjust the image to fit the page (see Update, below). To adjust the image properties (size, resolution, colors, border, etc), you'll need some form of image editor. I find I can do everything I need with one of ImageMagick, GIMP, or InkScape, all free and open source.
+
+Update:  
+Pandoc incorporated "link_attributes" for images. "Resizing images" can be done directly. For example:  
+```{r eval=FALSE, include=FALSE}
+![unchanged image](foo.jpg)
+![much-smaller image](foo.jpg){#id .class width=30 height=20px}
+![half-size image](foo.jpg){#id .class width=50% height=50%}
+```
+
+The bookdown book does a great job of explaining that the best way to include images is by using `include_graphics()'. For example, a full width image can be printed with a caption below:
+
+```{r eval=FALSE, include=FALSE}
+{r pressure, echo=FALSE, fig.cap="A caption", out.width = '100%'}
+knitr::include_graphics("temp.png")
+```
+The reason this method is better than the pandoc approach `![your image](path/to/image)` is because:
+- It automatically changes the command based on the output format (HTML/PDF/Word)
+- The same syntax can be used to the size of the plot (`fig.width`), the output width in the report (`out.width`), add captions (`fig.cap`) etc.
+- It uses the best graphical devices for the output. This means PDF images remain high resolution.  
+
+
+****************************************************************************    
+
+## R and zotero for bibliography.   
+
+[Guide/tutorial on using zotero in r](https://forums.zotero.org/discussion/73390/guide-or-tutorial-on-using-zotero-in-r)   
+
+Install the BetterBibTeX plugin in Zotero and then use the **citr** package in R. See here for General instructions on adding citations to an R Markdown document (though citr makes this easier):   
+[Link here](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)  
+
+[Better BibTeX for Zotero](https://retorque.re/zotero-better-bibtex/).  
+
+* Highly [customized exports](https://retorque.re/zotero-better-bibtex/exporting/).  
+* Fixes date field exports: export dates like ‘forthcoming’ as ‘forthcoming’ instead of empty, but normalize valid dates to unambiguous international format.  
+* [Auto export](https://retorque.re/zotero-better-bibtex/exporting/auto/) of collections or entire libraries when they change.  
+* [Pull export](https://retorque.re/zotero-better-bibtex/exporting/pull/) from the embedded webserver.  
+* Automatic [journal abbreviation](https://retorque.re/zotero-better-bibtex/citing/).  
+
+****************************************************************************    
+
+### **Start here:  Zotero for R INSTALLATION**  
+[Installation instruction](https://retorque.re/zotero-better-bibtex/installation/)  
+
+1. Download the [latest release of zotero better bibtex](https://github.com/retorquere/zotero-better-bibtex/releases/latest ), make sure to save the XPI file, then in Zotero:  
+1. Open Zotero (standalone)  
+1. In the main menu go to Tools > Add-ons  
+1. Select ‘Extensions’  
+1. Click on the gear in the top-right corner and choose ‘Install Add-on From File…’  
+1. Choose .xpi that you’ve just downloaded, click ‘Install’  
+1. Restart Zotero  
+
+_Note: the default setting of BBT will generate different citekeys than Zotero would itself generate; the keys from Zotero are not always safe for use in bibtex/biber. If you want to get the stock zotero keys, set the pattern in the preferences to [zotero]. I very much recommend **not** choosing [zotero] as your pattern unless you have existing articles that use keys generated by previous Zotero-native BibTeX export._  
+
+
+**Once Zotero re-starts, set Configuration:**
+A welcome to better BibTex for Zotero will appear.  
+Select:  
+ √ Use the BBT default format > Continue.  
+ √ Enable darg-and-drop citations > Continue.  
+ √ Unabbreviate journal names on import > Continue.  
+ √ Expand @string journal names on imports > Continue.  
+All done.
+
+****************************************************************************    
+
+### For Zotero-R to work properly.  
+
+Open to Zotero Preferences>  
+
+**To quick copy/paste form Zotero to Rstudio (command+ Shift +C).** Set Config to Pandoc.  
+1. Zotero Preferences> **Better BibTex**> Citation keys>  
+    a. Citation key format: [auth:lower][year]  
+    b. Keep keys unique: √ Across all libraries.  
+    c. Quick copy/drag and drop citations> QuickCopy format:  √ **Pandoc** √ Surround Pandoc citations with brackets.   
+2. After that for easy export to Rstudio and Markdown, Go to:   
+    Zotero Preferences> **Export**> Default Format: **Better BibTex Quick Copy** √   
+
+In Zotero> preferences> Better BibTex> Citation keys:  
+
+Default settings:  
+Citation key format: [auth:lower][year]
+QuickCopy Format: LaTex  
+LaTex command: cite for **\cite{acar2015}**  
+
+Change to:  
+QuickCopy Format: Pandoc for [@acar2015]  
+√ Surround Pandoc citations with brackets.  
+
+Other Citation key format options:
+[auth:lower][shorttitle3_3][year]: ?  
+[zotero]: almeida_structural_2011  
+[zotero:clean]  
+[auth:lower][year]: alford2015  . IF duplicated alford2015a  
+
+Then I changed to [auth:lower][year][month]  
+For more cite configurations, go:[Generating cite keys functions](https://retorque.re/zotero-better-bibtex/citing/#generating-citekeys).  
+
+****************************************************************************    
+
+### To add Refereces/Bibliography to R bookdown. 
+
+Watch this [video](https://youtu.be/GAVXVkcpbG0) as guide:   
+
+**Steps**  
+
+1. Add the refences in the Markdown text with the quickcopy feature set above as in normal text. I advice to place all the related refecences in one folder in zotero, it doesnt matter if you don't use all the reference at the end.  ex.  
+`
+[@almehmadi_vwc2_2018], [@rosales_rocabado_multi-factorial_2018].   
+`
+1. In Zotero (standalone), select all the references you want to add. 
+1. Zotero// File> Export library.  
+1. Select Format: √ Better BibLaTex.  
+1. Check √ Keep update if you need to modify the bibliography in zotero, otherwhise is not necessary.  
+1. Click ok/  
+1. Choose the namefile.bib and save **inside the Bookdown Projects folder**.   
+1. Chose Better BibLaTex and click Save.  
+1. In the index.Rdm YAML (Meta-data), add the name of the .bib file saved.  **bibliography: [book.bib, namefile.bib,]**  
+1. Reference will be displayed at the end of the chapter **after building the book**.  
+1. To add an overall reference, **Create a Reference.Rmd file** and knit all references by typing the following code.   
+```{r, echo=TRUE, eval=FALSE}
+`r if (knitr:::is_html_output()) '
+# References {-}
+'`
+```  
+1. Finally build the book and References will be created.  
+
+Here example of the meta-data YAML of Bookdown.   
+
+```{r, echo=TRUE, eval=FALSE}
+-- 
+title: "A Minimal Book Example"
+author: "Yihui Xie"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib, myLibrarytest01.bib, Exported Items.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
+```
+****************************************************************************    
+
+### To automatically create a bib database for R packages
+```{r, echo=TRUE, eval=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+****************************************************************************    
+
+### Introduction Example.  
+
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter `\@ref(intro)`. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter `\@ref(methods)`.
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+```{r nice-fig-02, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center', echo=TRUE, eval=FALSE}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+
+```{r nice-tab02, tidy=FALSE, echo=TRUE, eval=FALSE}
+knitr::kable(
+  head(iris, 20), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
+
+You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].  
+
+
+****************************************************************************    
+
+
+
+
+
+
+
+
+
