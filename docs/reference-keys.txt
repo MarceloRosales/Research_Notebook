@@ -17,7 +17,13 @@ old-method-used-to-transfer-discontinue.
 interactive-plots-using-r-markdown-notebook.
 r-markdown-r-notebook-r-bookdown-r-blogdown
 r-markdown
-including-plots
+introduction.
+includingexcluding-plots
+important-notes-for-easy-typing-in-rmarkdown.
+keyboard-shortcuts
+to-prevent-code-running
+plots
+bonus-r-markdown-cheatsheet
 r-notebook
 r-bookdown.
 get-started-with-bookdown
@@ -41,7 +47,7 @@ method-1.-existing-project-github-first
 method-2.-book-down-and-github-pages.
 blogdown.
 setting-netlify.
-to-modify-site-in-rstudio
+how-to-modify-site-in-rstudio
 methods
 applications
 example-one

@@ -33,6 +33,25 @@ $\color{red}{\text{How to get to the file?}}$
 
 ****************************************************************************    
 
+Rstudio Options
+
+```
+title: "R Notebook"
+output: html_notebook | html_document | 
+
+title: "Untitled"
+output: html_document
+
+title: "Untitled"
+output: pdf_document
+
+title: "Untitled"
+output: word_document
+```
+
+
+
+****************************************************************************  
 ## Copy/Transfer the packages installed on one computer or R version to another using Scripts. 
 
 ### Method 1: (!THE ONLY METHOD THAT WORKED) USE THIS ONE!!!!!].  
@@ -234,9 +253,11 @@ fig2
 
 *****************************************************  
 
-## R Markdown, R Notebook, R Bookdown, R Blogdown  
+# R Markdown, R Notebook, R Bookdown, R Blogdown  
 
-### R Markdown  
+## R Markdown  
+
+### Introduction. 
 
 Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -246,7 +267,7 @@ Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word docu
 summary(cars)
 ```
 
-#### Including Plots
+### Including/Excluding Plots
 
 You can also embed plots, for example:
 
@@ -297,9 +318,175 @@ chrome.).
 1. GitHub Document (Markdown)  
 1. Package Vignete (HTML)  
 
+
+************************************************************************************************
+
+### Important Notes for easy typing in Rmarkdown.
+Some of the code does not work the same in word_documents as in html_documents.  
+
+> To create a `new line` or `return`, **`insert 2 spaces`** after the point or end of the line.  
+
+Be careful with the characters themselves, these characters (1.) **''** are not the same as these (2.) **``**.  
+
+1. Gives 'word'; _a simple quotation_, the key is next to the return/enter in the English keyboard or in the shift+7 in the japanese keyboard.  
+2. Gives `word`; _a format and background style_, the key is in the top left side before 1 in the English key or in the Shift+@ in the Japanese keyboard.   
+
+**Inline R Code**  
+There were **_`r nrow(cars)`_** cars studied  
+
+**Plain Code Blocks:** Plain code blocks are displayed in a fixed-width font but not evaluated  
+```
+This text is displayed verbatim / preformatted  
+```
+For more help or references on Rmardown styles go to:  
+> //Help> Markdown Quidk Reference  
+
+For color text you can use.   
+
+Roses are $\color{red}{\text{beautiful red}}$,
+violets are $\color{blue}{\text{lovely blue}}$.  
+
+****************************************************************************    
+
+### Keyboard Shortcuts 
+from <https://www.dataquest.io/blog/r-markdown-tips-tricks-and-shortcuts/> page.  
+Knowing R Markdown keyboard shortcuts will save lots of time when creating reports.  
+Here are some of the essential R Markdown shortcuts: **_``_**
+
+|command| on a Mac | on Linux and Windows |
+|---:| :---| :---|
+To access shortcuts | **_`Option + Shift + K`_** | **_`Alt + Shift + K `_**
+Assignment operator <- | **_`Option + -`_**  | **_`Alt + - `_** | 
+Pipe operator %>%| **_`Cmd + Shift + M`_** | **_`Ctrl + Shift + M`_** |
+Quick `Copy and paste` | **_`Select section + Alt + Command + downArrow`_**
+Move word or section up or down | **_`Select section + Alt + Up/Down Arrows`_**
+Jump to `Top` or `End` | **_`Command + upArrow`_** or **_`Command + downArrow`_**| 
+Write in several lines at the same time | **_`Alt+Command+ L-click lines`_** |   
+Wrap text or chunck with characters | **_`Just select text of chunk to be wrapped and type`_** |   
+Insert a new code chuck | **_`Command + Option + I`_** | **_`Ctrl + Alt + I`_** |  
+Comment/uncomment current line/selection |	**_`⇧⌘C`_** |  **_`Ctrl+Shift+C`_**.|  
+Outdent	| **_`Shift+Tab`_** | **_`Shift+Tab`_**　| 　
+Knit Document (knitr)	| **_`⇧⌘K`_** | **_`Ctrl+Shift+K`_** |  	
+Output in document in the format specified in your YAML header with. **The “k” is short for “knit”!**| **_`Command + Shift + K`_** | **_`Ctrl + Shift + K`_** |  
+
+
+
+Next we’ll cover **shortcuts to run code chunks**. But before doing this it is often a good idea to restart your R session and start with a clean environment. 
+
+|command            | on a Mac | on Linux and Windows |
+|:---               | :---| :---|
+Restart your R session                  | **_`Command + Shift + F10`_** | **_`Ctrl + Shift + F10`_** | 
+Run all chunks above the current chunk  | **_`Command + Option + P`_** | **_`Ctrl + Alt + P`_** |  
+Run the current chunk                   | **_`Command + Option + C`_** or **_`Command + Shift + Enter`_** | **_`Ctrl + Alt + C`_** or **_`Ctrl + Shift + Enter`_** |  **_``_**
+Run the next chunk                      | **_`Command + Option + N`_** | **_`Ctrl + Alt + N`_** |  
+Run all chunks                          | **_`Command + Option + R or`_** **_`Command + A + Enter`_** | **_`Ctrl + Alt + R`_** or **_`Ctrl + A + Enter`_**|
+
+[knitr](http://yihui.name/knitr/) can execute code in many languages besides R. Some of the available language engines include:
+**_`Code chunks with brackets {} will be run by R while kniting to display results. `_**  
+
+*  R
+*  Python
+*  SQL
+*  Bash
+*  Rcpp
+*  Stan
+*  JavaScript
+*  CSS
+*  Java
+*  Json
+*  Ruby
+
+**Code Chunks**  
+The R Markdown file below contains three code chunks. You can open it here in RStudio Cloud.  
+You can quickly insert chunks like these into your file with  
+
+the keyboard shortcut Ctrl + Alt + I (OS X: Cmd + Option + I)  
+the Add Chunk  command in the editor toolbar  
+or by typing the chunk delimiters ```{r} and ```.  
+
+
+****************************************************************************    
+
+### TO PREVENT CODE RUNNING
+> **Seems like it is better to use R notebook instead of R markdown.**
+
+>  **_When you render your .Rmd file, R Markdown will partially run each code chunk and embed the results beneath the code chunk in your final report._**  
+
+>  **_In Rmarkdown: TO PREVENT CODE RUNNING, ERASE CODE BRACKES AND CODE TYPE, USE ONLY ``._**  
+
+If you don't want any code chunks to run you can add `eval = FALSE` in your setup chunk with knitr::opts_chunk$set().
+
+``{r setup, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+``
+Ex. As shown graphs above. 
+```{r cars1, eval = FALSE} 
+summary(cars)
+```
+> Code shown but summary table not shown.  
+
+A better way to do it is to add in the code@s chunk header the opptions:  
+```{r echo=TRUE, eval=FALSE}
+echo=TRUE, eval=FALSE
+```   
+
+
+### Plots
+
+Embed plots, for example can be stoped by eval = FALSE:  
+Code for the graphic is here but it is not shown.
+
+```{r pressure2, echo=FALSE, eval = FALSE}
+plot(pressure)
+```
+> Code nor plot shown
+
+Note that the `echo = FALSE` parameter was `added` to the code chunk to prevent printing of the R code that generated the plot.  
+
+!Comment: while trying the "eval" command, this error happen...
+
+```
+!Error in parse_block(g[-1], g[1], params.src) : duplicate label 'setup' or 
+
+Error in parse_block(g[-1], g[1], params.src, markdown_mode) : 
+  Duplicate chunk label 'cars', which has been used for the chunk:
+summary(cars)
+```   
+>  **Solution** Change the "name of the code chunk": {r cars} to {r cars1.}  
+
+**Chunk Options**  
+Chunk output can be customized with [knitr options](http://yihui.name/knitr/options/), arguments set in the {} of a chunk header. Above, we use five arguments:
+
+*  **include = FALSE** prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.
+*  **echo = FALSE** prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.
+*  **message = FALSE** prevents messages that are generated by code from appearing in the finished file.
+*  **warning = FALSE** prevents warnings that are generated by code from appearing in the finished.
+*  **fig.cap = "..."** adds a caption to graphical results.  
+
+See the [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.165887543.809923720.1609919756-125756219.1609328321) for a complete list of knitr chunk options.
+
+
+****************************************************************************    
+
+
+### Bonus: R Markdown Cheatsheet
+RStudio has published numerous cheatsheets for working with R, including a detailed cheatsheet on using R Markdown! The R Markdown cheatsheet can be accessed from within RStudio by selecting Help > Cheatsheets > R Markdown Cheat Sheet.
+
+* <https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf>.
+* <https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>.
+* <https://rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf>.
+* <https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf>.
+* [17.1 Use RStudio keyboard shortcuts](<https://bookdown.org/yihui/rmarkdown-cookbook/rstudio-shortcuts.html#rstudio-shortcuts>).  
+* [R Markdown](https://ismayc.github.io/rbasics-book/4-rmarkdown.html).  
+
+
+****************************************************************************    **********
+
+
+
 ****************************************************************************  
 
-### R Notebook
+## R Notebook
 
 [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results **appear beneath the code**. 
 
@@ -325,7 +512,7 @@ A way to organize the Markdown text in section with the ability to preview the t
 
 *****************************************************
 
-### R Bookdown.
+## R Bookdown.
 A way to manage several Rmad files and compile them in a gitbook style, with the possibility of multiple types of outputs, with support of figure/table number crossreference and can embed interactive content like HTML widgets/Shyny apps (if output is not html, take screenshots automatically) and compile as a gitbook.
 
 Bookdown also can be uploaded to github where other collaborators can proof read and commit changes if nessesary.
@@ -832,7 +1019,7 @@ output_dir: "docs"
 
 [Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/).  
 [Best R Hugo Blogdown Site End to End Tutorial](https://youtu.be/9Jqvaoeh1W4?list=PLuak_bGvcWZNu-Eu2MPBS7gZ6Zz3jdc4w) Use this video as a guide.  
-[Live - Tutorial Making Live Site, Free - R RStudio Blogdown Hugo GitHub Netlify](https://youtu.be/fq_AYx874gs) Error at the end and did not deploy the site.
+[Live-Tutorial Making Live Site, Blogdown Hugo GitHub Netlify](https://youtu.be/fq_AYx874gs) Error at the end and did not deploy the site.  
 [Video01](https://youtu.be/oXFPOOrkogA?list=PLuak_bGvcWZNu-Eu2MPBS7gZ6Zz3jdc4w).  
 
 
@@ -952,7 +1139,7 @@ blogdown::hugo_version()
 1. Click on domain or paste link to web browser. 
 1. **Success!! Page is live.**  
 
-###  To modify site in Rstudio
+###  How to modify site in Rstudio
 
 
 
