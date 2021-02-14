@@ -20,7 +20,7 @@ description: This is a minimal example of using the bookdown package to write a 
 
 Location: Folder for this R site is in...   
 **MBP2015:** `/Users/Marcelo-Rosales/Documents/GitHub_Repos/Rprojects/Experiments/Research_Notebook`  
-**MBP2020:**  
+**MBP2020:**  `/Users/marcelorosales/Documents/GitHub_Repos/Rprojects/Experiments/Research_Notebook`
 
 This is also Bookdown GitHub page, you can found it in [https://marcelorosales.github.io/Research_Notebook/](https://marcelorosales.github.io/Research_Notebook/).  
 
