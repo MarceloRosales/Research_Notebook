@@ -15,7 +15,6 @@ method-2-quick-way-of-installing-all-your-old-r-libraries-on-a-new-device.-does-
 since-the-code-above-is-not-interactive-i-modify-to-suit-my-needs.does-not-work-neither
 old-method-used-to-transfer-discontinue.
 interactive-plots-using-r-markdown-notebook.
-r-markdown-r-notebook-r-bookdown-r-blogdown
 r-markdown
 introduction.
 includingexcluding-plots
@@ -25,6 +24,7 @@ to-prevent-code-running
 plots
 bonus-r-markdown-cheatsheet
 r-notebook
+what-is-the-difference-between-a-notebook-and-an-r-markdown-file
 r-bookdown.
 get-started-with-bookdown
 r-bookdown-quick-tutorial
@@ -33,6 +33,7 @@ useful-tips.
 math-formula-inputs.
 displaying-code-and-plosts
 how-to-addembed-videos-and-images.
+how-to-check-differences-between-rmarkdown-files
 r-and-zotero-for-bibliography.
 start-here-zotero-for-r-installation
 for-zotero-r-to-work-properly.

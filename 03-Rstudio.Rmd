@@ -1,7 +1,7 @@
 # R and Rstudio 
 
 ## Rstudio global settings Export/Import. Configurations and settings..  
-After Installing R and Rstudio with homebrew, R studio settings are need. Doing it manually takes time and usually all changes are not performed. 
+After Installing R and Rstudio with homebrew, R studio settings are need. Doing it manually takes time and usually all changes are not performed.  
 
 For more information on RStudio [Link to site](https://blog.rstudio.com/2020/02/18/rstudio-1-3-preview-configuration/).  
 From RStudio 1.3, the settings and configuration were overhaul.  
@@ -50,7 +50,6 @@ output: word_document
 ```
 
 
-
 ****************************************************************************  
 ## Copy/Transfer the packages installed on one computer or R version to another using Scripts. 
 
@@ -91,7 +90,7 @@ for (p in setdiff(packages, installed.packages()[,"Package"]))
 Check <- installed.packages()
 ```
 
-****************************************************************************    
+****************************************************************************  
 
 ### Method 2:  Quick Way of Installing all your old R libraries on a New Device. DOES NOT WORK!!    
 [Link here](https://www.r-bloggers.com/2017/07/quick-way-of-installing-all-your-old-r-libraries-on-a-new-device/).  To install all the libraries that I had installed in my previous laptop. I did the following:
@@ -185,7 +184,7 @@ install.packages(toInstall)
 [Link to site](http://hlplab.wordpress.com/2012/06/01/transferring-installed-packages-between-different-installations-of-r/
 )  
 
-*****************************************************  
+****************************************************************************  
 
 ## Interactive Plots using R Markdown Notebook.  
 [Link to site](https://bookdown.org/flavioadsm/untitled2/Untitled2.html#113_interactive_plots)  
@@ -251,9 +250,7 @@ fig2
 
 [Export Plotly graphs into MS PowerPoint](https://community.rstudio.com/t/export-plotly-graphs-into-ms-powerpoint/33789).  
 
-*****************************************************  
-
-# R Markdown, R Notebook, R Bookdown, R Blogdown  
+****************************************************************************  
 
 ## R Markdown  
 
@@ -420,7 +417,7 @@ If you don't want any code chunks to run you can add `eval = FALSE` in your setu
 knitr::opts_chunk$set(eval = FALSE)
 ``
 Ex. As shown graphs above. 
-```{r cars1, eval = FALSE} 
+```{r cars2, eval = FALSE} 
 summary(cars)
 ```
 > Code shown but summary table not shown.  
@@ -436,7 +433,7 @@ echo=TRUE, eval=FALSE
 Embed plots, for example can be stoped by eval = FALSE:  
 Code for the graphic is here but it is not shown.
 
-```{r pressure2, echo=FALSE, eval = FALSE}
+```{r pressure3, echo=FALSE, eval = FALSE}
 plot(pressure)
 ```
 > Code nor plot shown
@@ -482,10 +479,6 @@ RStudio has published numerous cheatsheets for working with R, including a detai
 
 ****************************************************************************    **********
 
-
-
-****************************************************************************  
-
 ## R Notebook
 
 [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results **appear beneath the code**. 
@@ -510,7 +503,18 @@ A way to organize the Markdown text in section with the ability to preview the t
 5.	And then start coding.   
 
 
-*****************************************************
+****************************************************************************  
+
+## What is the difference between a Notebook and an R Markdown file?
+Most people use the terms R Notebook and R Markdown interchangeably and that is fine. Technically, R Markdown is a file, whereas R Notebook is a way to work with R Markdown files. R Notebooks do not have their own file format, they all use `.Rmd`. All R Notebooks can be `‘knitted’` to R Markdown outputs, and all R Markdown documents can be interfaced as a Notebook.  
+
+An important difference is in the execution of code. **In R Markdown**, when the file is **Knit**, **`all the elements (chunks) are also run`**. Knit is to R Markdown what Source is to an R script (Source was introduced in Chapter 1, essentially it means ‘Run all lines’).  
+
+**In a Notebook**, when the file is rendered with the Preview button, **`no code is re-run, only that which has already been run and is present in the document is included in the output`**.  
+
+Also, **in the Notebook** behind-the-scenes file `(.nb)`, **all the code is always included. Something to watch out for if your code contains sensitive information, such as a password (which it never should!)**.  
+
+****************************************************************************  
 
 ## R Bookdown.
 A way to manage several Rmad files and compile them in a gitbook style, with the possibility of multiple types of outputs, with support of figure/table number crossreference and can embed interactive content like HTML widgets/Shyny apps (if output is not html, take screenshots automatically) and compile as a gitbook.
@@ -706,6 +710,47 @@ The reason this method is better than the pandoc approach `![your image](path/to
 - The same syntax can be used to the size of the plot (`fig.width`), the output width in the report (`out.width`), add captions (`fig.cap`) etc.
 - It uses the best graphical devices for the output. This means PDF images remain high resolution.  
 
+****************************************************************************    
+
+### How to check Differences between rmarkdown files  
+
+The `diff_rmd` function can be used to produce a nicely-formatted document showing the differences between two rmarkdown files. This function can be used to compare two files, or a file with previous versions of itself (within a git repository). See [here](https://ropenscilabs.github.io/reviewer/index.html#differences-between-rmarkdown-files) for more info.  
+
+You can install the development version of `reviewer` from [GitHub](https://github.com/ropenscilabs/reviewer) with:
+```{r eval=FALSE}
+remotes::install_github("ropenscilabs/reviewer")
+```  
+
+See the [package vignette](https://ropenscilabs.github.io/reviewer/articles/reviewer.html) for a demonstration.  
+
+The `diff_rmd` function can be used to produce a nicely-formatted document showing the differences between two rmarkdown files. For the purposes of demonstration, we’ll use the example files bundled with the package. We’ll compare modified_file to its earlier version.   
+
+Reference_file:  
+```{r eval=FALSE}
+modified_file <- system.file("extdata/CheatSheet-modified.Rmd", package = "reviewer")
+reference_file <- system.file("extdata/CheatSheet.Rmd", package = "reviewer")
+```
+
+Compare:
+```{r eval=FALSE}
+library(reviewer)
+result <- diff_rmd(modified_file, reference_file)
+```
+
+And our output:
+
+**We can also compare the current version of a document to a previous version in stored in a git repository.**   
+
+If a `reference_file` argument is not provided, by default the modified_file will be compared to the most recent copy in the git repo:  
+```{r eval=FALSE}
+result <- diff_rmd(modified_file)
+```
+
+**Or we can compare it to how it appeared in the git repository after a particular commit**   (here, the commit with reference 750ab4):
+```{r eval=FALSE}
+result <- diff_rmd(reference_file, "750ab4")
+```
+
 
 ****************************************************************************    
 
@@ -848,14 +893,14 @@ You can label chapter and section titles using `{#label}` after them, e.g., we c
 
 Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
 
-```{r nice-fig-02, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center', echo=TRUE, eval=FALSE}
+```{r nice-fig-03, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center', echo=TRUE, eval=FALSE}
 par(mar = c(4, 4, .1, .1))
 plot(pressure, type = 'b', pch = 19)
 ```
 
 Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
 
-```{r nice-tab02, tidy=FALSE, echo=TRUE, eval=FALSE}
+```{r nice-tab03, tidy=FALSE, echo=TRUE, eval=FALSE}
 knitr::kable(
   head(iris, 20), caption = 'Here is a nice table!',
   booktabs = TRUE
@@ -1049,10 +1094,11 @@ blogdown::install_hugo()
     
     **In Github**   
     Signup/Login to github  
-    
     https://github.com/login  
     MarceloRosales  
-    pw:mrcd3  
+```{undefined eval=FALSE, include=FALSE}
+pw:mrcd3
+```
     mail:@hotmail.com  
     
     In github create a new repository. (you can do it in terminal as well is much faster)  
