@@ -716,7 +716,8 @@ The reason this method is better than the pandoc approach `![your image](path/to
 
 The `diff_rmd` function can be used to produce a nicely-formatted document showing the differences between two rmarkdown files. This function can be used to compare two files, or a file with previous versions of itself (within a git repository). See [here](https://ropenscilabs.github.io/reviewer/index.html#differences-between-rmarkdown-files) for more info.  
 
-You can install the development version of `reviewer` from [GitHub](https://github.com/ropenscilabs/reviewer) with:
+You can install the development version of `reviewer` from [GitHub](https://github.com/ropenscilabs/reviewer) with:  
+
 ```{r eval=FALSE}
 remotes::install_github("ropenscilabs/reviewer")
 ```  
@@ -726,12 +727,14 @@ See the [package vignette](https://ropenscilabs.github.io/reviewer/articles/revi
 The `diff_rmd` function can be used to produce a nicely-formatted document showing the differences between two rmarkdown files. For the purposes of demonstration, we’ll use the example files bundled with the package. We’ll compare modified_file to its earlier version.   
 
 Reference_file:  
+
 ```{r eval=FALSE}
 modified_file <- system.file("extdata/CheatSheet-modified.Rmd", package = "reviewer")
 reference_file <- system.file("extdata/CheatSheet.Rmd", package = "reviewer")
 ```
 
-Compare:
+Compare:  
+
 ```{r eval=FALSE}
 library(reviewer)
 result <- diff_rmd(modified_file, reference_file)
@@ -742,11 +745,13 @@ And our output:
 **We can also compare the current version of a document to a previous version in stored in a git repository.**   
 
 If a `reference_file` argument is not provided, by default the modified_file will be compared to the most recent copy in the git repo:  
+
 ```{r eval=FALSE}
 result <- diff_rmd(modified_file)
 ```
 
-**Or we can compare it to how it appeared in the git repository after a particular commit**   (here, the commit with reference 750ab4):
+**Or we can compare it to how it appeared in the git repository after a particular commit**   (here, the commit with reference 750ab4):  
+
 ```{r eval=FALSE}
 result <- diff_rmd(reference_file, "750ab4")
 ```
@@ -1096,7 +1101,7 @@ blogdown::install_hugo()
     Signup/Login to github  
     https://github.com/login  
     MarceloRosales  
-```{undefined eval=FALSE, include=FALSE}
+```{eval=FALSE, include=FALSE}
 pw:mrcd3
 ```
     mail:@hotmail.com  
