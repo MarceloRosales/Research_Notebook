@@ -1,0 +1,125 @@
+# R Methods and how to`s:  
+
+## How to add Lorem ipsum paragraphs in r markdow.  
+
+**lorem::ipsum()**  link [here](https://github.com/gadenbuie/lorem) to see all examples.  
+* Quickly generate lorem ipsum placeholder text with **lorem::ipsum()**.  
+* Easy to integrate in RMarkdown documents.  
+* Includes an RStudio addin to insert lorem ipsum into the current document.  
+
+First install  
+```{r eval=FALSE}
+# install.package("devtools")
+devtools::install_github("gadenbuie/lorem")
+
+```
+
+**Usage**: The addin allows you to specify the number of desired paragraphs and sentences.  
+
+R Markdown  
+**Call lorem::ipsum() in an inline R chunk in R Markdown.**  
+```{r eval=FALSE}
+`r lorem::ipsum(paragraphs = 2)`  
+```  
+
+**Place the scrip with "``" (inline code) to call the function. ex.**  
+```{r eval=FALSE}
+`r lorem::ipsum(paragraphs = 1)`  
+```
+
+
+**You can control the number of paragraphs and sentences per paragraph.**  
+```{r eval=FALSE}
+`r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))`  
+```
+
+
+You can also adjust the avg_words_per_sentence to create long or short paragraphs.  
+```{r eval=FALSE}
+`r lorem::ipsum(2, avg_words_per_sentence = 3)`  
+`r lorem::ipsum(1, avg_words_per_sentence = 20)`  
+```
+
+
+**Everywhere Else**    
+Generate lorem ipsum anywhere else using lorem::ipsum() or lorem::ipsum_words().  
+```{r eval=FALSE}
+ipsum_items <- replicate(5, lorem::ipsum_words(5))
+cat(paste("-", ipsum_items), sep = "\n")
+```  
+
+
+## How to insert colummns in r markdown.  
+
+Description of the  methods in this [Link](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown).  
+
+Put the following in the **css file or directly in rmarkdown.**  
+
+> **It is better to add directly to the style.css file for it to work properly.**  
+
+```{css }
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+```  
+
+### Columns + loremipsum example
+
+<div class="col3">
+**1. paragraphs = 1**   
+`r lorem::ipsum()`  
+**2. paragraphs = 3, sentences = c(1, 2, 3)**    
+`r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))`  
+**3. paragraphs = 2, avg_words_per_sentence = 3**     
+`r lorem::ipsum(2, avg_words_per_sentence = 3)`  
+**4.** four.    
+**5.** five.      
+**6.** six.      
+**7.** seven.     
+**8.** eight.    
+**9.** nine.     
+</div>
+
+### This section will have two columns
+
+<div class="col2">  
+
+```{r}
+head(mtcars)
+tail(mtcars)
+```  
+</div>
+
+From here the columns are released. 
+
+
+## How to Find the indices of lines in Markdown that are prose (not balanced).  
+[Link1](https://cran.r-project.org/web/packages/xfun/xfun.pdf), [Link2](https://rdrr.io/cran/xfun/man/prose_index.html)  
+
+**Prose_index** Find the indices of lines in Markdown that are prose (not code blocks).  
+
+**Description**  
+Filters out the indices of lines between code block fences such as ``` (could be three or four or more backticks).  
+
+**Usage**  
+```{r eval=FALSE}
+library(xfun)
+## ??xfun
+prose_index("```", warn = TRUE)
+prose_index(c("a", "```", "b", "```", "c"))
+prose_index(c("a", "````", "```r", "1+1", "```", "````", "c"))
+
+```  
+
+**Value:** An integer vector of indices of lines that are prose in Markdown.
+**Note:**  If the code fences are not balanced (e.g., a starting fence without an ending fence), this function will treat all lines as prose.  
+

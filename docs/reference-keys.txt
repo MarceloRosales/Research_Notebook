@@ -49,7 +49,12 @@ method-2.-book-down-and-github-pages.
 blogdown.
 setting-netlify.
 how-to-modify-site-in-rstudio
-methods
+r-methods-and-how-tos
+how-to-add-lorem-ipsum-paragraphs-in-r-markdow.
+how-to-insert-colummns-in-r-markdown.
+columns-loremipsum-example
+this-section-will-have-two-columns
+how-to-find-the-indices-of-lines-in-markdown-that-are-prose-not-balanced.
 applications
 example-one
 example-two
