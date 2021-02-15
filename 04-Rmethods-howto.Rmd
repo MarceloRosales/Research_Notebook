@@ -123,3 +123,4 @@ prose_index(c("a", "````", "```r", "1+1", "```", "````", "c"))
 **Value:** An integer vector of indices of lines that are prose in Markdown.
 **Note:**  If the code fences are not balanced (e.g., a starting fence without an ending fence), this function will treat all lines as prose.  
 
+Sill DO NOT UNDERSTAND HOW IT WORKS AND WHAT THE OUTCOME MEANS. 
