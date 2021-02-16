@@ -59,10 +59,8 @@ how-to-insert-colummns-in-r-markdown.
 columns-loremipsum-example
 this-section-will-have-two-columns
 how-to-find-the-indices-of-lines-in-markdown-that-are-prose-not-balanced.
-how-to
+how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.
 applications
 example-one
 example-two
 final-words
-how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.
-ex.
