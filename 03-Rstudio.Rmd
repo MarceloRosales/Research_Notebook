@@ -193,7 +193,7 @@ Using Normal ggplot graphics, is possible to add 3d interaction with the **plotl
 
 > ggplot2 example  
 
-```{r echo=TRUE}
+```{r }
 
 library(ggplot2)
 
@@ -209,7 +209,7 @@ a
 
 > Using ggplotly with in ggplot2, 
 
-```{r echo=TRUE, message=FALSE, warning=FALSE}
+```{r  message=FALSE, warning=FALSE}
 library(plotly)
 
 ggplotly(a)
@@ -221,7 +221,7 @@ ggplotly(a)
 Here a [Plotly R Open Source Graphing Library](https://plotly.com/r/).  
 And [R Figure Reference: Single Page. How are Plotly attributes organized?](https://plotly.com/r/reference/)
 
-```{r, echo=TRUE}
+```{r }
 # Using plotly
 library(plotly)
 
@@ -231,7 +231,7 @@ fig
 ```
 
 
-```{r, echo=TRUE}
+```{r }
 
 library(plotly)
 
@@ -329,16 +329,23 @@ Be careful with the characters themselves, these characters (1.) **''** are not 
 2. Gives `word`; _a format and background style_, the key is in the top left side before 1 in the English key or in the Shift+@ in the Japanese keyboard.   
 
 **Inline R Code**  
-There were **_`r nrow(cars)`_** cars studied  
+It is possible to show r script outcome inline with the text. For example, the line:  
+  
+There were **_`r nrow(cars)`_** cars studied
 
-**Plain Code Blocks:** Plain code blocks are displayed in a fixed-width font but not evaluated  
+was created with the inline code format:  
+```{r eval=FALSE}
+There were `r nrow(cars)` cars studied  
+```
+
+**Plain Code Blocks:** Use the three thicks (beging/end) to add plain code blocks, this are displayed in a fixed-width font but not evaluated.  Use the option+command+i shortcut and delete the **{r}** heading to convert code section in plain code.  
 ```
 This text is displayed verbatim / preformatted  
 ```
 For more help or references on Rmardown styles go to:  
 > //Help> Markdown Quidk Reference  
 
-For color text you can use.   
+**Color text:** you can use.   
 
 Roses are $\color{red}{\text{beautiful red}}$,
 violets are $\color{blue}{\text{lovely blue}}$.  
@@ -395,9 +402,8 @@ Run all chunks                          | **_`Command + Option + R or`_** **_`Co
 
 **Code Chunks**  
 The R Markdown file below contains three code chunks. You can open it here in RStudio Cloud.  
-You can quickly insert chunks like these into your file with  
-
-the keyboard shortcut Ctrl + Alt + I (OS X: Cmd + Option + I)  
+You can quickly insert chunks like these into your file with the keyboard shortcut  
+**Ctrl + Alt + I (OS X: Cmd + Option + I)**,   
 the Add Chunk  command in the editor toolbar  
 or by typing the chunk delimiters ```{r} and ```.  
 
@@ -428,9 +434,9 @@ echo=TRUE, eval=FALSE
 ```   
 
 
-### Plots
+### Plots and Interactive plots.
 
-Embed plots, for example can be stoped by eval = FALSE:  
+Embed plots, for example can be stopped by eval = FALSE:  
 Code for the graphic is here but it is not shown.
 
 ```{r pressure3, echo=FALSE, eval = FALSE}
@@ -545,7 +551,7 @@ install.packages("bookdown")
 
 ****************************************************************************    
 
-#### Get started with bookdown
+### Get started with bookdown
 The easiest way for beginners to get started with writing a book with R Markdown and bookdown is through the demo bookdown-demo on GitHub:
 
 1. Download the GitHub repository https://github.com/rstudio/bookdown-demo as a Zip file, then unzip it locally.
@@ -585,7 +591,7 @@ tinytex::tlmgr_update()
 
 ****************************************************************************    
 
-#### R Bookdown quick tutorial
+### R Bookdown quick tutorial
 
 1. **File> New project> New directory> Empty project… [ ]…** Directory name> choose location (subdirectory of…)
 2. Once project is created, open a new R Markdown file: **File> New File> R Markdown> Title of the book> Author > √HTML> OK**  
@@ -659,7 +665,6 @@ install.packages("gert")
 install.packages("git2r")
 install.packages('usethis')
 ```
-
 
 ****************************************************************************    
 

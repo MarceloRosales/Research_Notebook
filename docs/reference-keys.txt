@@ -7,6 +7,10 @@ new-mac-installing-and-setup
 install-homebrew
 brew-bundle-and-the-brewfile-tips
 using-scripts-to-automate-installs-and-save-time-in-install-and-setup
+how-to-customize-terminal.
+linuxmac-terminal-tutorials-list.
+customizing-your-terminal-.bash_profile-and-.bashrc-files
+how-to-install-windows-10-on-a-mac-using-virtualbox-2020-tutorial.
 r-and-rstudio
 rstudio-global-settings-exportimport.-configurations-and-settings..
 copytransfer-the-packages-installed-on-one-computer-or-r-version-to-another-using-scripts.
@@ -21,7 +25,7 @@ includingexcluding-plots
 important-notes-for-easy-typing-in-rmarkdown.
 keyboard-shortcuts
 to-prevent-code-running
-plots
+plots-and-interactive-plots.
 bonus-r-markdown-cheatsheet
 r-notebook
 what-is-the-difference-between-a-notebook-and-an-r-markdown-file

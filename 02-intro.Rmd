@@ -254,28 +254,30 @@ To uninstall a package
 To see the version of packages:  
 `grep --version`   
 
-If there is already a native package on the operating system, for instance macOS grep. Then the new package installed will have a “g” prefix. 
+If there is already a native package on the operating system, for instance macOS grep. Then the new package installed will have a “g” prefix.  
 
-$%
+```
 brew update
 brew outdated
 Brew upgrade
 brew clean up
 brew doctor 
+```
 
-To install Mac applications use the “cask” command.
+To install **Mac applications** use the **“cask”** command.
 Example. 
-$%
-brew cask install firefox 
 
-To open the webpages of the application directly use
-$%
+```
+brew cask install firefox 
+```
+
+To open the webpages of the application directly from terminal, use
+```
 brew home rstudio
 brew home r
 brew home pycharm
+```
 
-
-[ ] hello   
 
 ****************************************************************************    
 
@@ -292,6 +294,99 @@ If it displays git commands, then git is install and ready to connect.
 >   
 >   
 
+****************************************************************************    
+
+
+
+## How to Customize Terminal.   
+With in a list of helpful videos on how to use terminal on macOS.  
+1. [Linux/Mac Terminal Tutorials: List](https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+2. [Linux/Mac Terminal Tutorial: How To Use The rsync Command - Sync Files Locally and Remotely](https://youtu.be/qE77MbDnljA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+7. [Linux/Mac Tutorial: Cron Jobs - How to Schedule Commands with crontab](https://youtu.be/QZJ1drMQz1A?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+8. [Customizing Your Terminal: .bash_profile and .bashrc files](https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+9. [Customizing Your Terminal: Adding Color and Information to Your Prompt](https://youtu.be/LXgXV7YmSiU?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+10. [Customizing Your Terminal: How To Use and Modify Dotfiles](https://youtu.be/c5RZWDLqifA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+11. [Mac OS X Terminal Tutorial: Time-Saving Keyboard Shortcuts](https://youtu.be/TXzrk3b9sKM?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+12. [Easily Resize Multiple Images Using the Mac Terminal](https://youtu.be/HVMOBKRNEbc?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+17. [How I Setup a New Development Machine - Using Scripts to Automate Installs and Save Time](https://www.youtube.com/watch?v=kIdiWut8eD8&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&index=5.)   
+
+****************************************************************************    
+
+
+## Linux/Mac Terminal Tutorials: List.  
+[Link to site](https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+
+Command | Result | Example |
+:--- | :--- | :---|
+`pwd` | prompt working directory |
+`mkdir`| make a directory | `mkdir TestDir` |
+`ls` | List of files within a Directory |
+`cd` | To navigate into a Directory | `cd TestDir/` |
+`touch` | To create a file | `touch test_file.txt` |
+`open` | To open a file with default program in my machine | `open test_file.text` |
+`cp` | To make a copy of the file and set a different name | `cp test_file.txt copy_file.txt` |
+`mv` | To move a file to a different directory| `mv test_file.txt DirNamePath/` |
+`mv` | mv  is also used for renaming files, we are moving the file to the same folder but with a different name. | `mv test_file.txt newname_file.txt` |
+" | To move and rename at the same time. Especify DirPath or up one dir with _../_ | `mv test_file.txt _filePath_ NewName_file.txt` |
+`rm` | To delete or remove a file *make sure you are in the same directory as the file*. **!Warning** This command will delete file from system without warning and it will not move it to trash!| `rm test_file.txt` |
+For Directories |   |  |
+`mkdir` | To make a new directory | `mkdir NewDir` | 
+`cp` | Copy a directory. | `cp TestDir/ NewDir/` |
+`man` | To find more options about the command, use the command manual. To quit press q | `man cp` |
+`cp -R ...` | copies the director and the entire subtree | `cp -R TestDir/ CopyDir/|
+
+Not finished.... finish this later.
+
+****************************************************************************    
+
+
+## Customizing Your Terminal: .bash_profile and .bashrc files   
+[Link to article](https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+
+You can modify Terminal temporally.  ex. By typing in Terminal. 
+```
+PS1="Marcelo ->"  
+```    
+This will change the prompt name to "Marcelo ->", but this is only temporary, once we quit terminal, those changes are lost.   
+
+To customize this preferences permanently we need 2 modify or create 2 `dot files` located in our home directory.  
+1. .bash_profile and
+2. .bashrc 
+
+This files may or maynot exist in the computer, (In my new computer did not exist neither of these files).
+To find these files, go to your home directory. 
+
+```{r, echo=TRUE, eval=FALSE}
+pwd # (present working directory). If not at home directory, go to /Users/Marcelo-Rosales.  
+ls -la # list files and list attribute files (hidden files) or .  
+find .bash_profile # to find the .file.   
+```  
+
+To clear prior customization, move or delete 2 bash files.
+
+```{r, echo=TRUE, eval=FALSE}
+mk  
+mv .bash_profile DotFiles/ # this command will move bash files in to a folder named "DotFiles".  
+mv .bashrc DotFiles/ 
+```
+
+
+
+The bash_Profile is used for login shell.
+The bashrc file is used for non login shell. 
+To create a .bash_profile and a .bashrc file. 
+`touch .bash_profile`
+`touch .bashrc`
+Open with Atom. 
 
 
 ****************************************************************************    
+
+
+## How to Install Windows 10 on a Mac using VirtualBox (2020 Tutorial).  
+[Link to site](https://youtu.be/HEL9Uw3AR9s).  
+
+
+****************************************************************************    
+
+
