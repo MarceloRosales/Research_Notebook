@@ -12,17 +12,23 @@ First install
 # install.package("devtools")
 devtools::install_github("gadenbuie/lorem")
 
-```
+# If devtools can not be installed. 
+# Install in terminal: 
+# brew install libgit2
 
+#Then in R
+# install.packages("devtools")
+# install.packages("usethis")
+
+```
 **Usage**: The addin allows you to specify the number of desired paragraphs and sentences.  
 
 R Markdown  
-**Call lorem::ipsum() in an inline R chunk in R Markdown.**  
+**Call lorem::ipsum() in an inline R chunk in R Markdown.**
 ```{r eval=FALSE}
 `r lorem::ipsum(paragraphs = 2)`  
-```  
-
-**Place the scrip with "``" (inline code) to call the function. ex.**  
+```
+**Place the scrip with "``" (inline code) to call the function. ex.**
 ```{r eval=FALSE}
 `r lorem::ipsum(paragraphs = 1)`  
 ```

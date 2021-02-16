@@ -252,7 +252,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 * Includes an RStudio addin to insert lorem ipsum into the current document.</p>
 <p>First install</p>
 <div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="r-methods-and-how-tos.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.package(&quot;devtools&quot;)</span></span>
-<span id="cb81-2"><a href="r-methods-and-how-tos.html#cb81-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;gadenbuie/lorem&quot;</span>)</span></code></pre></div>
+<span id="cb81-2"><a href="r-methods-and-how-tos.html#cb81-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;gadenbuie/lorem&quot;</span>)</span>
+<span id="cb81-3"><a href="r-methods-and-how-tos.html#cb81-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-4"><a href="r-methods-and-how-tos.html#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If devtools can not be installed. </span></span>
+<span id="cb81-5"><a href="r-methods-and-how-tos.html#cb81-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install in terminal: </span></span>
+<span id="cb81-6"><a href="r-methods-and-how-tos.html#cb81-6" aria-hidden="true" tabindex="-1"></a><span class="co"># brew install libgit2</span></span>
+<span id="cb81-7"><a href="r-methods-and-how-tos.html#cb81-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-8"><a href="r-methods-and-how-tos.html#cb81-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Then in R</span></span>
+<span id="cb81-9"><a href="r-methods-and-how-tos.html#cb81-9" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;devtools&quot;)</span></span>
+<span id="cb81-10"><a href="r-methods-and-how-tos.html#cb81-10" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;usethis&quot;)</span></span></code></pre></div>
 <p><strong>Usage</strong>: The addin allows you to specify the number of desired paragraphs and sentences.</p>
 <p>R Markdown<br />
 <strong>Call lorem::ipsum() in an inline R chunk in R Markdown.</strong></p>
@@ -306,14 +314,14 @@ Generate lorem ipsum anywhere else using lorem::ipsum() or lorem::ipsum_words().
 <h3><span class="header-section-number">4.2.1</span> Columns + loremipsum example</h3>
 <div class="col3">
 <p><strong>1. paragraphs = 1</strong><br />
-Dolor est gravida rutrum congue pulvinar primis. Bibendum facilisi dis litora netus ullamcorper nibh. Curabitur mollis litora egestas blandit bibendum et pretium fames conubia ut.<br />
+Sit mollis convallis rutrum aliquet luctus condimentum dignissim feugiat ornare! Euismod imperdiet integer mauris vel aliquam himenaeos ante luctus faucibus nulla. Metus mauris porta duis pellentesque luctus quis integer fames vestibulum velit. Curabitur neque nunc aptent rhoncus sagittis penatibus eu!<br />
 <strong>2. paragraphs = 3, sentences = c(1, 2, 3)</strong><br />
-Ipsum donec euismod molestie odio est enim aliquam congue dui vivamus sollicitudin.</p>
-<p>Amet arcu magnis mus nisi sollicitudin venenatis netus. Curabitur porttitor pretium mauris eros consequat felis faucibus viverra venenatis inceptos ullamcorper congue urna!</p>
-<p>Amet himenaeos mattis tellus porttitor placerat congue nisi curae! Rutrum volutpat facilisi quam per pulvinar ligula cum sollicitudin proin. Porta morbi lacus est tincidunt bibendum dapibus erat tempus congue luctus erat.<br />
+Dolor ad mattis dictumst a quam eget nisi est sapien ac purus porttitor.</p>
+<p>Lorem dictum turpis consequat potenti ante consequat nec ornare imperdiet. Dis ridiculus facilisis a justo nostra erat vivamus penatibus felis id vulputate eget imperdiet placerat nisl.</p>
+<p>Elit habitant viverra commodo laoreet habitant lacus etiam metus est? Consequat iaculis varius suscipit tempor aenean cursus litora. Interdum cum eu blandit augue nascetur torquent etiam duis donec massa lacinia!<br />
 <strong>3. paragraphs = 2, avg_words_per_sentence = 3</strong><br />
-Dolor sodales eget porta cum. Sodales bibendum ligula eget sagittis condimentum. Na condimentum.</p>
-<p>Elit primis bibendum aenean. Eget tempus netus sodales? Aenean mauris accumsan pretium cursus? Hendrerit vivamus nunc ac velit? Na velit.<br />
+Adipiscing vehicula donec fermentum? Enim ante nec aliquam molestie. Nostra scelerisque pellentesque posuere libero. Na libero.</p>
+<p>Ipsum iaculis aliquam. Bibendum duis mauris. Pretium posuere malesuada. Parturient ac sociis conubia. Hac quisque id facilisi! Faucibus leo cubilia senectus! Lacinia etiam sapien a. Na a?<br />
 <strong>4.</strong> four.<br />
 <strong>5.</strong> five.<br />
 <strong>6.</strong> six.<br />
