@@ -628,11 +628,29 @@ While installing R bookdown, there were several problems. To solve the problem:
 update.packages(ask = FALSE, checkBuilt = TRUE)
 tinytex::tlmgr_update()
 ```  
-1. Some error refered to the citr package and Latex. citr is the R zotero bibliography pack (see 14.0.7),  
+1. Some error referred to the citr package and Latex. citr is the R zotero bibliography pack (see 14.0.7),  
 1. When building the page `Make sure that the output is "bookdown::gitbook" and not in "All formats". `  
 1. Other problem is the code chunks, RStudio will run all the code in the page unless specified otherwise. Therefore,  **_Always use the `{r  eval=FALSE}` at the beginning of the chunk code_**  (echo=TRUE is the default setting, no need to type in)
-1. Devtools packages did not installed properly. **Error: installation of package ‘devtools’ had non-zero exit status**.  usethis
+1. Devtools packages did not installed correctly. **Error: installation of package ‘devtools’ had non-zero exit status**.  
 
+To solve this problem:
+```{r eval=FALSE}
+# 1st. try to Install devtools.
+install.packages("devtools")
+```
+If devtools can not be installed. 
+Install in terminal: 
+```{}
+brew install libgit2
+```
+
+Then in R devtools and usethis packages.
+```{r eval=FALSE}
+install.packages("devtools")
+install.packages("usethis")
+```
+
+Other packages that might be needed...
 ```{r eval=FALSE}
 install.packages("cli")
 install.packages("stringi")
