@@ -49,8 +49,8 @@ title: "Untitled"
 output: word_document
 ```
 
-
 ****************************************************************************  
+
 ## Copy/Transfer the packages installed on one computer or R version to another using Scripts. 
 
 ### Method 1: (!THE ONLY METHOD THAT WORKED) USE THIS ONE!!!!!].  
@@ -134,6 +134,9 @@ install.packages(toInstall)
 
 That’s it. Save yourself the trouble installing packages one-by-one all over again.  LIES!!
 
+****************************************************************************  
+
+
 ### Since the code above is not interactive, I modify to suit my needs.**(DOES NOT WORK NEITHER)**  
 Since the function choose.dir is only for Windows and not for Mac. I created a custom dir.choose function 
 
@@ -181,8 +184,7 @@ install.packages(toInstall)
 ```
 
 ### Old method used to transfer (DISCONTINUE).  
-[Link to site](http://hlplab.wordpress.com/2012/06/01/transferring-installed-packages-between-different-installations-of-r/
-)  
+[Link to site](http://hlplab.wordpress.com/2012/06/01/transferring-installed-packages-between-different-installations-of-r/)  
 
 ****************************************************************************  
 
@@ -263,6 +265,8 @@ Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word docu
 ```{r}
 summary(cars)
 ```
+
+****************************************************************************  
 
 ### Including/Excluding Plots
 
@@ -433,6 +437,7 @@ A better way to do it is to add in the code@s chunk header the opptions:
 echo=TRUE, eval=FALSE
 ```   
 
+****************************************************************************  
 
 ### Plots and Interactive plots.
 
@@ -670,7 +675,6 @@ install.packages('usethis')
 
 ## **Useful Tips.**   
 
-
 ### Math Formula inputs.  
 In the UI menu // n Add-ins menu, there is the Input LaTeX Math. Write the math formula and a latex source will be generated.
 
@@ -683,12 +687,15 @@ $x^2 + y^2$
 
 $a\ +\ ß\ =\ \sum_{i=1}^nX_i$  
 
+****************************************************************************  
+
 ### Displaying Code and Plosts
 
 * **_Always use the `{r  eval=FALSE}` at the beginning of the chunk code_** to stop RStudio automatic run.  
 * To have a better control on how to display the code chunks and plots, use the **chunk Preferences**. It appears in the Editor panel when `{r}` or other code type is at the head of the code chunk.  
 * Click on the gear icon and several option will be available.   
 
+****************************************************************************  
 
 ### How to add/embed videos and images.  
 
@@ -991,6 +998,8 @@ This section creates a pdf and a e-pub files, but they constantly have problems 
 1. In //Environment > Git > Select all the files (cmmd + A) and check all files. Click on **commit**, place the commit comment and click **commit**.  
 1. **Push** all the files to GitHub.  
 
+****************************************************************************  
+
 ### To Publish the GitHub Page.  
 
 1. Go to the [my GitHub account](https://github.com/MarceloRosales/)  
@@ -999,12 +1008,15 @@ This section creates a pdf and a e-pub files, but they constantly have problems 
 1. In **source** select branch: **main** and folder: **/docs**, then **Save**.  
 1. A new web address where the page is been hosted will be displayed. 
   
+****************************************************************************  
 
 ### Other method for Bookdown and GitHub Pages:   
 
 **THESE METHODs PROVED TO BE MORE COMPLICATED, BUT ARE PLACE HERE AS REFERENCE. FOR A SIMPLER VERSION SEE GITHUB.**  
 
 [Video](https://www.youtube.com/watch?v=RdSmYvbQkhs)
+
+****************************************************************************  
 
 #### Method 1. Existing project, GitHub first  
 [Source; Happy Git and GitHub for the use R](https://happygitwithr.com/existing-github-first.html)  
@@ -1180,6 +1192,7 @@ blogdown::new_site(theme = "themefisher/airspace-hugo")
     1. **Unselect** the Block command line pushes that expose my email check box.
 1. Then, click **Push** in the same window again.  **Push successfull**.   
 
+****************************************************************************  
 
 ### Setting Netlify.  
 [Netlify](https://www.netlify.com/).  
@@ -1212,6 +1225,8 @@ blogdown::hugo_version()
 1. Commit and Push.  
 1. Click on domain or paste link to web browser. 
 1. **Success!! Page is live.**  
+
+****************************************************************************  
 
 ###  How to modify site in Rstudio
 
