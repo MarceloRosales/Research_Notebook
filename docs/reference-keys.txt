@@ -64,3 +64,5 @@ applications
 example-one
 example-two
 final-words
+how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.
+ex.

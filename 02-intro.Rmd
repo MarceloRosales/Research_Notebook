@@ -13,6 +13,8 @@ Account name: marcelorosales
 Full Name: Marcelo Rosales  
 Home directory: /Users/marcelorosales  
   
+****************************************************************************    
+
 ## Install Homebrew  
   
 > **Why to Install Homebrew?** Homebrew is a `terminal` program that helps to easily Install, Update, Upgrade, and Automate many tasks in Mac computers.   
@@ -21,7 +23,7 @@ I used Mainly to migrate all my programs from one machine to another.
 > `Formulae and Cask` are small code snippets that need to be copy/paste or type into Mac Terminal to install a program.  
 
 An example of a "Cask formula":  
-```
+```{ruby eval=FALSE}
 brew install --cask inkscape
 ```
 You can search for the formulae and cask of a program in the homebrew webpage.
@@ -33,27 +35,27 @@ https://www.youtube.com/watch?v=1uvr9-zUB3w.
 https://www.youtube.com/watch?v=-VP2NVv3LHg.  
 
 **To Install Homebrew (on macOS or Linux)** <https://brew.sh/>.   
-```
+```{ruby, eval=FALSE }
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```   
 More installation information and options: <https://docs.brew.sh/Installation>.
 If running Linux or WSL, there are some pre-requisite packages to install.
 
 **To Uninstall Homebrew** link [here](https://github.com/homebrew/install#uninstall-homebrew)  
-```
+```{ruby, eval=FALSE }
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
 ```  
 Download the uninstall script and run /bin/bash uninstall.sh --help to view more uninstall options.
 
 
 Homebrew installs the stuff you need that Apple (or your Linux system) didn’t.  
-```
+```{ruby, eval=FALSE}
 brew install wget
-```
+```  
 
 Update and upgrade, in brief, brew update updates Homebrew itself while brew upgrade will upgrade your Homebrew-installed software to their latest versions.Dec 2020:   
 
-```
+```{ruby, eval=FALSE }
 brew update
 brew upgrade
 ```
@@ -62,7 +64,7 @@ brew upgrade
 IF Error:   
 homebrew-core is a shallow clone.   
 To `brew update`, first run:   
-```
+```{ruby, eval=FALSE }
 git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
 ```   
 This restriction has been made on GitHub's request because updating shallow
@@ -75,7 +77,7 @@ the inconvenience!
 The run ( requires a long time to run )   
 
 Check if brew installed correctly with:   
-```
+```{ruby, eval=FALSE }
 brew doctor
 ```   
 Usually it prompts **_`Your system is ready to brew.`_**   
@@ -83,7 +85,7 @@ Usually it prompts **_`Your system is ready to brew.`_**
 In my macbook pro 2015:   
 **Warning: Homebrew's sbin was not found in your PATH but you have installed formulae that put executables in /usr/local/sbin.**
 Consider setting the PATH for example like... so run:   
-```
+```{ruby, eval=FALSE }
 echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.zshrc
 ```   
 Warning: Your Xcode (11.7) is outdated.  
@@ -91,30 +93,32 @@ Please update to Xcode 12.3 (or delete it).
 Xcode can be updated from the App Store.  
 
 **To check if a software/package is installed, and if not, then install**   
-```
+```{ruby, eval=FALSE }
 brew list <formulae1> || brew install <formulae1>
 ```   
 This will error on list and continue with install if not installed otherwise it will just list package files. (one could modify this further as a function or alias in .bashrc to make it easier to type)
 
 From the [tutorial](https://www.youtube.com/watch?v=SELYgZvAZbU)
 To confirm installation and to check install use the command.   
-```
+```{ruby, eval=FALSE }
 brew help
 ```  
 To list all the packages that you can install with homebrew use the command.  
-```
+```{ruby, eval=FALSE }
 brew search
 ```   
 A long list will be displayed. If you want to count the number of packages available, 'search' with 'word count' as a list with the command.  
-```
+```{ruby, eval=FALSE }
 brew search | wc -l
 ```   
 To search for a specific package use the command, or the brew web page search engine [here]().   
+```{}
+brew search <name of the package>
 ```
-brew search <name of the package>   
-Ex.   
+Example
+```{ruby, eval=FALSE }
 brew search postgres
-```   
+```
 Results can be of two types:   
 - Formulae which typically deals with command software and,   
 - Cask is and extension of homebrew that allows us to install macOS native applications like google chrome, etc.   
@@ -122,65 +126,75 @@ Results can be of two types:
 **To install packages with brew, ** first check if the package exist, type the name of the package, ex. `tree` command.  
 If the package is not installed the message `bash: tree: command not found` will be displayed. 
 To install the package (tree) use the command.
-```
+```{ruby, eval=FALSE }
 brew install tree
 ```   
 To see the path of the installed package (in this case tree), type in terminal.
-```
+```{}
 which <pckg name>   ex.
+```
+
+```{ruby, eval=FALSE }
 which tree
-```   
+```
 Terminal will display `/usr/local/bin/tree`, which seem to be the path of the folder where the package was saved, but in reality is a `symbolic link` or `symlink`.  
 To see the real location use the commands list and list-out and copy the `symlink` of the packege.   
-```
+```{ruby, eval=FALSE }
 ls -la /usr/local/bin/tree
 ```   
 Terminal will display **lrwxr-xr-x  1 Marcelo-Rosales  admin  29 Jan  4 18:04 /usr/local/bin/tree -> ../Cellar/tree/1.8.0/bin/tree**, where the last portion `../Cellar/tree/1.8.0/bin/tree` indicates the real location of the package.    
 
 To see more information of the package, like the description, where and when was installed, etc. use the command.
-```
+```{ruby, eval=FALSE }
 brew info tree
 ```    
 If not installed it will also show the dependencies need for the installation. ex. `brew info node`.   
 To uninstall a package.    
-```
+```{ruby, eval=FALSE }
 brew uninstall tree 
 ```   
 If you want to install GNU packages that are already install natively in and from macOS. It will not over-write over the original, instead it will add a `g` prefix in the name of the new package. 
 
 To see the outdate packages that need an update use the command.
-```
+```{ruby, eval=FALSE }
 brew outdated
 ```    
 Then `brew update` and `brew upgrade`. However; by default, brew does not remove old version of a package. To remove this outdated version run the command.  
-``` 
+``` {ruby, eval=FALSE }
 brew cleanup
 ```   
 **To install applications**, use the command cask, ex.  
-```
+```{ruby, eval=FALSE }
 brew cask install firefox
-_Recently the "cask" command has been modify to "--cask". From now on the command line would be like:_   
-brew install --cask firefox
 ```   
-to see info or go directly to the home web page of the application use.   
+
+**_Recently the "cask" command has been modify to "--cask". From now on the command line would be like:_**   
+
+```{ruby, eval=FALSE}
+brew install --cask firefox
 ```
+
+to see info or go directly to the home web page of the application use.   
+```{ruby, eval=FALSE }
 brew info --cask firefox
 brew homepage --cask firefox
 ```   
 
 **To install packages from git repositories,** we can tap the repository and then install the package. This packages Formulae or casks are usually not available in the brew search or web. So;   
 1st.: we have to pull the formulae or casks from the git repository with
-```
+```{}
 brew tap <name of the repository>  
-Ex.  
-brew tap heroku/brew
-```   
-2nd.: Search in brew if the formulae or cask were saved.This will pull the Formulae needed to install.
 ```
+Ex.
+```{ruby, eval=FALSE }
+brew tap heroku/brew
+```
+2nd.: Search in brew if the formulae or cask were saved.This will pull the Formulae needed to install.
+```{ruby, eval=FALSE }
 brew search heroku
 ```   
 3rd.: If present, then install as normal. 
-```
+```{ruby, eval=FALSE }
 brew install heroku
 ```   
 
@@ -189,15 +203,15 @@ brew install heroku
 ## Brew Bundle and the "Brewfile": Tips  
 
 In brew **Install “mas”**, it lets you install and update application from the apple store.   
-```
+```{ruby, eval=FALSE }
 brew list mas || brew install mas
-or
+# or
 brew install mas
 ```
 
 **Install the command "brew bundle"**: With this package you can dump all the programs and applications that you installed with brew over time in a "brew file". <https://twit.tv/shows/hands-on-mac/episodes/9>.   
 
-```
+```{ruby, eval=FALSE }
 brew bundle  
 # or  
 brew bundle install   
