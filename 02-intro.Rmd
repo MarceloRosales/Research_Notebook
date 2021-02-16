@@ -205,36 +205,49 @@ brew install heroku
 In brew **Install “mas”**, it lets you install and update application from the apple store.   
 ```{ruby, eval=FALSE }
 brew list mas || brew install mas
-# or
+```  
+or
+```{ruby, eval=FALSE }
 brew install mas
 ```
 
 **Install the command "brew bundle"**: With this package you can dump all the programs and applications that you installed with brew over time in a "brew file". <https://twit.tv/shows/hands-on-mac/episodes/9>.   
 
 ```{ruby, eval=FALSE }
-brew bundle  
-# or  
+brew bundle
+```
+or
+```{ruby, eval=FALSE }
 brew bundle install   
-```  
+```
 [link here](https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f)  
 
 At first install (or if never done before) there is no brewfile  and **Error: No Brewfile found**. To create a brew file run:
 
-``` brew bundle```  
+``` {ruby, eval=FALSE }
+brew bundle
+```  
 
-```brew install bash-completions```
+```{ruby, eval=FALSE }
+brew install bash-completions
+```
 
 To see the # of packages available in brew.  
-```brew search```   
+```{ruby, eval=FALSE }
+brew search
+```   
 
 To see the list of packages, [word count]- list  
-```brew search | wc -l``` 
+```{ruby, eval=FALSE }
+brew search | wc -l
+``` 
 
 To search a specific package.  
 
-```{}
+```{ruby, eval=FALSE }
 brew search [name of package]
-# Ex. 
+```
+```{ruby, eval=FALSE }
 brew search postgres
 ```
 
@@ -270,7 +283,7 @@ To see the version of packages:
 
 If there is already a native package on the operating system, for instance macOS grep. Then the new package installed will have a “g” prefix.  
 
-```
+```{ruby, eval=FALSE }
 brew update
 brew outdated
 Brew upgrade
@@ -281,12 +294,12 @@ brew doctor
 To install **Mac applications** use the **“cask”** command.
 Example. 
 
-```
+```{ruby, eval=FALSE }
 brew cask install firefox 
 ```
 
 To open the webpages of the application directly from terminal, use
-```
+```{ruby, eval=FALSE }
 brew home rstudio
 brew home r
 brew home pycharm

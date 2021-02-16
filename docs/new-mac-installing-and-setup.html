@@ -366,25 +366,24 @@ To uninstall a package.</p>
 <div id="brew-bundle-and-the-brewfile-tips" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Brew Bundle and the “Brewfile”: Tips</h2>
 <p>In brew <strong>Install “mas”</strong>, it lets you install and update application from the apple store.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb30-1"><a href="new-mac-installing-and-setup.html#cb30-1" aria-hidden="true" tabindex="-1"></a>brew list mas <span class="kw">||</span> brew install mas</span>
-<span id="cb30-2"><a href="new-mac-installing-and-setup.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
-<span id="cb30-3"><a href="new-mac-installing-and-setup.html#cb30-3" aria-hidden="true" tabindex="-1"></a>brew install mas</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb30-1"><a href="new-mac-installing-and-setup.html#cb30-1" aria-hidden="true" tabindex="-1"></a>brew list mas <span class="kw">||</span> brew install mas</span></code></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb31-1"><a href="new-mac-installing-and-setup.html#cb31-1" aria-hidden="true" tabindex="-1"></a>brew install mas</span></code></pre></div>
 <p><strong>Install the command “brew bundle”</strong>: With this package you can dump all the programs and applications that you installed with brew over time in a “brew file.” <a href="https://twit.tv/shows/hands-on-mac/episodes/9" class="uri">https://twit.tv/shows/hands-on-mac/episodes/9</a>.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb31-1"><a href="new-mac-installing-and-setup.html#cb31-1" aria-hidden="true" tabindex="-1"></a>brew bundle  </span>
-<span id="cb31-2"><a href="new-mac-installing-and-setup.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or  </span></span>
-<span id="cb31-3"><a href="new-mac-installing-and-setup.html#cb31-3" aria-hidden="true" tabindex="-1"></a>brew bundle install   </span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb32-1"><a href="new-mac-installing-and-setup.html#cb32-1" aria-hidden="true" tabindex="-1"></a>brew bundle</span></code></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb33-1"><a href="new-mac-installing-and-setup.html#cb33-1" aria-hidden="true" tabindex="-1"></a>brew bundle install   </span></code></pre></div>
 <p><a href="https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f">link here</a></p>
 <p>At first install (or if never done before) there is no brewfile and <strong>Error: No Brewfile found</strong>. To create a brew file run:</p>
-<p><code>brew bundle</code></p>
-<p><code>brew install bash-completions</code></p>
-<p>To see the # of packages available in brew.<br />
-<code>brew search</code></p>
-<p>To see the list of packages, [word count]- list<br />
-<code>brew search | wc -l</code></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb34-1"><a href="new-mac-installing-and-setup.html#cb34-1" aria-hidden="true" tabindex="-1"></a>brew bundle</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb35-1"><a href="new-mac-installing-and-setup.html#cb35-1" aria-hidden="true" tabindex="-1"></a>brew install bash<span class="kw">-</span>completions</span></code></pre></div>
+<p>To see the # of packages available in brew.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb36-1"><a href="new-mac-installing-and-setup.html#cb36-1" aria-hidden="true" tabindex="-1"></a>brew search</span></code></pre></div>
+<p>To see the list of packages, [word count]- list</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb37-1"><a href="new-mac-installing-and-setup.html#cb37-1" aria-hidden="true" tabindex="-1"></a>brew search <span class="kw">|</span> wc <span class="kw">-</span>l</span></code></pre></div>
 <p>To search a specific package.</p>
-<pre><code>brew search [name of package]
-# Ex. 
-brew search postgres</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb38-1"><a href="new-mac-installing-and-setup.html#cb38-1" aria-hidden="true" tabindex="-1"></a>brew search <span class="kw">[</span>name of package<span class="kw">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb39-1"><a href="new-mac-installing-and-setup.html#cb39-1" aria-hidden="true" tabindex="-1"></a>brew search postgres</span></code></pre></div>
 <p><a href="https://www.youtube.com/watch?v=SELYgZvAZbU">Homebrew Tutorial video</a></p>
 <p>To install a package:<br />
 <code>brew install tree</code></p>
@@ -408,18 +407,18 @@ This means that the location is in <strong>/usr/local/Cellar directory.</strong>
 <p>To see the version of packages:<br />
 <code>grep --version</code></p>
 <p>If there is already a native package on the operating system, for instance macOS grep. Then the new package installed will have a “g” prefix.</p>
-<pre><code>brew update
-brew outdated
-Brew upgrade
-brew clean up
-brew doctor </code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb40-1"><a href="new-mac-installing-and-setup.html#cb40-1" aria-hidden="true" tabindex="-1"></a>brew update</span>
+<span id="cb40-2"><a href="new-mac-installing-and-setup.html#cb40-2" aria-hidden="true" tabindex="-1"></a>brew outdated</span>
+<span id="cb40-3"><a href="new-mac-installing-and-setup.html#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="dt">Brew</span> upgrade</span>
+<span id="cb40-4"><a href="new-mac-installing-and-setup.html#cb40-4" aria-hidden="true" tabindex="-1"></a>brew clean up</span>
+<span id="cb40-5"><a href="new-mac-installing-and-setup.html#cb40-5" aria-hidden="true" tabindex="-1"></a>brew doctor </span></code></pre></div>
 <p>To install <strong>Mac applications</strong> use the <strong>“cask”</strong> command.
 Example.</p>
-<pre><code>brew cask install firefox </code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb41-1"><a href="new-mac-installing-and-setup.html#cb41-1" aria-hidden="true" tabindex="-1"></a>brew cask install firefox </span></code></pre></div>
 <p>To open the webpages of the application directly from terminal, use</p>
-<pre><code>brew home rstudio
-brew home r
-brew home pycharm</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb42-1"><a href="new-mac-installing-and-setup.html#cb42-1" aria-hidden="true" tabindex="-1"></a>brew home rstudio</span>
+<span id="cb42-2"><a href="new-mac-installing-and-setup.html#cb42-2" aria-hidden="true" tabindex="-1"></a>brew home r</span>
+<span id="cb42-3"><a href="new-mac-installing-and-setup.html#cb42-3" aria-hidden="true" tabindex="-1"></a>brew home pycharm</span></code></pre></div>
 <hr />
 </div>
 <div id="using-scripts-to-automate-installs-and-save-time-in-install-and-setup" class="section level2" number="2.3">
@@ -560,13 +559,13 @@ To check in Terminal run git.</p>
 2. .bashrc</p>
 <p>This files may or maynot exist in the computer, (In my new computer did not exist neither of these files).
 To find these files, go to your home directory.</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="new-mac-installing-and-setup.html#cb38-1" aria-hidden="true" tabindex="-1"></a>pwd <span class="co"># (present working directory). If not at home directory, go to /Users/Marcelo-Rosales.  </span></span>
-<span id="cb38-2"><a href="new-mac-installing-and-setup.html#cb38-2" aria-hidden="true" tabindex="-1"></a>ls <span class="sc">-</span>la <span class="co"># list files and list attribute files (hidden files) or .  </span></span>
-<span id="cb38-3"><a href="new-mac-installing-and-setup.html#cb38-3" aria-hidden="true" tabindex="-1"></a>find .bash_profile <span class="co"># to find the .file.   </span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="new-mac-installing-and-setup.html#cb45-1" aria-hidden="true" tabindex="-1"></a>pwd <span class="co"># (present working directory). If not at home directory, go to /Users/Marcelo-Rosales.  </span></span>
+<span id="cb45-2"><a href="new-mac-installing-and-setup.html#cb45-2" aria-hidden="true" tabindex="-1"></a>ls <span class="sc">-</span>la <span class="co"># list files and list attribute files (hidden files) or .  </span></span>
+<span id="cb45-3"><a href="new-mac-installing-and-setup.html#cb45-3" aria-hidden="true" tabindex="-1"></a>find .bash_profile <span class="co"># to find the .file.   </span></span></code></pre></div>
 <p>To clear prior customization, move or delete 2 bash files.</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="new-mac-installing-and-setup.html#cb39-1" aria-hidden="true" tabindex="-1"></a>mk  </span>
-<span id="cb39-2"><a href="new-mac-installing-and-setup.html#cb39-2" aria-hidden="true" tabindex="-1"></a>mv .bash_profile DotFiles<span class="sc">/</span> <span class="co"># this command will move bash files in to a folder named &quot;DotFiles&quot;.  </span></span>
-<span id="cb39-3"><a href="new-mac-installing-and-setup.html#cb39-3" aria-hidden="true" tabindex="-1"></a>mv .bashrc DotFiles<span class="sc">/</span> </span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="new-mac-installing-and-setup.html#cb46-1" aria-hidden="true" tabindex="-1"></a>mk  </span>
+<span id="cb46-2"><a href="new-mac-installing-and-setup.html#cb46-2" aria-hidden="true" tabindex="-1"></a>mv .bash_profile DotFiles<span class="sc">/</span> <span class="co"># this command will move bash files in to a folder named &quot;DotFiles&quot;.  </span></span>
+<span id="cb46-3"><a href="new-mac-installing-and-setup.html#cb46-3" aria-hidden="true" tabindex="-1"></a>mv .bashrc DotFiles<span class="sc">/</span> </span></code></pre></div>
 <p>The bash_Profile is used for login shell.
 The bashrc file is used for non login shell.
 To create a .bash_profile and a .bashrc file.
