@@ -59,6 +59,7 @@ how-to-insert-colummns-in-r-markdown.
 columns-loremipsum-example
 this-section-will-have-two-columns
 how-to-find-the-indices-of-lines-in-markdown-that-are-prose-not-balanced.
+how-to
 applications
 example-one
 example-two

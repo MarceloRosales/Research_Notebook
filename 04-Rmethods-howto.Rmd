@@ -54,6 +54,7 @@ ipsum_items <- replicate(5, lorem::ipsum_words(5))
 cat(paste("-", ipsum_items), sep = "\n")
 ```  
 
+****************************************************************************  
 
 ## How to insert colummns in r markdown.  
 
@@ -107,6 +108,7 @@ tail(mtcars)
 
 From here the columns are released. 
 
+****************************************************************************  
 
 ## How to Find the indices of lines in Markdown that are prose (not balanced).  
 [Link1](https://cran.r-project.org/web/packages/xfun/xfun.pdf), [Link2](https://rdrr.io/cran/xfun/man/prose_index.html)  
@@ -129,6 +131,18 @@ prose_index(c("a", "````", "```r", "1+1", "```", "````", "c"))
 **Value:** An integer vector of indices of lines that are prose in Markdown.
 **Note:**  If the code fences are not balanced (e.g., a starting fence without an ending fence), this function will treat all lines as prose.  
 
-Still DO NOT UNDERSTAND HOW IT WORKS AND WHAT THE OUTCOME MEANS. 
+Still DO NOT UNDERSTAND HOW IT WORKS AND WHAT THE OUTCOME MEANS.  
 
+****************************************************************************  
+
+##  How to DISCHARGE git commits to avoid conflicts (Special circumstances).  
+
+Apparently it is not possible to discard changes made in >environment >Git tab. (At least I did not found a way yet).  
+
+The only way Discard is by*  
+1. going to the **GitHub desktop app**,  
+1. Select the correct repository from where to remove the changes.   
+1. Select all the changed files (command + A)  
+1. Right click over the selected changes.  
+1. Select **discard selected changes** and click on OK.   
 
