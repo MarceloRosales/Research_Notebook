@@ -532,7 +532,7 @@ A way to manage several Rmad files and compile them in a gitbook style, with the
 
 Bookdown also can be uploaded to github where other collaborators can proof read and commit changes if nessesary.
 
-**DEMO for Authoring Books with R Markdown.¥** 
+**DEMO for Authoring Books with R Markdown.** 
 
 1. Download the GitHub repository https://github.com/rstudio/bookdown-demo as a Zip file, then unzip it locally.
 
