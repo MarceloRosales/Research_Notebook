@@ -685,6 +685,8 @@ See figure \@ref(fig:fig-name).
 For more information see [Bookdown.org](https://bookdown.org).  There is Markdown/Bookdown syntax guide in [Chapter 2](https://bookdown.org/yihui/bookdown/markdown-syntax.html) .  
 
 ****************************************************************************    
+
+
 ### Bookdown Trouble shooting.  
 
 While installing R bookdown, there were several problems. To solve the problem:  
@@ -727,122 +729,6 @@ install.packages("gert")
 install.packages("git2r")
 install.packages('usethis')
 ```
-
-****************************************************************************    
-
-## **Useful Tips.**   
-
-### Math Formula inputs.  
-In the UI menu // n Add-ins menu, there is the Input LaTeX Math. Write the math formula and a latex source will be generated.
-
-For example*.  
-a\ +\ ß\ =\ \sum_{i=1}^nX_i.   
-
-Then add $ at the beginning and the end of the equation and formula will be display as a professional math formula in the preview.  
-
-$x^2 + y^2$  
-
-$a\ +\ ß\ =\ \sum_{i=1}^nX_i$  
-
-****************************************************************************  
-
-### Displaying Code and Plosts
-
-* **_Always use the `{r  eval=FALSE}` at the beginning of the chunk code_** to stop RStudio automatic run.  
-* To have a better control on how to display the code chunks and plots, use the **chunk Preferences**. It appears in the Editor panel when `{r}` or other code type is at the head of the code chunk.  
-* Click on the gear icon and several option will be available.   
-
-****************************************************************************  
-
-### How to add/embed videos and images.  
-
-**Videos**  
-To [embed videos in markdown](https://bookdown.org/yihui/rmarkdown/learnr-videos.html).  
-
-```{r echo=TRUE, eval=FALSE}
-![](https://youtu.be/GAVXVkcpbG0){width="100" height="100"}.  
-```
-OR:
-```{r echo=TRUE, eval=FALSE}
-<iframe width="560" height="315" src="https://youtu.be/GAVXVkcpbG0" frameborder="0" allowfullscreen></iframe>  
-```
-```{r echo=TRUE, eval=FALSE}
-knitr::include_url("https://youtu.be/GAVXVkcpbG0")
-```  
-
-**Images**  
-To add a pictures, use:   
-[source 01](https://stackoverflow.com/questions/25166624/insert-picture-table-in-r-markdown).  
-
-`![Caption for the picture.](/path/to/image.png)`  
-
-But this do not offer the ability to adjust the image to fit the page (see Update, below). To adjust the image properties (size, resolution, colors, border, etc), you'll need some form of image editor. I find I can do everything I need with one of ImageMagick, GIMP, or InkScape, all free and open source.
-
-Update:  
-Pandoc incorporated "link_attributes" for images. "Resizing images" can be done directly. For example:  
-```{r eval=FALSE, include=FALSE}
-![unchanged image](foo.jpg)
-![much-smaller image](foo.jpg){#id .class width=30 height=20px}
-![half-size image](foo.jpg){#id .class width=50% height=50%}
-```
-
-The bookdown book does a great job of explaining that the best way to include images is by using `include_graphics()'. For example, a full width image can be printed with a caption below:
-
-```{r eval=FALSE, include=FALSE}
-{r pressure, echo=FALSE, fig.cap="A caption", out.width = '100%'}
-knitr::include_graphics("temp.png")
-```
-The reason this method is better than the pandoc approach `![your image](path/to/image)` is because:
-- It automatically changes the command based on the output format (HTML/PDF/Word)
-- The same syntax can be used to the size of the plot (`fig.width`), the output width in the report (`out.width`), add captions (`fig.cap`) etc.
-- It uses the best graphical devices for the output. This means PDF images remain high resolution.  
-
-****************************************************************************    
-
-### How to check Differences between rmarkdown files  
-
-The `diff_rmd` function can be used to produce a nicely-formatted document showing the differences between two rmarkdown files. This function can be used to compare two files, or a file with previous versions of itself (within a git repository). See [here](https://ropenscilabs.github.io/reviewer/index.html#differences-between-rmarkdown-files) for more info.  
-
-You can install the development version of `reviewer` from [GitHub](https://github.com/ropenscilabs/reviewer) with:  
-
-```{r eval=FALSE}
-remotes::install_github("ropenscilabs/reviewer")
-```  
-
-See the [package vignette](https://ropenscilabs.github.io/reviewer/articles/reviewer.html) for a demonstration.  
-
-The `diff_rmd` function can be used to produce a nicely-formatted document showing the differences between two rmarkdown files. For the purposes of demonstration, we’ll use the example files bundled with the package. We’ll compare modified_file to its earlier version.   
-
-Reference_file:  
-
-```{r eval=FALSE}
-modified_file <- system.file("extdata/CheatSheet-modified.Rmd", package = "reviewer")
-reference_file <- system.file("extdata/CheatSheet.Rmd", package = "reviewer")
-```
-
-Compare:  
-
-```{r eval=FALSE}
-library(reviewer)
-result <- diff_rmd(modified_file, reference_file)
-```
-
-And our output:
-
-**We can also compare the current version of a document to a previous version in stored in a git repository.**   
-
-If a `reference_file` argument is not provided, by default the modified_file will be compared to the most recent copy in the git repo:  
-
-```{r eval=FALSE}
-result <- diff_rmd(modified_file)
-```
-
-**Or we can compare it to how it appeared in the git repository after a particular commit**   (here, the commit with reference 750ab4):  
-
-```{r eval=FALSE}
-result <- diff_rmd(reference_file, "750ab4")
-```
-
 
 ****************************************************************************    
 
@@ -1157,6 +1043,7 @@ output_dir: "docs"
 
 ****************************************************************************    
 
+
 ## Blogdown.  
 
 [Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/).  
@@ -1288,8 +1175,120 @@ blogdown::hugo_version()
 ###  How to modify site in Rstudio
 
 
+********************************************************************************
 
+## **Useful Tips.**   
 
+### Math Formula inputs.  
+In the UI menu // n Add-ins menu, there is the Input LaTeX Math. Write the math formula and a latex source will be generated.
+
+For example*.  
+a\ +\ ß\ =\ \sum_{i=1}^nX_i.   
+
+Then add $ at the beginning and the end of the equation and formula will be display as a professional math formula in the preview.  
+
+$x^2 + y^2$  
+
+$a\ +\ ß\ =\ \sum_{i=1}^nX_i$  
+
+****************************************************************************  
+
+### Displaying Code and Plosts
+
+* **_Always use the `{r  eval=FALSE}` at the beginning of the chunk code_** to stop RStudio automatic run.  
+* To have a better control on how to display the code chunks and plots, use the **chunk Preferences**. It appears in the Editor panel when `{r}` or other code type is at the head of the code chunk.  
+* Click on the gear icon and several option will be available.   
+
+****************************************************************************  
+
+### How to add/embed videos and images.  
+
+**Videos**  
+To [embed videos in markdown](https://bookdown.org/yihui/rmarkdown/learnr-videos.html).  
+
+```{r echo=TRUE, eval=FALSE}
+![](https://youtu.be/GAVXVkcpbG0){width="100" height="100"}.  
+```
+OR:
+```{r echo=TRUE, eval=FALSE}
+<iframe width="560" height="315" src="https://youtu.be/GAVXVkcpbG0" frameborder="0" allowfullscreen></iframe>  
+```
+```{r echo=TRUE, eval=FALSE}
+knitr::include_url("https://youtu.be/GAVXVkcpbG0")
+```  
+
+**Images**  
+To add a pictures, use:   
+[source 01](https://stackoverflow.com/questions/25166624/insert-picture-table-in-r-markdown).  
+
+`![Caption for the picture.](/path/to/image.png)`  
+
+But this do not offer the ability to adjust the image to fit the page (see Update, below). To adjust the image properties (size, resolution, colors, border, etc), you'll need some form of image editor. I find I can do everything I need with one of ImageMagick, GIMP, or InkScape, all free and open source.
+
+Update:  
+Pandoc incorporated "link_attributes" for images. "Resizing images" can be done directly. For example:  
+```{r eval=FALSE, include=FALSE}
+![unchanged image](foo.jpg)
+![much-smaller image](foo.jpg){#id .class width=30 height=20px}
+![half-size image](foo.jpg){#id .class width=50% height=50%}
+```
+
+The bookdown book does a great job of explaining that the best way to include images is by using `include_graphics()'. For example, a full width image can be printed with a caption below:
+
+```{r eval=FALSE, include=FALSE}
+{r pressure, echo=FALSE, fig.cap="A caption", out.width = '100%'}
+knitr::include_graphics("temp.png")
+```
+The reason this method is better than the pandoc approach `![your image](path/to/image)` is because:
+- It automatically changes the command based on the output format (HTML/PDF/Word)
+- The same syntax can be used to the size of the plot (`fig.width`), the output width in the report (`out.width`), add captions (`fig.cap`) etc.
+- It uses the best graphical devices for the output. This means PDF images remain high resolution.  
+
+****************************************************************************    
+
+### How to check Differences between rmarkdown files  
+
+The `diff_rmd` function can be used to produce a nicely-formatted document showing the differences between two rmarkdown files. This function can be used to compare two files, or a file with previous versions of itself (within a git repository). See [here](https://ropenscilabs.github.io/reviewer/index.html#differences-between-rmarkdown-files) for more info.  
+
+You can install the development version of `reviewer` from [GitHub](https://github.com/ropenscilabs/reviewer) with:  
+
+```{r eval=FALSE}
+remotes::install_github("ropenscilabs/reviewer")
+```  
+
+See the [package vignette](https://ropenscilabs.github.io/reviewer/articles/reviewer.html) for a demonstration.  
+
+The `diff_rmd` function can be used to produce a nicely-formatted document showing the differences between two rmarkdown files. For the purposes of demonstration, we’ll use the example files bundled with the package. We’ll compare modified_file to its earlier version.   
+
+Reference_file:  
+
+```{r eval=FALSE}
+modified_file <- system.file("extdata/CheatSheet-modified.Rmd", package = "reviewer")
+reference_file <- system.file("extdata/CheatSheet.Rmd", package = "reviewer")
+```
+
+Compare:  
+
+```{r eval=FALSE}
+library(reviewer)
+result <- diff_rmd(modified_file, reference_file)
+```
+
+And our output:
+
+**We can also compare the current version of a document to a previous version in stored in a git repository.**   
+
+If a `reference_file` argument is not provided, by default the modified_file will be compared to the most recent copy in the git repo:  
+
+```{r eval=FALSE}
+result <- diff_rmd(modified_file)
+```
+
+**Or we can compare it to how it appeared in the git repository after a particular commit**   (here, the commit with reference 750ab4):  
+
+```{r eval=FALSE}
+result <- diff_rmd(reference_file, "750ab4")
+```
 
 
 
