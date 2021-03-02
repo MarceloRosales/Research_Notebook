@@ -599,10 +599,12 @@ tinytex::tlmgr_update()
 ### R Bookdown tutorial quick start. (Latest update)
 
 1. **FIle > New project > ...[]... > New Directory > Book Project using bookdown > Directory naem: -> Create project as subdirectory of: -> Browse ~/Documents/GitHub_Repos > √Open in new session ... Create Project.**.  
-1. This will create all the files (.yml, .Rproj, .css, .Rmd, book.bib, including the "Index.Rmd which is the "initialization file" for the HTML book page).  
-1. _bookdown.yml, _output.yml, Readme.md and index.Rmd will automatically open.   
+1. This will create all the files (.yml, book.bib, .Rproj, .text, .css, .Rmd, , including the "Index.Rmd which is the "initialization file" for the HTML book page.  8 file + 6 .Rmd).  
+1. Readme.md, _bookdown.yml, _output.yml and index.Rmd will automatically open.   
+1. In the **_bookdown.yml** file.  
+    a. Add `output_dir: "docs"` to create the docs folder for GitHub Pages. 
 1. In the _output.yml.   
-    a. Make sure the that the output is set to:   **”bookdown::gitbook”** (the first line of the file).   
+    a. Make sure the that the output is set to:   **bookdown::gitbook** (the first line of the file).   
     a. Additional outputs are set (pdf_book and epub_book). This automatically create this 2 formats as well as the HTML format. However; many times, this 2 outputs create conflicts in the building of the book, therefore I recommend to erase these formats unless they are need. In other words*:  
 **Erase the section:**  
 ```{ , eval=FALSE }
@@ -620,18 +622,38 @@ bookdown::epub_book: default
     a. Site: **”bookdown::bookdown_site”**  
     a. Title: (change title).  
     a. author: (change author).  
-    a. date: Change to) "Created: 2021/02/02, Latest update `r Sys.Date()`".   
+    a. date: Change to: **"Created: 2021/02/02, Latest update `r Sys.Date()`"**.   
     a. description: (change description)  
     a. Save file.  
 1. In **Tools> Project Options …[ ]… > Build tools>**, make sure that it is set to: **website..**.  
-1. Since the project already started as a bookdown, the "build" tab will already be displayed in the Environment Panel. 
-1. Press the **Build tab > Build book** to create the bookdown page.  
-1. A new **_book** or **docs** folder will be automatically created with all the html file needed for the web page.  
+1. Since the project already started as a bookdown, the "build" tab will already be displayed in the Environment Panel.  (See below if not).  
+1. Press the **Build tab > Build book > bookdown::gitbook** to create the bookdown page.  (All Formats will create all the formats pdf and epub if available).  
+1. A new **docs** folders will be automatically created with all the html file needed for the web page. (**_book** and _bookdown_files folders are also created).   
 1. You can use the **Knit** button to preview the files.   
+1. Close the project, after configuration in GitHub app and GitHubPages, open again and project will display the **Git Tab** in the environment panel.    
 
-#### To create the website in gitHub Pages. 
-1. 
+#### To create the website in gitHub Pages.   
 
+Go to the GitHub desktop app.  
+1. Go to the Repository List screen. (click in the down arrow next to **Current Repository**).  
+1. Click on **Add** (next to the Filter box).  
+1. Add > Add Existing Repository > ...[]... Add local Repository > choose (Choose containing folder) > Open > ...[]...  
+1. **Message* `This directory does not appear to be a Git repository. Would you like to create a repository here instead?`   
+1. Click in **Create a repository** > ...[]... Create a New Repository > ç Create Repository.  
+1. GitHub will create the repository in the app. 
+1. ç Publish Repository > ...[]... **Un-check** `keep this code private` > ç Publish Repository.  
+
+Go to GitHub.com page (browser).   
+1. [GitHub](https://github.com/).  
+1. In the repository list select the repsitory created.  
+1. MarceloRosales/Repo Name > Settings > GitHub Pages > Source > √ main > selected forlder: /docs > Save.  
+1. Your site is ready to be published at https://~.github.io/~/.  
+1. Close/Open Project(Repository) in RStudio and the **Git** tab will be displayed and available
+
+
+****************************************************************************    
+
+### R Bookdown tutorial quick start. (If not created as Bookdown)
 
 1. **File> New project> New directory> Empty project… [ ]…** Directory name> choose location (subdirectory of…)
 2. Once project is created, open a new R Markdown file: **File> New File> R Markdown> Title of the book> Author > √HTML> OK**  
