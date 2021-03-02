@@ -33,12 +33,8 @@ r-bookdown.
 get-started-with-bookdown
 r-bookdown-tutorial-quick-start.-latest-update
 to-create-the-website-in-github-pages.
+r-bookdown-tutorial-quick-start.-if-not-created-as-bookdown
 bookdown-trouble-shooting.
-useful-tips.
-math-formula-inputs.
-displaying-code-and-plosts
-how-to-addembed-videos-and-images.
-how-to-check-differences-between-rmarkdown-files
 r-and-zotero-for-bibliography.
 start-here-zotero-for-r-installation
 for-zotero-r-to-work-properly.
@@ -54,6 +50,11 @@ method-2.-book-down-and-github-pages.
 blogdown.
 setting-netlify.
 how-to-modify-site-in-rstudio
+useful-tips.
+math-formula-inputs.
+displaying-code-and-plosts
+how-to-addembed-videos-and-images.
+how-to-check-differences-between-rmarkdown-files
 r-methods-and-how-tos
 how-to-add-lorem-ipsum-paragraphs-in-r-markdow.
 how-to-insert-colummns-in-r-markdown.
