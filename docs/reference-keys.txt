@@ -31,7 +31,8 @@ r-notebook
 what-is-the-difference-between-a-notebook-and-an-r-markdown-file
 r-bookdown.
 get-started-with-bookdown
-r-bookdown-quick-tutorial
+r-bookdown-tutorial-quick-start.-latest-update
+to-create-the-website-in-github-pages.
 bookdown-trouble-shooting.
 useful-tips.
 math-formula-inputs.

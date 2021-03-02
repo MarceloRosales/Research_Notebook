@@ -596,7 +596,42 @@ tinytex::tlmgr_update()
 
 ****************************************************************************    
 
-### R Bookdown quick tutorial
+### R Bookdown tutorial quick start. (Latest update)
+
+1. **FIle > New project > ...[]... > New Directory > Book Project using bookdown > Directory naem: -> Create project as subdirectory of: -> Browse ~/Documents/GitHub_Repos > √Open in new session ... Create Project.**.  
+1. This will create all the files (.yml, .Rproj, .css, .Rmd, book.bib, including the "Index.Rmd which is the "initialization file" for the HTML book page).  
+1. _bookdown.yml, _output.yml, Readme.md and index.Rmd will automatically open.   
+1. In the _output.yml.   
+    a. Make sure the that the output is set to:   **”bookdown::gitbook”** (the first line of the file).   
+    a. Additional outputs are set (pdf_book and epub_book). This automatically create this 2 formats as well as the HTML format. However; many times, this 2 outputs create conflicts in the building of the book, therefore I recommend to erase these formats unless they are need. In other words*:  
+**Erase the section:**  
+```{ , eval=FALSE }
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
+```     
+    a. Change the title of the Book "before" and "after" names.  In the sections ` <li><a href="./">A Minimal Book Example</a></li>` to the name of the project, and in after, to any name you want.  
+    a. Save file.      
+1. In the **index.Rmd** file, make sure that in the YAML header:  
+    a. Site: **”bookdown::bookdown_site”**  
+    a. Title: (change title).  
+    a. author: (change author).  
+    a. date: Change to) "Created: 2021/02/02, Latest update `r Sys.Date()`".   
+    a. description: (change description)  
+    a. Save file.  
+1. In **Tools> Project Options …[ ]… > Build tools>**, make sure that it is set to: **website..**.  
+1. Since the project already started as a bookdown, the "build" tab will already be displayed in the Environment Panel. 
+1. Press the **Build tab > Build book** to create the bookdown page.  
+1. A new **_book** or **docs** folder will be automatically created with all the html file needed for the web page.  
+1. You can use the **Knit** button to preview the files.   
+
+#### To create the website in gitHub Pages. 
+1. 
+
 
 1. **File> New project> New directory> Empty project… [ ]…** Directory name> choose location (subdirectory of…)
 2. Once project is created, open a new R Markdown file: **File> New File> R Markdown> Title of the book> Author > √HTML> OK**  
