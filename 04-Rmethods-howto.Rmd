@@ -1,4 +1,4 @@
-# R Methods and how to\`s:
+# R Methods and how "to\`s":
 
 ## How to add Lorem ipsum paragraphs in r markdow.
 
@@ -84,7 +84,7 @@ Put the following in the **css file or directly in rmarkdown.**
 </style>
 ```
 
-### Columns + loremipsum example
+### 3 Columns + loremipsum example
 
 Code:
 
@@ -122,7 +122,7 @@ Result
 **9.** nine.
 :::
 
-### This section will have two columns
+### 2 Columns examples.
 
 Code: (Erase the "()" in the {} section, it should be **{r}** only)
 

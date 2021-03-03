@@ -66,3 +66,4 @@ applications
 how-to-insert-an-image-with-visual-markdown-editor
 example-two
 final-words
+columns-examples.
