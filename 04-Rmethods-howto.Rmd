@@ -80,6 +80,25 @@ Put the following in the **css file or directly in rmarkdown.**
 ```  
 
 ### Columns + loremipsum example
+Code:
+```{ruby, eval=FALSE }
+<div class="col3">
+**1. paragraphs = 1**   
+`r lorem::ipsum()`  
+**2. paragraphs = 3, sentences = c(1, 2, 3)**    
+`r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))`  
+**3. paragraphs = 2, avg_words_per_sentence = 3**     
+`r lorem::ipsum(2, avg_words_per_sentence = 3)`  
+**4.** four.    
+**5.** five.      
+**6.** six.      
+**7.** seven.     
+**8.** eight.    
+**9.** nine.     
+</div>
+```
+
+Result
 
 <div class="col3">
 **1. paragraphs = 1**   
@@ -97,9 +116,18 @@ Put the following in the **css file or directly in rmarkdown.**
 </div>
 
 ### This section will have two columns
+Code:  (Erase the "()" in the {} section, it should be **{r}** only)
+```{ruby, eval=FALSE}
+<div class="col2">  
+```{(r)}
+head(mtcars)
+tail(mtcars)```  
+</div>
+```
+
+Result:
 
 <div class="col2">  
-
 ```{r}
 head(mtcars)
 tail(mtcars)
@@ -139,7 +167,8 @@ Still DO NOT UNDERSTAND HOW IT WORKS AND WHAT THE OUTCOME MEANS.
 
 Apparently it is not possible to discard changes made in >environment >Git tab. (At least I did not found a way yet).  
 
-The only way Discard is by*  
+The only way Discard is by:  
+
 1. going to the **GitHub desktop app**,  
 1. Select the correct repository from where to remove the changes.   
 1. Select all the changed files (command + A)  
