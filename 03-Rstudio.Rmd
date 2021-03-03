@@ -354,6 +354,13 @@ For more help or references on Rmardown styles go to:
 Roses are $\color{red}{\text{beautiful red}}$,
 violets are $\color{blue}{\text{lovely blue}}$.  
 
+To add color to text is a little more complicated. 
+```{}
+Roses are $\color{red}{\text{beautiful red}}$,
+violets are $\color{blue}{\text{lovely blue}}$.  
+```
+
+
 ****************************************************************************    
 
 ### Keyboard Shortcuts 
@@ -685,6 +692,158 @@ See figure \@ref(fig:fig-name).
 For more information see [Bookdown.org](https://bookdown.org).  There is Markdown/Bookdown syntax guide in [Chapter 2](https://bookdown.org/yihui/bookdown/markdown-syntax.html) .  
 
 ****************************************************************************    
+## GitHub Pages and Bookdown:   
+
+### Creating a booklike webpage with RStudio.   
+
+Hosting bookdown in github - Outline  
+Some packages may be required.  
+
+> library(gh)  
+
+- Create bookdown in r in a “repository” folder.
+- Add repository through github desktop.
+- Close r bookdown and open again, (the git tab will appear)
+- Add/Erase portions in the .yml files, build book and commit through R.
+- Edit settings in github browser to show the web page from “docs” folder.
+
+This method is a mix of other references but ultimately my experience to publish my bookdown to GitHub pages. 
+
+1. In RStudio, create a **new bookdown project** (in a new session) from template in a **"repository"** folder.
+    * // Session > New Session
+    * // New Project > New Directory > Book project using bookdown.  
+    * Choose Directory Name.  
+    * Choose the directory/folder to place the book project under. ( Do not use Box or Dropbox or Google Drive or any other cloud storage since RStudio is constantly creating and erasing file that could lead to conflicts when commiting a pushing.)  The page will be saved in GitHub and version control will manage the updates in the folders/files. This is convinient, since all procedures will be made locally in the computer but committed and pushed to all computers/collaborator through Git.
+    * A new book project will be created. All the files needed for bookdown web-page are automatically created.  
+    
+1. Add the newly created **repository** folder to [my GitHub account](https://github.com/MarceloRosales/). Using the **GitHub Desktop app.**  
+    * Click on **Current Repository**  
+    * Click on **Add**.   
+    * Choose **Add existing repository**.  This will Upload the repository created in the local folder to the GitHub account.   
+    * **Add local repository** path and click on **Add Repository**.  
+    * Some time will not recognize folder as repository. Click on **create repository(?)**
+    * **Commit**  by selection all files and filling the **Summary** box (*required*) and **Push** to GitHub.
+1.　The **Git** tab: At this point there is no **Git** Tab in the environment Pane. Save the files in RStudio, and reopen the project and the *Git tab* in environment and **Git button** in main menu will be displayed.  
+1. Open the **_bookdown.yml** file and add `output_dir: "docs"` in a line.  
+1. Open the **_output.yml** file and erase this section from the file.  
+```
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
+```  
+
+This section creates a pdf and a e-pub files, but they constantly have problems building therefore is better to avoid them until needed.  
+
+5. **Build** the book buy clicking in //environment > Build > Build Book >   
+1. Check for Warning or errors in red, a successful creation should say `Output created: docs/index.html`, a new folder **docs** will be created containing all the html files for the page.   
+1. In //Environment > Git > Select all the files (cmmd + A) and check all files. Click on **commit**, place the commit comment and click **commit**.  
+1. **Push** all the files to GitHub.  
+
+****************************************************************************  
+
+### To Publish the GitHub Page.  
+
+1. Go to the [my GitHub account](https://github.com/MarceloRosales/)  
+1. In **Repositories**, choose the repository project created.  
+1. Go to **Settings** of the repository, scroll down to **GitHub**.  
+1. In **source** select branch: **main** and folder: **/docs**, then **Save**.  
+1. A new web address where the page is been hosted will be displayed. 
+  
+****************************************************************************  
+
+### Other method for Bookdown and GitHub Pages:   
+
+**THESE METHODs PROVED TO BE MORE COMPLICATED, BUT ARE PLACE HERE AS REFERENCE. FOR A SIMPLER VERSION SEE GITHUB.**  
+
+[Video](https://www.youtube.com/watch?v=RdSmYvbQkhs)
+
+****************************************************************************  
+
+#### Method 1. Existing project, GitHub first  
+[Source; Happy Git and GitHub for the use R](https://happygitwithr.com/existing-github-first.html)  
+
+A novice-friendly workflow for bringing an existing R project into the RStudio and Git/GitHub universe.  
+Probably your existing R project isolated in a directory on your computer. If that’s not already true, make it so.  
+Create a directory and marshal all the existing data and R scripts there. It doesn’t really matter where you do this, but note where the project currently lives.  
+
+1. Make a repo on GitHub. Go to https://github.com and make sure you are logged in.  
+
+    Click the green “New repository” button.  
+    Public  
+    YES Initialize this repository with a README.  
+    Click the big green button “Create repository.”  
+    Copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button. Or copy the SSH URL if you chose to set up SSH keys.  
+1. Create a New RStudio Project via git clone  
+
+    In RStudio, start a new Project:  
+    File > New Project > Version Control > Git. In the “repository URL” paste the URL of your new GitHub repository.   
+    Suggest: “Open in new session”.  
+    Click “Create Project” to create a new directory, which will be all of these things:  
+        a directory or “folder” on your computer  
+        a Git repository, linked to a remote GitHub repository  
+        an RStudio Project  
+    This should download the README.md file that we created on GitHub in the previous step. Look in RStudio’s file browser pane for the README.md file.
+1. Bring your existing project over  
+
+    Using your favorite method of moving or copying files, copy the files that constitute your existing project into the directory for this new project.  
+    In RStudio, consult the Git pane and the file browser. Are you seeing all the files? They should be here if your move/copy was successful.    
+1. Stage and commit  
+1. Push your local changes to GitHub  
+
+****************************************************************************    
+
+#### Method 2. Book down and GitHub Pages.     
+
+[Source:](https://youtu.be/RdSmYvbQkhs).  
+
+1. In RStudio, create a **new bookdown project** (in a new session) from template.  
+    * // Session > New Session  
+    * // New Project > New Directory > Book project using bookdown.  
+    * Choose Directory Name.  
+    * Choose the directory/folder to place the book project under. ( Do not use Box or Dropbox or Google Drive or any other cloud storage.  The page will be saved in GitHub and version control will manage the updates in the folders/files. This is convinient, since all procedures will be made locally in the computer but commited and pushed to all computers/collaborator throught Git.)  
+    * A new book project will be created. All the files needed for bookdown webpage are automatically created.   
+1. To Upload a bookdown to GitHub go to Terminal in Rstudio.  
+ * In terminal See 'git --help'.  
+ * You can type:  
+ 
+```{ruby eval=FALSE}
+git  # to see if  package is installed or not)
+git –version # To the git version installed. 
+git init  # Initialized empty Git repository in
+git add . # add all
+git commit -m”Add text file in case” # To add the comment in the commit. 
+```  
+   
+> library(gh)  
+> library(gitcreds)  
+  
+Version Control with Git and SVN.   (https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&mode=desktop )  
+Setup for git in r https://r-pkgs.org/git.html.  
+From R, you can check if you already have an SSH key-pair by running:  
+  
+`file.exists("~/.ssh/id_rsa.pub")`  
+  
+Copy  
+If that returns FALSE, you’ll need to create a new key. You can either follow the instructions on GitHub or use RStudio. Go to RStudio’s global options, choose the Git/SVN panel, and click “Create RSA key…”:  
+
+In _output.yml erase 
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
+
+In _bookdown.ylm add
+output_dir: "docs"  
+
+
+****************************************************************************    
 
 
 ### Bookdown Trouble shooting.  
@@ -890,158 +1049,6 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 ****************************************************************************    
 
-## GitHub Pages and Bookdown:   
-
-### Creating a booklike webpage with RStudio.   
-
-Hosting bookdown in github - Outline  
-Some packages may be required.  
-
-> library(gh)  
-
-- Create bookdown in r in a “repository” folder.
-- Add repository through github desktop.
-- Close r bookdown and open again, (the git tab will appear)
-- Add/Erase portions in the .yml files, build book and commit through R.
-- Edit settings in github browser to show the web page from “docs” folder.
-
-This method is a mix of other references but ultimately my experience to publish my bookdown to GitHub pages. 
-
-1. In RStudio, create a **new bookdown project** (in a new session) from template in a **"repository"** folder.
-    * // Session > New Session
-    * // New Project > New Directory > Book project using bookdown.  
-    * Choose Directory Name.  
-    * Choose the directory/folder to place the book project under. ( Do not use Box or Dropbox or Google Drive or any other cloud storage since RStudio is constantly creating and erasing file that could lead to conflicts when commiting a pushing.)  The page will be saved in GitHub and version control will manage the updates in the folders/files. This is convinient, since all procedures will be made locally in the computer but committed and pushed to all computers/collaborator through Git.
-    * A new book project will be created. All the files needed for bookdown web-page are automatically created.  
-    
-1. Add the newly created **repository** folder to [my GitHub account](https://github.com/MarceloRosales/). Using the **GitHub Desktop app.**  
-    * Click on **Current Repository**  
-    * Click on **Add**.   
-    * Choose **Add existing repository**.  This will Upload the repository created in the local folder to the GitHub account.   
-    * **Add local repository** path and click on **Add Repository**.  
-    * Some time will not recognize folder as repository. Click on **create repository(?)**
-    * **Commit**  by selection all files and filling the **Summary** box (*required*) and **Push** to GitHub.
-1.　The **Git** tab: At this point there is no **Git** Tab in the environment Pane. Save the files in RStudio, and reopen the project and the *Git tab* in environment and **Git button** in main menu will be displayed.  
-1. Open the **_bookdown.yml** file and add `output_dir: "docs"` in a line.  
-1. Open the **_output.yml** file and erase this section from the file.  
-```
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
-```  
-
-This section creates a pdf and a e-pub files, but they constantly have problems building therefore is better to avoid them until needed.  
-
-5. **Build** the book buy clicking in //environment > Build > Build Book >   
-1. Check for Warning or errors in red, a successful creation should say `Output created: docs/index.html`, a new folder **docs** will be created containing all the html files for the page.   
-1. In //Environment > Git > Select all the files (cmmd + A) and check all files. Click on **commit**, place the commit comment and click **commit**.  
-1. **Push** all the files to GitHub.  
-
-****************************************************************************  
-
-### To Publish the GitHub Page.  
-
-1. Go to the [my GitHub account](https://github.com/MarceloRosales/)  
-1. In **Repositories**, choose the repository project created.  
-1. Go to **Settings** of the repository, scroll down to **GitHub**.  
-1. In **source** select branch: **main** and folder: **/docs**, then **Save**.  
-1. A new web address where the page is been hosted will be displayed. 
-  
-****************************************************************************  
-
-### Other method for Bookdown and GitHub Pages:   
-
-**THESE METHODs PROVED TO BE MORE COMPLICATED, BUT ARE PLACE HERE AS REFERENCE. FOR A SIMPLER VERSION SEE GITHUB.**  
-
-[Video](https://www.youtube.com/watch?v=RdSmYvbQkhs)
-
-****************************************************************************  
-
-#### Method 1. Existing project, GitHub first  
-[Source; Happy Git and GitHub for the use R](https://happygitwithr.com/existing-github-first.html)  
-
-A novice-friendly workflow for bringing an existing R project into the RStudio and Git/GitHub universe.  
-Probably your existing R project isolated in a directory on your computer. If that’s not already true, make it so.  
-Create a directory and marshal all the existing data and R scripts there. It doesn’t really matter where you do this, but note where the project currently lives.  
-
-1. Make a repo on GitHub. Go to https://github.com and make sure you are logged in.  
-
-    Click the green “New repository” button.  
-    Public  
-    YES Initialize this repository with a README.  
-    Click the big green button “Create repository.”  
-    Copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button. Or copy the SSH URL if you chose to set up SSH keys.  
-1. Create a New RStudio Project via git clone  
-
-    In RStudio, start a new Project:  
-    File > New Project > Version Control > Git. In the “repository URL” paste the URL of your new GitHub repository.   
-    Suggest: “Open in new session”.  
-    Click “Create Project” to create a new directory, which will be all of these things:  
-        a directory or “folder” on your computer  
-        a Git repository, linked to a remote GitHub repository  
-        an RStudio Project  
-    This should download the README.md file that we created on GitHub in the previous step. Look in RStudio’s file browser pane for the README.md file.
-1. Bring your existing project over  
-
-    Using your favorite method of moving or copying files, copy the files that constitute your existing project into the directory for this new project.  
-    In RStudio, consult the Git pane and the file browser. Are you seeing all the files? They should be here if your move/copy was successful.    
-1. Stage and commit  
-1. Push your local changes to GitHub  
-
-****************************************************************************    
-
-#### Method 2. Book down and GitHub Pages.     
-
-[Source:](https://youtu.be/RdSmYvbQkhs).  
-
-1. In RStudio, create a **new bookdown project** (in a new session) from template.  
-    * // Session > New Session  
-    * // New Project > New Directory > Book project using bookdown.  
-    * Choose Directory Name.  
-    * Choose the directory/folder to place the book project under. ( Do not use Box or Dropbox or Google Drive or any other cloud storage.  The page will be saved in GitHub and version control will manage the updates in the folders/files. This is convinient, since all procedures will be made locally in the computer but commited and pushed to all computers/collaborator throught Git.)  
-    * A new book project will be created. All the files needed for bookdown webpage are automatically created.   
-1. To Upload a bookdown to GitHub go to Terminal in Rstudio.  
- * In terminal See 'git --help'.  
- * You can type:  
- 
-```{ruby eval=FALSE}
-git  # to see if  package is installed or not)
-git –version # To the git version installed. 
-git init  # Initialized empty Git repository in
-git add . # add all
-git commit -m”Add text file in case” # To add the comment in the commit. 
-```  
-   
-> library(gh)  
-> library(gitcreds)  
-  
-Version Control with Git and SVN.   (https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&mode=desktop )  
-Setup for git in r https://r-pkgs.org/git.html.  
-From R, you can check if you already have an SSH key-pair by running:  
-  
-`file.exists("~/.ssh/id_rsa.pub")`  
-  
-Copy  
-If that returns FALSE, you’ll need to create a new key. You can either follow the instructions on GitHub or use RStudio. Go to RStudio’s global options, choose the Git/SVN panel, and click “Create RSA key…”:  
-
-In _output.yml erase 
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
-
-In _bookdown.ylm add
-output_dir: "docs"  
-
-
-****************************************************************************    
 
 
 ## Blogdown.  
