@@ -59,11 +59,10 @@ r-methods-and-how-tos
 how-to-add-lorem-ipsum-paragraphs-in-r-markdow.
 how-to-insert-colummns-in-r-markdown.
 columns-loremipsum-example
-this-section-will-have-two-columns
+columns-examples.
 how-to-find-the-indices-of-lines-in-markdown-that-are-prose-not-balanced.
 how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.
 applications
 how-to-insert-an-image-with-visual-markdown-editor
 example-two
 final-words
-columns-examples.

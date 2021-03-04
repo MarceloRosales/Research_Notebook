@@ -10,7 +10,7 @@ Some *significant* applications are demonstrated in this chapter.
 [![RakuPanda](images/RakuPanda.png "Panda avatar"){width="200"}](https://marcelorosales.github.io/Research_Notebook/r-methods-and-how-tos.html#how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.)
 ```
 
-## Example two
+## Example two 
 
 ```{=html}
 <div class="">
