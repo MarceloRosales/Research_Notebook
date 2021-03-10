@@ -65,4 +65,5 @@ how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.
 applications
 how-to-insert-an-image-with-visual-markdown-editor
 example-two
+linear-regression-with-formula
 final-words

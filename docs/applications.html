@@ -227,6 +227,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#how-to-insert-an-image-with-visual-markdown-editor"><i class="fa fa-check"></i><b>5.1</b> How to insert an image (with visual markdown editor)</a></li>
 <li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+<li class="chapter" data-level="5.3" data-path="applications.html"><a href="applications.html#linear-regression-with-formula"><i class="fa fa-check"></i><b>5.3</b> Linear Regression with formula</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -263,6 +264,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="">
   <h1>Hello world!!</h1>
 </div>
+</div>
+<div id="linear-regression-with-formula" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Linear Regression with formula</h2>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="applications.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Linear regression plot full example</span></span>
+<span id="cb118-2"><a href="applications.html#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb118-3"><a href="applications.html#cb118-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb118-4"><a href="applications.html#cb118-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Dummy data frame</span></span>
+<span id="cb118-5"><a href="applications.html#cb118-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>))</span>
+<span id="cb118-6"><a href="applications.html#cb118-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> df<span class="sc">$</span>x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">40</span>)</span>
+<span id="cb118-7"><a href="applications.html#cb118-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb118-8"><a href="applications.html#cb118-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear regression</span></span>
+<span id="cb118-9"><a href="applications.html#cb118-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(y <span class="sc">~</span> x, df)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = y ~ x, data = df)
+## 
+## Coefficients:
+## (Intercept)            x  
+##     -16.978        3.233</code></pre>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="applications.html#cb120-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, df) <span class="co"># Gives Intercept and the slope only.</span></span>
+<span id="cb120-2"><a href="applications.html#cb120-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit) <span class="co">#Gives a detail summary or the regression.</span></span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = y ~ x, data = df)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -79.884 -31.421  -6.648  28.214  96.868 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -16.9782     8.1314  -2.088   0.0394 *  
+## x             3.2333     0.1398  23.129   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 40.35 on 98 degrees of freedom
+## Multiple R-squared:  0.8452, Adjusted R-squared:  0.8436 
+## F-statistic:   535 on 1 and 98 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="applications.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="co"># y =  a + b*x. a= Intercept, b = Slope. </span></span>
+<span id="cb122-2"><a href="applications.html#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="co"># y = mx + b is the same as above where m = slope and b= intercept </span></span>
+<span id="cb122-3"><a href="applications.html#cb122-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-4"><a href="applications.html#cb122-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb122-5"><a href="applications.html#cb122-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">formula =</span> y <span class="sc">~</span> x) <span class="sc">+</span></span>
+<span id="cb122-6"><a href="applications.html#cb122-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb122-7"><a href="applications.html#cb122-7" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
+<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="applications.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GET EQUATION AND R-SQUARED AS STRING</span></span>
+<span id="cb123-2"><a href="applications.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="co"># SOURCE: https://groups.google.com/forum/#!topic/ggplot2/1TgH-kG5XMA</span></span>
+<span id="cb123-3"><a href="applications.html#cb123-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb123-4"><a href="applications.html#cb123-4" aria-hidden="true" tabindex="-1"></a>lm_eqn <span class="ot">&lt;-</span> <span class="cf">function</span>(df){</span>
+<span id="cb123-5"><a href="applications.html#cb123-5" aria-hidden="true" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, df);</span>
+<span id="cb123-6"><a href="applications.html#cb123-6" aria-hidden="true" tabindex="-1"></a>  eq <span class="ot">&lt;-</span> <span class="fu">substitute</span>(<span class="fu">italic</span>(y) <span class="sc">==</span> a <span class="sc">+</span> b <span class="sc">%.%</span> <span class="fu">italic</span>(x)<span class="sc">*</span><span class="st">&quot;,&quot;</span><span class="sc">~</span><span class="er">~</span><span class="fu">italic</span>(r)<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span><span class="st">&quot;=&quot;</span><span class="sc">~</span>r2, </span>
+<span id="cb123-7"><a href="applications.html#cb123-7" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">list</span>(<span class="at">a =</span> <span class="fu">format</span>(<span class="fu">unname</span>(<span class="fu">coef</span>(m)[<span class="dv">1</span>]), <span class="at">digits =</span> <span class="dv">3</span>),</span>
+<span id="cb123-8"><a href="applications.html#cb123-8" aria-hidden="true" tabindex="-1"></a>                        <span class="at">b =</span> <span class="fu">format</span>(<span class="fu">unname</span>(<span class="fu">coef</span>(m)[<span class="dv">2</span>]), <span class="at">digits =</span> <span class="dv">3</span>),</span>
+<span id="cb123-9"><a href="applications.html#cb123-9" aria-hidden="true" tabindex="-1"></a>                        <span class="at">r2 =</span> <span class="fu">format</span>(<span class="fu">summary</span>(m)<span class="sc">$</span>r.squared, <span class="at">digits =</span> <span class="dv">3</span>)))</span>
+<span id="cb123-10"><a href="applications.html#cb123-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.character</span>(<span class="fu">as.expression</span>(eq));</span>
+<span id="cb123-11"><a href="applications.html#cb123-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb123-12"><a href="applications.html#cb123-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb123-13"><a href="applications.html#cb123-13" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="at">x =</span> <span class="dv">25</span>, <span class="at">y =</span> <span class="dv">300</span>, <span class="at">label =</span> <span class="fu">lm_eqn</span>(df), <span class="at">parse =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb123-14"><a href="applications.html#cb123-14" aria-hidden="true" tabindex="-1"></a>p1</span></code></pre></div>
+<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-99-2.png" width="672" /></p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="applications.html#cb124-1" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="dv">23</span>, <span class="at">y =</span> <span class="dv">250</span>, <span class="at">label =</span> <span class="fu">lm_eqn</span>(df), <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">parse=</span>T)</span>
+<span id="cb124-2"><a href="applications.html#cb124-2" aria-hidden="true" tabindex="-1"></a>p2</span></code></pre></div>
+<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-99-3.png" width="672" /></p>
 
 </div>
 </div>

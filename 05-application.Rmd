@@ -17,3 +17,44 @@ Some *significant* applications are demonstrated in this chapter.
   <h1>Hello world!!</h1>
 </div>
 ```
+## Linear Regression with formula
+
+```{r}
+#Linear regression plot full example
+library(ggplot2)
+
+# Dummy data frame
+df <- data.frame(x = c(1:100))
+df$y <- 2 + 3 * df$x + rnorm(100, sd = 40)
+
+# Linear regression
+lm(y ~ x, df)
+fit <- lm(y ~ x, df) # Gives Intercept and the slope only.
+summary(fit) #Gives a detail summary or the regression.
+
+# y =  a + b*x. a= Intercept, b = Slope. 
+# y = mx + b is the same as above where m = slope and b= intercept 
+
+p <- ggplot(data = df, aes(x = x, y = y)) +
+  geom_smooth(method = "lm", se=FALSE, color="red", formula = y ~ x) +
+  geom_point()
+p
+
+# GET EQUATION AND R-SQUARED AS STRING
+# SOURCE: https://groups.google.com/forum/#!topic/ggplot2/1TgH-kG5XMA
+
+lm_eqn <- function(df){
+  m <- lm(y ~ x, df);
+  eq <- substitute(italic(y) == a + b %.% italic(x)*","~~italic(r)^2~"="~r2, 
+                   list(a = format(unname(coef(m)[1]), digits = 3),
+                        b = format(unname(coef(m)[2]), digits = 3),
+                        r2 = format(summary(m)$r.squared, digits = 3)))
+  as.character(as.expression(eq));
+}
+
+p1 <- p + geom_text(x = 25, y = 300, label = lm_eqn(df), parse = TRUE)
+p1
+
+p2 <- p + annotate("text", x=23, y = 250, label = lm_eqn(df), color = "black", size = 3, parse=T)
+p2
+```
