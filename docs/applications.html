@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Applications | All Research Notes</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Applications | All Research Notes" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="r-methods-and-how-tos.html"/>
 <link rel="next" href="final-words.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,6 +51,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <script src="libs/plotly-binding-4.9.3/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
@@ -64,6 +66,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -124,6 +127,29 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -157,59 +183,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html"><i class="fa fa-check"></i><b>3</b> R and Rstudio</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#rstudio-global-settings-exportimport.-configurations-and-settings.."><i class="fa fa-check"></i><b>3.1</b> Rstudio global settings Export/Import. Configurations and settings..</a></li>
-<li class="chapter" data-level="3.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#copytransfer-the-packages-installed-on-one-computer-or-r-version-to-another-using-scripts."><i class="fa fa-check"></i><b>3.2</b> Copy/Transfer the packages installed on one computer or R version to another using Scripts.</a>
+<li class="chapter" data-level="3.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-rstudio-git-and-github-install."><i class="fa fa-check"></i><b>3.1</b> R, RStudio, Git and Github install.</a></li>
+<li class="chapter" data-level="3.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#rstudio-global-settings-exportimport.-configurations-and-settings.."><i class="fa fa-check"></i><b>3.2</b> Rstudio global settings Export/Import. Configurations and settings..</a></li>
+<li class="chapter" data-level="3.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#copytransfer-the-packages-installed-on-one-computer-or-r-version-to-another-using-scripts."><i class="fa fa-check"></i><b>3.3</b> Copy/Transfer the packages installed on one computer or R version to another using Scripts.</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#method-1-the-only-method-that-worked-use-this-one."><i class="fa fa-check"></i><b>3.2.1</b> Method 1: (!THE ONLY METHOD THAT WORKED) USE THIS ONE!!!!!].</a></li>
-<li class="chapter" data-level="3.2.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#method-2-quick-way-of-installing-all-your-old-r-libraries-on-a-new-device.-does-not-work"><i class="fa fa-check"></i><b>3.2.2</b> Method 2: Quick Way of Installing all your old R libraries on a New Device. DOES NOT WORK!!</a></li>
-<li class="chapter" data-level="3.2.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#since-the-code-above-is-not-interactive-i-modify-to-suit-my-needs.does-not-work-neither"><i class="fa fa-check"></i><b>3.2.3</b> Since the code above is not interactive, I modify to suit my needs.<strong>(DOES NOT WORK NEITHER)</strong></a></li>
-<li class="chapter" data-level="3.2.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#old-method-used-to-transfer-discontinue."><i class="fa fa-check"></i><b>3.2.4</b> Old method used to transfer (DISCONTINUE).</a></li>
+<li class="chapter" data-level="3.3.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#method-1-the-only-method-that-worked-use-this-one."><i class="fa fa-check"></i><b>3.3.1</b> Method 1: (!THE ONLY METHOD THAT WORKED) USE THIS ONE!!!!!].</a></li>
+<li class="chapter" data-level="3.3.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#method-2-quick-way-of-installing-all-your-old-r-libraries-on-a-new-device.-does-not-work"><i class="fa fa-check"></i><b>3.3.2</b> Method 2: Quick Way of Installing all your old R libraries on a New Device. DOES NOT WORK!!</a></li>
+<li class="chapter" data-level="3.3.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#since-the-code-above-is-not-interactive-i-modify-to-suit-my-needs.does-not-work-neither"><i class="fa fa-check"></i><b>3.3.3</b> Since the code above is not interactive, I modify to suit my needs.<strong>(DOES NOT WORK NEITHER)</strong></a></li>
+<li class="chapter" data-level="3.3.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#old-method-used-to-transfer-discontinue."><i class="fa fa-check"></i><b>3.3.4</b> Old method used to transfer (DISCONTINUE).</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#interactive-plots-using-r-markdown-notebook."><i class="fa fa-check"></i><b>3.3</b> Interactive Plots using R Markdown Notebook.</a></li>
-<li class="chapter" data-level="3.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-markdown"><i class="fa fa-check"></i><b>3.4</b> R Markdown</a>
+<li class="chapter" data-level="3.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#interactive-plots-using-r-markdown-notebook."><i class="fa fa-check"></i><b>3.4</b> Interactive Plots using R Markdown Notebook.</a></li>
+<li class="chapter" data-level="3.5" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-markdown"><i class="fa fa-check"></i><b>3.5</b> R Markdown</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#introduction."><i class="fa fa-check"></i><b>3.4.1</b> Introduction.</a></li>
-<li class="chapter" data-level="3.4.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#includingexcluding-plots"><i class="fa fa-check"></i><b>3.4.2</b> Including/Excluding Plots</a></li>
-<li class="chapter" data-level="3.4.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#important-notes-for-easy-typing-in-rmarkdown."><i class="fa fa-check"></i><b>3.4.3</b> Important Notes for easy typing in Rmarkdown.</a></li>
-<li class="chapter" data-level="3.4.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#keyboard-shortcuts"><i class="fa fa-check"></i><b>3.4.4</b> Keyboard Shortcuts</a></li>
-<li class="chapter" data-level="3.4.5" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#to-prevent-code-running"><i class="fa fa-check"></i><b>3.4.5</b> TO PREVENT CODE RUNNING</a></li>
-<li class="chapter" data-level="3.4.6" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#plots-and-interactive-plots."><i class="fa fa-check"></i><b>3.4.6</b> Plots and Interactive plots.</a></li>
-<li class="chapter" data-level="3.4.7" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#bonus-r-markdown-cheatsheet"><i class="fa fa-check"></i><b>3.4.7</b> Bonus: R Markdown Cheatsheet</a></li>
+<li class="chapter" data-level="3.5.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#introduction."><i class="fa fa-check"></i><b>3.5.1</b> Introduction.</a></li>
+<li class="chapter" data-level="3.5.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#includingexcluding-plots"><i class="fa fa-check"></i><b>3.5.2</b> Including/Excluding Plots</a></li>
+<li class="chapter" data-level="3.5.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#important-notes-for-easy-typing-in-rmarkdown."><i class="fa fa-check"></i><b>3.5.3</b> Important Notes for easy typing in Rmarkdown.</a></li>
+<li class="chapter" data-level="3.5.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#keyboard-shortcuts"><i class="fa fa-check"></i><b>3.5.4</b> Keyboard Shortcuts</a></li>
+<li class="chapter" data-level="3.5.5" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#to-prevent-code-running"><i class="fa fa-check"></i><b>3.5.5</b> TO PREVENT CODE RUNNING</a></li>
+<li class="chapter" data-level="3.5.6" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#plots-and-interactive-plots."><i class="fa fa-check"></i><b>3.5.6</b> Plots and Interactive plots.</a></li>
+<li class="chapter" data-level="3.5.7" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#bonus-r-markdown-cheatsheet"><i class="fa fa-check"></i><b>3.5.7</b> Bonus: R Markdown Cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-notebook"><i class="fa fa-check"></i><b>3.5</b> R Notebook</a></li>
-<li class="chapter" data-level="3.6" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#what-is-the-difference-between-a-notebook-and-an-r-markdown-file"><i class="fa fa-check"></i><b>3.6</b> What is the difference between a Notebook and an R Markdown file?</a></li>
-<li class="chapter" data-level="3.7" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-bookdown."><i class="fa fa-check"></i><b>3.7</b> R Bookdown.</a>
+<li class="chapter" data-level="3.6" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-notebook"><i class="fa fa-check"></i><b>3.6</b> R Notebook</a></li>
+<li class="chapter" data-level="3.7" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#what-is-the-difference-between-a-notebook-and-an-r-markdown-file"><i class="fa fa-check"></i><b>3.7</b> What is the difference between a Notebook and an R Markdown file?</a></li>
+<li class="chapter" data-level="3.8" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-bookdown."><i class="fa fa-check"></i><b>3.8</b> R Bookdown.</a>
 <ul>
-<li class="chapter" data-level="3.7.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#get-started-with-bookdown"><i class="fa fa-check"></i><b>3.7.1</b> Get started with bookdown</a></li>
-<li class="chapter" data-level="3.7.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-bookdown-tutorial-quick-start.-latest-update"><i class="fa fa-check"></i><b>3.7.2</b> R Bookdown tutorial quick start. (Latest update)</a></li>
-<li class="chapter" data-level="3.7.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-bookdown-tutorial-quick-start.-if-not-created-as-bookdown"><i class="fa fa-check"></i><b>3.7.3</b> R Bookdown tutorial quick start. (If not created as Bookdown)</a></li>
+<li class="chapter" data-level="3.8.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#get-started-with-bookdown"><i class="fa fa-check"></i><b>3.8.1</b> Get started with bookdown</a></li>
+<li class="chapter" data-level="3.8.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-bookdown-tutorial-quick-start.-latest-update"><i class="fa fa-check"></i><b>3.8.2</b> R Bookdown tutorial quick start. (Latest update)</a></li>
+<li class="chapter" data-level="3.8.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-bookdown-tutorial-quick-start.-if-not-created-as-bookdown"><i class="fa fa-check"></i><b>3.8.3</b> R Bookdown tutorial quick start. (If not created as Bookdown)</a></li>
 </ul></li>
-<li class="chapter" data-level="3.8" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#github-pages-and-bookdown"><i class="fa fa-check"></i><b>3.8</b> GitHub Pages and Bookdown:</a>
+<li class="chapter" data-level="3.9" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#github-pages-and-bookdown"><i class="fa fa-check"></i><b>3.9</b> GitHub Pages and Bookdown:</a>
 <ul>
-<li class="chapter" data-level="3.8.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#creating-a-booklike-webpage-with-rstudio."><i class="fa fa-check"></i><b>3.8.1</b> Creating a booklike webpage with RStudio.</a></li>
-<li class="chapter" data-level="3.8.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#to-publish-the-github-page."><i class="fa fa-check"></i><b>3.8.2</b> To Publish the GitHub Page.</a></li>
-<li class="chapter" data-level="3.8.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#other-method-for-bookdown-and-github-pages"><i class="fa fa-check"></i><b>3.8.3</b> Other method for Bookdown and GitHub Pages:</a></li>
-<li class="chapter" data-level="3.8.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#bookdown-trouble-shooting."><i class="fa fa-check"></i><b>3.8.4</b> Bookdown Trouble shooting.</a></li>
+<li class="chapter" data-level="3.9.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#creating-a-booklike-webpage-with-rstudio."><i class="fa fa-check"></i><b>3.9.1</b> Creating a booklike webpage with RStudio.</a></li>
+<li class="chapter" data-level="3.9.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#to-publish-the-github-page."><i class="fa fa-check"></i><b>3.9.2</b> To Publish the GitHub Page.</a></li>
+<li class="chapter" data-level="3.9.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#other-method-for-bookdown-and-github-pages"><i class="fa fa-check"></i><b>3.9.3</b> Other method for Bookdown and GitHub Pages:</a></li>
+<li class="chapter" data-level="3.9.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#bookdown-trouble-shooting."><i class="fa fa-check"></i><b>3.9.4</b> Bookdown Trouble shooting.</a></li>
 </ul></li>
-<li class="chapter" data-level="3.9" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-and-zotero-for-bibliography."><i class="fa fa-check"></i><b>3.9</b> R and zotero for bibliography.</a>
+<li class="chapter" data-level="3.10" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#r-and-zotero-for-bibliography."><i class="fa fa-check"></i><b>3.10</b> R and zotero for bibliography.</a>
 <ul>
-<li class="chapter" data-level="3.9.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#start-here-zotero-for-r-installation"><i class="fa fa-check"></i><b>3.9.1</b> <strong>Start here: Zotero for R INSTALLATION</strong></a></li>
-<li class="chapter" data-level="3.9.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#for-zotero-r-to-work-properly."><i class="fa fa-check"></i><b>3.9.2</b> For Zotero-R to work properly.</a></li>
-<li class="chapter" data-level="3.9.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#to-add-referecesbibliography-to-r-bookdown."><i class="fa fa-check"></i><b>3.9.3</b> To add Refereces/Bibliography to R bookdown.</a></li>
-<li class="chapter" data-level="3.9.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#to-automatically-create-a-bib-database-for-r-packages"><i class="fa fa-check"></i><b>3.9.4</b> To automatically create a bib database for R packages</a></li>
-<li class="chapter" data-level="3.9.5" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#example-from-the-introduction-file-in-bookdown."><i class="fa fa-check"></i><b>3.9.5</b> Example from the “Introduction” file in bookdown.</a></li>
+<li class="chapter" data-level="3.10.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#start-here-zotero-for-r-installation"><i class="fa fa-check"></i><b>3.10.1</b> <strong>Start here: Zotero for R INSTALLATION</strong></a></li>
+<li class="chapter" data-level="3.10.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#for-zotero-r-to-work-properly."><i class="fa fa-check"></i><b>3.10.2</b> For Zotero-R to work properly.</a></li>
+<li class="chapter" data-level="3.10.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#to-add-referecesbibliography-to-r-bookdown."><i class="fa fa-check"></i><b>3.10.3</b> To add Refereces/Bibliography to R bookdown.</a></li>
+<li class="chapter" data-level="3.10.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#to-automatically-create-a-bib-database-for-r-packages"><i class="fa fa-check"></i><b>3.10.4</b> To automatically create a bib database for R packages</a></li>
+<li class="chapter" data-level="3.10.5" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#example-from-the-introduction-file-in-bookdown."><i class="fa fa-check"></i><b>3.10.5</b> Example from the “Introduction” file in bookdown.</a></li>
 </ul></li>
-<li class="chapter" data-level="3.10" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#blogdown."><i class="fa fa-check"></i><b>3.10</b> Blogdown.</a>
+<li class="chapter" data-level="3.11" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#blogdown."><i class="fa fa-check"></i><b>3.11</b> Blogdown.</a>
 <ul>
-<li class="chapter" data-level="3.10.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#setting-netlify."><i class="fa fa-check"></i><b>3.10.1</b> Setting Netlify.</a></li>
-<li class="chapter" data-level="3.10.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#how-to-modify-site-in-rstudio"><i class="fa fa-check"></i><b>3.10.2</b> How to modify site in Rstudio</a></li>
+<li class="chapter" data-level="3.11.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#setting-netlify."><i class="fa fa-check"></i><b>3.11.1</b> Setting Netlify.</a></li>
+<li class="chapter" data-level="3.11.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#how-to-modify-site-in-rstudio"><i class="fa fa-check"></i><b>3.11.2</b> How to modify site in Rstudio</a></li>
 </ul></li>
-<li class="chapter" data-level="3.11" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#useful-tips."><i class="fa fa-check"></i><b>3.11</b> <strong>Useful Tips.</strong></a>
+<li class="chapter" data-level="3.12" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#useful-tips."><i class="fa fa-check"></i><b>3.12</b> <strong>Useful Tips.</strong></a>
 <ul>
-<li class="chapter" data-level="3.11.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#math-formula-inputs."><i class="fa fa-check"></i><b>3.11.1</b> Math Formula inputs.</a></li>
-<li class="chapter" data-level="3.11.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#displaying-code-and-plosts"><i class="fa fa-check"></i><b>3.11.2</b> Displaying Code and Plosts</a></li>
-<li class="chapter" data-level="3.11.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#how-to-addembed-videos-and-images."><i class="fa fa-check"></i><b>3.11.3</b> How to add/embed videos and images.</a></li>
-<li class="chapter" data-level="3.11.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#how-to-check-differences-between-rmarkdown-files"><i class="fa fa-check"></i><b>3.11.4</b> How to check Differences between rmarkdown files</a></li>
+<li class="chapter" data-level="3.12.1" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#math-formula-inputs."><i class="fa fa-check"></i><b>3.12.1</b> Math Formula inputs.</a></li>
+<li class="chapter" data-level="3.12.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#displaying-code-and-plosts"><i class="fa fa-check"></i><b>3.12.2</b> Displaying Code and Plosts</a></li>
+<li class="chapter" data-level="3.12.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#how-to-addembed-videos-and-images."><i class="fa fa-check"></i><b>3.12.3</b> How to add/embed videos and images.</a></li>
+<li class="chapter" data-level="3.12.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#how-to-check-differences-between-rmarkdown-files"><i class="fa fa-check"></i><b>3.12.4</b> How to check Differences between rmarkdown files</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="r-methods-and-how-tos.html"><a href="r-methods-and-how-tos.html"><i class="fa fa-check"></i><b>4</b> R Methods and how “to`s”:</a>
@@ -257,7 +284,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="how-to-insert-an-image-with-visual-markdown-editor" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> How to insert an image (with visual markdown editor)</h2>
 <p><a href="https://marcelorosales.github.io/Research_Notebook/r-methods-and-how-tos.html#how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances."><img src="images/RakuPanda.png" title="Panda avatar" width="200" alt="RakuPanda" /></a></p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb117-1"><a href="applications.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span>!<span class="kw">[</span><span class="dt">RakuPanda</span><span class="kw">]</span>(images<span class="kw">/</span><span class="dt">RakuPanda</span><span class="at">.png</span> <span class="st">&quot;Panda avatar&quot;</span>)<span class="kw">{</span>width<span class="kw">=</span><span class="st">&quot;200&quot;</span><span class="kw">}]</span>(https:<span class="ss">//m</span>arcelorosales<span class="at">.github.io</span><span class="kw">/</span><span class="dt">Research_Notebook</span><span class="kw">/</span>r<span class="kw">-</span>methods<span class="kw">-</span><span class="cf">and</span><span class="kw">-</span>how<span class="kw">-</span>tos<span class="at">.html</span><span class="co">#how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.)</span></span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb120-1"><a href="applications.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span>!<span class="kw">[</span><span class="dt">RakuPanda</span><span class="kw">]</span>(images<span class="kw">/</span><span class="dt">RakuPanda</span><span class="at">.png</span> <span class="st">&quot;Panda avatar&quot;</span>)<span class="kw">{</span>width<span class="kw">=</span><span class="st">&quot;200&quot;</span><span class="kw">}]</span>(https:<span class="ss">//m</span>arcelorosales<span class="at">.github.io</span><span class="kw">/</span><span class="dt">Research_Notebook</span><span class="kw">/</span>r<span class="kw">-</span>methods<span class="kw">-</span><span class="cf">and</span><span class="kw">-</span>how<span class="kw">-</span>tos<span class="at">.html</span><span class="co">#how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.)</span></span></code></pre></div>
 </div>
 <div id="example-two" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Example two</h2>
@@ -267,68 +294,68 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="linear-regression-with-formula" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Linear Regression with formula</h2>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="applications.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Linear regression plot full example</span></span>
-<span id="cb118-2"><a href="applications.html#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb118-3"><a href="applications.html#cb118-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb118-4"><a href="applications.html#cb118-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Dummy data frame</span></span>
-<span id="cb118-5"><a href="applications.html#cb118-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>))</span>
-<span id="cb118-6"><a href="applications.html#cb118-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> df<span class="sc">$</span>x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">40</span>)</span>
-<span id="cb118-7"><a href="applications.html#cb118-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb118-8"><a href="applications.html#cb118-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear regression</span></span>
-<span id="cb118-9"><a href="applications.html#cb118-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(y <span class="sc">~</span> x, df)</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="applications.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Linear regression plot full example</span></span>
+<span id="cb121-2"><a href="applications.html#cb121-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb121-3"><a href="applications.html#cb121-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-4"><a href="applications.html#cb121-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Dummy data frame</span></span>
+<span id="cb121-5"><a href="applications.html#cb121-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>))</span>
+<span id="cb121-6"><a href="applications.html#cb121-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> df<span class="sc">$</span>x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">40</span>)</span>
+<span id="cb121-7"><a href="applications.html#cb121-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-8"><a href="applications.html#cb121-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear regression</span></span>
+<span id="cb121-9"><a href="applications.html#cb121-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(y <span class="sc">~</span> x, df)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = y ~ x, data = df)
 ## 
 ## Coefficients:
 ## (Intercept)            x  
-##       4.984        3.084</code></pre>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="applications.html#cb120-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, df) <span class="co"># Gives Intercept and the slope only.</span></span>
-<span id="cb120-2"><a href="applications.html#cb120-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit) <span class="co">#Gives a detail summary or the regression.</span></span></code></pre></div>
+##       4.722        2.963</code></pre>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="applications.html#cb123-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, df) <span class="co"># Gives Intercept and the slope only.</span></span>
+<span id="cb123-2"><a href="applications.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit) <span class="co">#Gives a detail summary or the regression.</span></span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = y ~ x, data = df)
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -102.585  -21.099   -0.648   21.612   81.583 
+## -131.418  -23.003   -2.292   26.584   72.162 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)    4.984      6.805   0.732    0.466    
-## x              3.083      0.117  26.356   &lt;2e-16 ***
+## (Intercept)   4.7216     7.9587   0.593    0.554    
+## x             2.9628     0.1368  21.654   &lt;2e-16 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Residual standard error: 33.77 on 98 degrees of freedom
-## Multiple R-squared:  0.8764, Adjusted R-squared:  0.8751 
-## F-statistic: 694.6 on 1 and 98 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="applications.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="co"># y =  a + b*x. a= Intercept, b = Slope. </span></span>
-<span id="cb122-2"><a href="applications.html#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="co"># y = mx + b is the same as above where m = slope and b= intercept </span></span>
-<span id="cb122-3"><a href="applications.html#cb122-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb122-4"><a href="applications.html#cb122-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb122-5"><a href="applications.html#cb122-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">formula =</span> y <span class="sc">~</span> x) <span class="sc">+</span></span>
-<span id="cb122-6"><a href="applications.html#cb122-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb122-7"><a href="applications.html#cb122-7" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
-<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="applications.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GET EQUATION AND R-SQUARED AS STRING</span></span>
-<span id="cb123-2"><a href="applications.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="co"># SOURCE: https://groups.google.com/forum/#!topic/ggplot2/1TgH-kG5XMA</span></span>
-<span id="cb123-3"><a href="applications.html#cb123-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb123-4"><a href="applications.html#cb123-4" aria-hidden="true" tabindex="-1"></a>lm_eqn <span class="ot">&lt;-</span> <span class="cf">function</span>(df){</span>
-<span id="cb123-5"><a href="applications.html#cb123-5" aria-hidden="true" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, df);</span>
-<span id="cb123-6"><a href="applications.html#cb123-6" aria-hidden="true" tabindex="-1"></a>  eq <span class="ot">&lt;-</span> <span class="fu">substitute</span>(<span class="fu">italic</span>(y) <span class="sc">==</span> a <span class="sc">+</span> b <span class="sc">%.%</span> <span class="fu">italic</span>(x)<span class="sc">*</span><span class="st">&quot;,&quot;</span><span class="sc">~</span><span class="er">~</span><span class="fu">italic</span>(r)<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span><span class="st">&quot;=&quot;</span><span class="sc">~</span>r2, </span>
-<span id="cb123-7"><a href="applications.html#cb123-7" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">list</span>(<span class="at">a =</span> <span class="fu">format</span>(<span class="fu">unname</span>(<span class="fu">coef</span>(m)[<span class="dv">1</span>]), <span class="at">digits =</span> <span class="dv">3</span>),</span>
-<span id="cb123-8"><a href="applications.html#cb123-8" aria-hidden="true" tabindex="-1"></a>                        <span class="at">b =</span> <span class="fu">format</span>(<span class="fu">unname</span>(<span class="fu">coef</span>(m)[<span class="dv">2</span>]), <span class="at">digits =</span> <span class="dv">3</span>),</span>
-<span id="cb123-9"><a href="applications.html#cb123-9" aria-hidden="true" tabindex="-1"></a>                        <span class="at">r2 =</span> <span class="fu">format</span>(<span class="fu">summary</span>(m)<span class="sc">$</span>r.squared, <span class="at">digits =</span> <span class="dv">3</span>)))</span>
-<span id="cb123-10"><a href="applications.html#cb123-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.character</span>(<span class="fu">as.expression</span>(eq));</span>
-<span id="cb123-11"><a href="applications.html#cb123-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb123-12"><a href="applications.html#cb123-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb123-13"><a href="applications.html#cb123-13" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="at">x =</span> <span class="dv">25</span>, <span class="at">y =</span> <span class="dv">300</span>, <span class="at">label =</span> <span class="fu">lm_eqn</span>(df), <span class="at">parse =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb123-14"><a href="applications.html#cb123-14" aria-hidden="true" tabindex="-1"></a>p1</span></code></pre></div>
-<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-99-2.png" width="672" /></p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="applications.html#cb124-1" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="dv">23</span>, <span class="at">y =</span> <span class="dv">250</span>, <span class="at">label =</span> <span class="fu">lm_eqn</span>(df), <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">parse=</span>T)</span>
-<span id="cb124-2"><a href="applications.html#cb124-2" aria-hidden="true" tabindex="-1"></a>p2</span></code></pre></div>
-<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-99-3.png" width="672" /></p>
+## Residual standard error: 39.5 on 98 degrees of freedom
+## Multiple R-squared:  0.8271, Adjusted R-squared:  0.8254 
+## F-statistic: 468.9 on 1 and 98 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="applications.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="co"># y =  a + b*x. a= Intercept, b = Slope. </span></span>
+<span id="cb125-2"><a href="applications.html#cb125-2" aria-hidden="true" tabindex="-1"></a><span class="co"># y = mx + b is the same as above where m = slope and b= intercept </span></span>
+<span id="cb125-3"><a href="applications.html#cb125-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb125-4"><a href="applications.html#cb125-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb125-5"><a href="applications.html#cb125-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">formula =</span> y <span class="sc">~</span> x) <span class="sc">+</span></span>
+<span id="cb125-6"><a href="applications.html#cb125-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb125-7"><a href="applications.html#cb125-7" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
+<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="applications.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GET EQUATION AND R-SQUARED AS STRING</span></span>
+<span id="cb126-2"><a href="applications.html#cb126-2" aria-hidden="true" tabindex="-1"></a><span class="co"># SOURCE: https://groups.google.com/forum/#!topic/ggplot2/1TgH-kG5XMA</span></span>
+<span id="cb126-3"><a href="applications.html#cb126-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb126-4"><a href="applications.html#cb126-4" aria-hidden="true" tabindex="-1"></a>lm_eqn <span class="ot">&lt;-</span> <span class="cf">function</span>(df){</span>
+<span id="cb126-5"><a href="applications.html#cb126-5" aria-hidden="true" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, df);</span>
+<span id="cb126-6"><a href="applications.html#cb126-6" aria-hidden="true" tabindex="-1"></a>  eq <span class="ot">&lt;-</span> <span class="fu">substitute</span>(<span class="fu">italic</span>(y) <span class="sc">==</span> a <span class="sc">+</span> b <span class="sc">%.%</span> <span class="fu">italic</span>(x)<span class="sc">*</span><span class="st">&quot;,&quot;</span><span class="sc">~</span><span class="er">~</span><span class="fu">italic</span>(r)<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span><span class="st">&quot;=&quot;</span><span class="sc">~</span>r2, </span>
+<span id="cb126-7"><a href="applications.html#cb126-7" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">list</span>(<span class="at">a =</span> <span class="fu">format</span>(<span class="fu">unname</span>(<span class="fu">coef</span>(m)[<span class="dv">1</span>]), <span class="at">digits =</span> <span class="dv">3</span>),</span>
+<span id="cb126-8"><a href="applications.html#cb126-8" aria-hidden="true" tabindex="-1"></a>                        <span class="at">b =</span> <span class="fu">format</span>(<span class="fu">unname</span>(<span class="fu">coef</span>(m)[<span class="dv">2</span>]), <span class="at">digits =</span> <span class="dv">3</span>),</span>
+<span id="cb126-9"><a href="applications.html#cb126-9" aria-hidden="true" tabindex="-1"></a>                        <span class="at">r2 =</span> <span class="fu">format</span>(<span class="fu">summary</span>(m)<span class="sc">$</span>r.squared, <span class="at">digits =</span> <span class="dv">3</span>)))</span>
+<span id="cb126-10"><a href="applications.html#cb126-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.character</span>(<span class="fu">as.expression</span>(eq));</span>
+<span id="cb126-11"><a href="applications.html#cb126-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb126-12"><a href="applications.html#cb126-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb126-13"><a href="applications.html#cb126-13" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="at">x =</span> <span class="dv">25</span>, <span class="at">y =</span> <span class="dv">300</span>, <span class="at">label =</span> <span class="fu">lm_eqn</span>(df), <span class="at">parse =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb126-14"><a href="applications.html#cb126-14" aria-hidden="true" tabindex="-1"></a>p1</span></code></pre></div>
+<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-100-2.png" width="672" /></p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="applications.html#cb127-1" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="dv">23</span>, <span class="at">y =</span> <span class="dv">250</span>, <span class="at">label =</span> <span class="fu">lm_eqn</span>(df), <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">parse=</span>T)</span>
+<span id="cb127-2"><a href="applications.html#cb127-2" aria-hidden="true" tabindex="-1"></a>p2</span></code></pre></div>
+<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-100-3.png" width="672" /></p>
 
 </div>
 </div>
@@ -361,6 +388,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

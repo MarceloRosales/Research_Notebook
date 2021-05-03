@@ -18,9 +18,18 @@ description: This is a minimal example of using the bookdown package to write a 
 
 ## Introduction {#intro}
 
+To start, while setting a **new computer** and to avoid writing the path of each individual computer while runing R code; **"SET THE SAME USER NAME FOR ALL COMPUTERS"** from now on.  
+
 Location: Folder for this R site is in...   
 **MBP2015:** `/Users/Marcelo-Rosales/Documents/GitHub_Repos/Rprojects/Experiments/Research_Notebook`  
-**MBP2020:**  `/Users/marcelorosales/Documents/GitHub_Repos/Rprojects/Experiments/Research_Notebook`
+**MBP2020:**  `/Users/marcelorosales/Documents/GitHub_Repos/Rprojects/Experiments/Research_Notebook`  
+
+See **/Users/Marcelo-Rosales/** and **/Users/marcelorosales/**, if while setting the computer I set both with the same name, all codes would run the same in all computers.  
+
+Set the locations of R projects in a folder located in the *local computer*, avoid specially sync folders like Google Drive, Box, Dropbox, etc, to avoid conflicts of synchronization and (building) versions with GitHub, these because it can bring conflicts in long run.
+
+This folders will be synchronized using GitHub, this process is not automatically done, it is necessary to **pull** (newest version of project from GitHub) **push** the newly added/changed data or code and **commit** to GitHub.  
+
 
 This is also Bookdown GitHub page, you can found it in [https://marcelorosales.github.io/Research_Notebook/](https://marcelorosales.github.io/Research_Notebook/).  
 
