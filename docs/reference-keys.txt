@@ -33,6 +33,7 @@ what-is-the-difference-between-a-notebook-and-an-r-markdown-file
 r-bookdown.
 get-started-with-bookdown
 r-bookdown-tutorial-quick-start.-latest-update
+to-conectlink-new-project-to-github
 to-create-the-website-in-github-pages.
 r-bookdown-tutorial-quick-start.-if-not-created-as-bookdown
 github-pages-and-bookdown

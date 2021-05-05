@@ -367,7 +367,7 @@ chrome.).
 1. Package Vignete (HTML)  
 
 
-************************************************************************************************
+********************************************************************************
 
 ### Important Notes for easy typing in Rmarkdown.
 Some of the code does not work the same in word_documents as in html_documents.  
@@ -661,14 +661,14 @@ tinytex::tlmgr_update()
     a. Make sure the that the output is set to:   **bookdown::gitbook** (the first line of the file).   
     a. Additional outputs are set (pdf_book and epub_book). This automatically create this 2 formats as well as the HTML format. However; many times, this 2 outputs create conflicts in the building of the book, therefore I recommend to erase these formats unless they are need. In other words*:  
 **Erase the section:**  
-```{ , eval=FALSE }
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
+```{eval=FALSE }
+bookdown::pdf_book:  
+  includes:  
+    in_header: preamble.tex  
+  latex_engine: xelatex  
+  citation_package: natbib  
+  keep_tex: yes  
+bookdown::epub_book: default  
 ```     
     a. Change the title of the Book "before" and "after" names.  In the sections ` <li><a href="./">A Minimal Book Example</a></li>` to the name of the project, and in after, to any name you want.  
     a. Save file.      
@@ -686,16 +686,18 @@ bookdown::epub_book: default
 1. You can use the **Knit** button to preview the files.   
 1. Close the project, after configuration in GitHub app and GitHubPages, open again and project will display the **Git Tab** in the environment panel.    
 
-#### To create the website in gitHub Pages.   
+#### To conect/link new project to GitHub
 
 Go to the GitHub desktop app.  
 1. Go to the Repository List screen. (click in the down arrow next to **Current Repository**).  
 1. Click on **Add** (next to the Filter box).  
-1. Add > Add Existing Repository > ...[]... Add local Repository > choose (Choose containing folder) > Open > ...[]...  
+1. Add > Add Existing Repository > ...[]... Add local Repository > choose (Choose containing folder) > Open > ...[]...   
 1. **Message* `This directory does not appear to be a Git repository. Would you like to create a repository here instead?`   
-1. Click in **Create a repository** > ...[]... Create a New Repository > ç Create Repository.  
+1. Click in **Create a repository** > ...[]... Create a New Repository > √ Create Repository.  
 1. GitHub will create the repository in the app. 
-1. ç Publish Repository > ...[]... **Un-check** `keep this code private` > ç Publish Repository.  
+1. ç Publish Repository > ...[]... **Un-check** `keep this code private` > √ Publish Repository.  
+
+#### To create the website in gitHub Pages.   
 
 Go to GitHub.com page (browser).   
 1. [GitHub](https://github.com/).  
