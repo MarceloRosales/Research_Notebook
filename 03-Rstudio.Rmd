@@ -686,16 +686,16 @@ bookdown::epub_book: default
 1. You can use the **Knit** button to preview the files.   
 1. Close the project, after configuration in GitHub app and GitHubPages, open again and project will display the **Git Tab** in the environment panel.    
 
-#### To conect/link new project to GitHub
+#### To conect/link new project to GitHub.   
 
 Go to the GitHub desktop app.  
 1. Go to the Repository List screen. (click in the down arrow next to **Current Repository**).  
 1. Click on **Add** (next to the Filter box).  
 1. Add > Add Existing Repository > ...[]... Add local Repository > choose (Choose containing folder) > Open > ...[]...   
-1. **Message* `This directory does not appear to be a Git repository. Would you like to create a repository here instead?`   
+1. **Message:** `This directory does not appear to be a Git repository. Would you like to create a repository here instead?`   
 1. Click in **Create a repository** > ...[]... Create a New Repository > √ Create Repository.  
-1. GitHub will create the repository in the app. 
-1. ç Publish Repository > ...[]... **Un-check** `keep this code private` > √ Publish Repository.  
+1. GitHub will create the repository in the app.   
+1. Then, √ Publish Repository > ...[]... **Un-check** `keep this code private` > √ Publish Repository.  
 
 #### To create the website in gitHub Pages.   
 
