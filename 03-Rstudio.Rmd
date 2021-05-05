@@ -2,7 +2,7 @@
 
 ## R, RStudio, Git and Github install.  
 For a quick start.  
-1. First Install apps and packages.  
+1. First Install apps and packages through **Terminal** (xcode with apple store).  
 
 ```{}
 brew install --cask r
@@ -11,12 +11,15 @@ brew install --cask rstudio
 brew install git   
 brew install --cask github  
 
+Install xcode from Apple Store. (For Git conection, is this necessary?)  
+xcode-select --install (this solved the git tab missing problem)
 ```
 
 1. Set up Github account.  
 1. Import rstudio global settings (See 3.2)  
 1. Update packages, then copy / transfer packages from older computer/rstudio ( See 3.3 method 1)  
 1. **Install xcode app**, from the App Store.  
+1. Oppen xcope app and follow setting instructions.   
 1. **IMPORTANT**  *In MBP20 there is a constant error of packages not updating:  
 1.[Git is not working after macOS Update](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-update-xcrun-error-invalid-active-developer-pa) **xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools.**   
 
