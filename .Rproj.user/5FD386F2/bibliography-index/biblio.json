@@ -34,7 +34,7 @@
             "issued": {
                 "date-parts": [
                     [
-                        2020
+                        2021
                     ]
                 ]
             },
@@ -45,7 +45,7 @@
             "type": "book"
         },
         {
-            "URL": "https://github.com/rstudio/bookdown",
+            "URL": "https://CRAN.R-project.org/package=bookdown",
             "author": [
                 {
                     "family": "Xie",
@@ -56,11 +56,11 @@
             "issued": {
                 "date-parts": [
                     [
-                        2020
+                        2021
                     ]
                 ]
             },
-            "note": "R package version 0.21",
+            "note": "R package version 0.22",
             "title": "Bookdown: Authoring books and technical documents with r markdown",
             "title-short": "Bookdown",
             "type": "book"
@@ -81,13 +81,13 @@
                     ]
                 ]
             },
-            "note": "R package version 1.31",
+            "note": "R package version 1.33",
             "title": "Knitr: A general-purpose package for dynamic report generation in r",
             "title-short": "Knitr",
             "type": "book"
         },
         {
-            "URL": "https://github.com/rstudio/rmarkdown",
+            "URL": "https://CRAN.R-project.org/package=rmarkdown",
             "author": [
                 {
                     "family": "Allaire",
@@ -134,17 +134,17 @@
             "issued": {
                 "date-parts": [
                     [
-                        2020
+                        2021
                     ]
                 ]
             },
-            "note": "R package version 2.6",
+            "note": "R package version 2.7",
             "title": "Rmarkdown: Dynamic documents for r",
             "title-short": "Rmarkdown",
             "type": "book"
         },
         {
-            "URL": "https://github.com/rstudio/bookdown",
+            "URL": "https://bookdown.org/yihui/bookdown",
             "author": [
                 {
                     "family": "Xie",
