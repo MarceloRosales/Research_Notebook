@@ -534,10 +534,10 @@ See the [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/
 ### Bonus: R Markdown Cheatsheet
 RStudio has published numerous cheatsheets for working with R, including a detailed cheatsheet on using R Markdown! The R Markdown cheatsheet can be accessed from within RStudio by selecting Help > Cheatsheets > R Markdown Cheat Sheet.
 
-* <https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf{target="_blank"}>.
-* <https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>.
-* <https://rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf>.
-* <https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf>.
+* [rmarkdown-cheatsheet.pdf](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}>.
+* [rmarkdown-reference.pdf](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf){target="_blank"}.
+* [Cheatsheets_2019.pdf](https://rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf){target="_blank"}.
+* [rmarkdown-cheatsheet-2.0.pdf](<https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf>){target="_blank"}.
 * [17.1 Use RStudio keyboard shortcuts](<https://bookdown.org/yihui/rmarkdown-cookbook/rstudio-shortcuts.html#rstudio-shortcuts>){target="_blank"}.  
 * [R Markdown](https://ismayc.github.io/rbasics-book/4-rmarkdown.html){target="_blank"}.  
 
@@ -546,7 +546,7 @@ RStudio has published numerous cheatsheets for working with R, including a detai
 
 ## R Notebook
 
-[R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results **appear beneath the code**. 
+[R Markdown](http://rmarkdown.rstudio.com){target="_blank"} Notebook. When you execute code within the notebook, the results **appear beneath the code**. 
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
@@ -588,7 +588,7 @@ Bookdown also can be uploaded to github where other collaborators can proof read
 
 **DEMO for Authoring Books with R Markdown.** 
 
-1. Download the GitHub repository https://github.com/rstudio/bookdown-demo as a Zip file, then unzip it locally.
+1. Download the GitHub repository [Bookdown-demo](https://github.com/rstudio/bookdown-demo){target="_blank"} as a Zip file, then unzip it locally.
 
 2. Install the RStudio IDE. Note that you need a version higher than 1.0.0. Please download the latest version if your RStudio version is lower than 1.0.0.
 
