@@ -306,13 +306,13 @@ I used Mainly to migrate all my programs from one machine to another.</p>
 <p>At the end of the installation, I will make a list of all the essencial programs (and some of the program settings like R and Atom) I need in a computer, and whenever I need to set up a new machine; Then, I will not have to install all the programs one by one again.</p>
 </blockquote>
 <p>Install <a href="https://brew.sh" target="_blank">Homebrew</a>.<br />
-<a href="https://www.youtube.com/watch?v=1uvr9-zUB3w" class="uri">https://www.youtube.com/watch?v=1uvr9-zUB3w</a>.<br />
-<a href="https://www.youtube.com/watch?v=-VP2NVv3LHg" class="uri">https://www.youtube.com/watch?v=-VP2NVv3LHg</a>.</p>
-<p><strong>To Install Homebrew (on macOS or Linux)</strong> <a href="https://brew.sh/" class="uri">https://brew.sh/</a>.</p>
+(Video1)<a href="https://www.youtube.com/watch?v=1uvr9-zUB3w%7Btarget=%22_blank" class="uri">https://www.youtube.com/watch?v=1uvr9-zUB3w{target="_blank</a>“}.<br />
+<a href="https://www.youtube.com/watch?v=-VP2NVv3LHg%7Btarget=%22_blank" class="uri">https://www.youtube.com/watch?v=-VP2NVv3LHg{target="_blank</a>”}.</p>
+<p><strong>To Install Homebrew (on macOS or Linux)</strong> (<a href="https://brew.sh/" class="uri">https://brew.sh/</a>){target="_blank"}.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb5-1"><a href="new-mac-installing-and-setup.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ss">/bin/</span>bash <span class="kw">-</span>c <span class="st">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</span></span></code></pre></div>
-<p>More installation information and options: <a href="https://docs.brew.sh/Installation" class="uri">https://docs.brew.sh/Installation</a>.
+<p>More installation information and options: &lt;(<a href="https://docs.brew.sh/Installation" class="uri">https://docs.brew.sh/Installation</a>){target="_blank"}&gt;.
 If running Linux or WSL, there are some pre-requisite packages to install.</p>
-<p><strong>To Uninstall Homebrew</strong> link <a href="https://github.com/homebrew/install#uninstall-homebrew">here</a></p>
+<p><strong>To Uninstall Homebrew</strong> link <a href="https://github.com/homebrew/install#uninstall-homebrew" target="_blank">here</a></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb6-1"><a href="new-mac-installing-and-setup.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ss">/bin/</span>bash <span class="kw">-</span>c <span class="st">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)&quot;</span></span></code></pre></div>
 <p>Download the uninstall script and run /bin/bash uninstall.sh –help to view more uninstall options.</p>
 <p>Homebrew installs the stuff you need that Apple (or your Linux system) didn’t.</p>
@@ -345,7 +345,7 @@ Xcode can be updated from the App Store.</p>
 <p><strong>To check if a software/package is installed, and if not, then install</strong></p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb12-1"><a href="new-mac-installing-and-setup.html#cb12-1" aria-hidden="true" tabindex="-1"></a>brew list <span class="kw">&lt;</span>formulae1<span class="kw">&gt;</span> <span class="kw">||</span> brew install <span class="kw">&lt;</span>formulae1<span class="kw">&gt;</span></span></code></pre></div>
 <p>This will error on list and continue with install if not installed otherwise it will just list package files. (one could modify this further as a function or alias in .bashrc to make it easier to type)</p>
-<p>From the <a href="https://www.youtube.com/watch?v=SELYgZvAZbU">tutorial</a>
+<p>From the <a href="https://www.youtube.com/watch?v=SELYgZvAZbU" target="_blank">tutorial</a><br />
 To confirm installation and to check install use the command.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb13-1"><a href="new-mac-installing-and-setup.html#cb13-1" aria-hidden="true" tabindex="-1"></a>brew help</span></code></pre></div>
 <p>To list all the packages that you can install with homebrew use the command.</p>
@@ -419,7 +419,7 @@ To uninstall a package.</p>
 <p>To search a specific package.</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb41-1"><a href="new-mac-installing-and-setup.html#cb41-1" aria-hidden="true" tabindex="-1"></a>brew search <span class="kw">[</span>name of package<span class="kw">]</span></span></code></pre></div>
 <div class="sourceCode" id="cb42"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb42-1"><a href="new-mac-installing-and-setup.html#cb42-1" aria-hidden="true" tabindex="-1"></a>brew search postgres</span></code></pre></div>
-<p><a href="https://www.youtube.com/watch?v=SELYgZvAZbU">Homebrew Tutorial video</a></p>
+<p><a href="https://www.youtube.com/watch?v=SELYgZvAZbU" target="_blank">Homebrew Tutorial video</a></p>
 <p>To install a package:<br />
 <code>brew install tree</code></p>
 <p>To see the path where brew saves the packages:<br />
@@ -458,7 +458,7 @@ Example.</p>
 </div>
 <div id="using-scripts-to-automate-installs-and-save-time-in-install-and-setup" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Using Scripts to Automate Installs (and save time in Install and setup)</h2>
-<p><a href="https://www.youtube.com/watch?v=kIdiWut8eD8&amp;list=RDCMUCCezIgC97PvUuR4_gbFUs5g&amp;index=5">video link</a><br />
+<p><a href="https://www.youtube.com/watch?v=kIdiWut8eD8&amp;list=RDCMUCCezIgC97PvUuR4_gbFUs5g&amp;index=5" target="_blank">video link</a><br />
 <strong>Homebrew must be installed</strong>. In homebrew,　make sure that git is installed, also, that your Automated scripts are in your repository.
 To check in Terminal run git.</p>
 <pre><code>git</code></pre>
@@ -470,20 +470,20 @@ To check in Terminal run git.</p>
 <div id="how-to-customize-terminal." class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> How to Customize Terminal.</h2>
 <p>With in a list of helpful videos on how to use terminal on macOS.<br />
-1. <a href="https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Linux/Mac Terminal Tutorials: List</a>.<br />
-2. <a href="https://youtu.be/qE77MbDnljA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Linux/Mac Terminal Tutorial: How To Use The rsync Command - Sync Files Locally and Remotely</a>.<br />
-7. <a href="https://youtu.be/QZJ1drMQz1A?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Linux/Mac Tutorial: Cron Jobs - How to Schedule Commands with crontab</a>.<br />
-8. <a href="https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Customizing Your Terminal: .bash_profile and .bashrc files</a>.<br />
-9. <a href="https://youtu.be/LXgXV7YmSiU?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Customizing Your Terminal: Adding Color and Information to Your Prompt</a>.<br />
-10. <a href="https://youtu.be/c5RZWDLqifA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Customizing Your Terminal: How To Use and Modify Dotfiles</a>.<br />
-11. <a href="https://youtu.be/TXzrk3b9sKM?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Mac OS X Terminal Tutorial: Time-Saving Keyboard Shortcuts</a>.<br />
-12. <a href="https://youtu.be/HVMOBKRNEbc?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Easily Resize Multiple Images Using the Mac Terminal</a>.<br />
-17. <a href="https://www.youtube.com/watch?v=kIdiWut8eD8&amp;list=RDCMUCCezIgC97PvUuR4_gbFUs5g&amp;index=5.">How I Setup a New Development Machine - Using Scripts to Automate Installs and Save Time</a></p>
+1. <a href="https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Linux/Mac Terminal Tutorials: List</a>.<br />
+2. <a href="https://youtu.be/qE77MbDnljA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Linux/Mac Terminal Tutorial: How To Use The rsync Command - Sync Files Locally and Remotely</a>.<br />
+7. <a href="https://youtu.be/QZJ1drMQz1A?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Linux/Mac Tutorial: Cron Jobs - How to Schedule Commands with crontab</a>.<br />
+8. <a href="https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Customizing Your Terminal: .bash_profile and .bashrc files</a>.<br />
+9. <a href="https://youtu.be/LXgXV7YmSiU?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Customizing Your Terminal: Adding Color and Information to Your Prompt</a>.<br />
+10. <a href="https://youtu.be/c5RZWDLqifA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Customizing Your Terminal: How To Use and Modify Dotfiles</a>.<br />
+11. <a href="https://youtu.be/TXzrk3b9sKM?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Mac OS X Terminal Tutorial: Time-Saving Keyboard Shortcuts</a>.<br />
+12. <a href="https://youtu.be/HVMOBKRNEbc?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Easily Resize Multiple Images Using the Mac Terminal</a>.<br />
+17. <a href="https://www.youtube.com/watch?v=kIdiWut8eD8&amp;list=RDCMUCCezIgC97PvUuR4_gbFUs5g&amp;index=5" target="_blank">How I Setup a New Development Machine - Using Scripts to Automate Installs and Save Time</a></p>
 <hr />
 </div>
 <div id="linuxmac-terminal-tutorials-list." class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Linux/Mac Terminal Tutorials: List.</h2>
-<p><a href="https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Link to site</a>.</p>
+<p><a href="https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Link to site</a>.</p>
 <table>
 <colgroup>
 <col width="33%" />
@@ -585,7 +585,7 @@ To check in Terminal run git.</p>
 </div>
 <div id="customizing-your-terminal-.bash_profile-and-.bashrc-files" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Customizing Your Terminal: .bash_profile and .bashrc files</h2>
-<p><a href="https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Link to article</a>.</p>
+<p><a href="https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c" target="_blank">Link to article</a>.</p>
 <p>You can modify Terminal temporally. ex. By typing in Terminal.</p>
 <pre><code>PS1=&quot;Marcelo -&gt;&quot;  </code></pre>
 <p>This will change the prompt name to “Marcelo -&gt;,” but this is only temporary, once we quit terminal, those changes are lost.</p>
@@ -611,7 +611,7 @@ Open with Atom.</p>
 </div>
 <div id="how-to-install-windows-10-on-a-mac-using-virtualbox-2020-tutorial." class="section level2" number="2.7">
 <h2><span class="header-section-number">2.7</span> How to Install Windows 10 on a Mac using VirtualBox (2020 Tutorial).</h2>
-<p><a href="https://youtu.be/HEL9Uw3AR9s">Link to site</a>.</p>
+<p><a href="https://youtu.be/HEL9Uw3AR9s" target="_blank">Link to site</a>.</p>
 <hr />
 
 </div>

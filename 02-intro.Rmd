@@ -31,17 +31,17 @@ You can search for the formulae and cask of a program in the homebrew webpage.
 > At the end of the installation, I will make a list of all the essencial programs (and some of the program settings like R and Atom) I need in a computer, and whenever I need to set up a new machine; Then, I will not have to install all the programs one by one again.   
 
 Install [Homebrew](https://brew.sh){target="_blank"}.   
-https://www.youtube.com/watch?v=1uvr9-zUB3w.    
-https://www.youtube.com/watch?v=-VP2NVv3LHg.  
+(Video1)https://www.youtube.com/watch?v=1uvr9-zUB3w{target="_blank"}.    
+https://www.youtube.com/watch?v=-VP2NVv3LHg{target="_blank"}.  
 
-**To Install Homebrew (on macOS or Linux)** <https://brew.sh/>.   
+**To Install Homebrew (on macOS or Linux)** (https://brew.sh/){target="_blank"}.   
 ```{ruby, eval=FALSE }
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```   
-More installation information and options: <https://docs.brew.sh/Installation>.
+More installation information and options: <(https://docs.brew.sh/Installation){target="_blank"}>.
 If running Linux or WSL, there are some pre-requisite packages to install.
 
-**To Uninstall Homebrew** link [here](https://github.com/homebrew/install#uninstall-homebrew)  
+**To Uninstall Homebrew** link [here](https://github.com/homebrew/install#uninstall-homebrew){target="_blank"}  
 ```{ruby, eval=FALSE }
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
 ```  
@@ -98,7 +98,7 @@ brew list <formulae1> || brew install <formulae1>
 ```   
 This will error on list and continue with install if not installed otherwise it will just list package files. (one could modify this further as a function or alias in .bashrc to make it easier to type)
 
-From the [tutorial](https://www.youtube.com/watch?v=SELYgZvAZbU)
+From the [tutorial](https://www.youtube.com/watch?v=SELYgZvAZbU){target="_blank"}  
 To confirm installation and to check install use the command.   
 ```{ruby, eval=FALSE }
 brew help
@@ -251,7 +251,7 @@ brew search [name of package]
 brew search postgres
 ```
 
-[Homebrew Tutorial video](https://www.youtube.com/watch?v=SELYgZvAZbU)  
+[Homebrew Tutorial video](https://www.youtube.com/watch?v=SELYgZvAZbU){target="_blank"}  
 
 To install a package:  
 ```brew install tree```  
@@ -311,7 +311,7 @@ brew home pycharm
 
 ## Using Scripts to Automate Installs (and save time in Install and setup)  
 
-[video link](https://www.youtube.com/watch?v=kIdiWut8eD8&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&index=5)  
+[video link](https://www.youtube.com/watch?v=kIdiWut8eD8&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&index=5){target="_blank"}  
 **Homebrew must be installed**. In homebrew,　make sure that git is installed,  also, that your Automated scripts are in your repository.
 To check in Terminal run git.
 ```
@@ -327,21 +327,21 @@ If it displays git commands, then git is install and ready to connect.
 
 ## How to Customize Terminal.   
 With in a list of helpful videos on how to use terminal on macOS.  
-1. [Linux/Mac Terminal Tutorials: List](https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
-2. [Linux/Mac Terminal Tutorial: How To Use The rsync Command - Sync Files Locally and Remotely](https://youtu.be/qE77MbDnljA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
-7. [Linux/Mac Tutorial: Cron Jobs - How to Schedule Commands with crontab](https://youtu.be/QZJ1drMQz1A?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
-8. [Customizing Your Terminal: .bash_profile and .bashrc files](https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
-9. [Customizing Your Terminal: Adding Color and Information to Your Prompt](https://youtu.be/LXgXV7YmSiU?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
-10. [Customizing Your Terminal: How To Use and Modify Dotfiles](https://youtu.be/c5RZWDLqifA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
-11. [Mac OS X Terminal Tutorial: Time-Saving Keyboard Shortcuts](https://youtu.be/TXzrk3b9sKM?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
-12. [Easily Resize Multiple Images Using the Mac Terminal](https://youtu.be/HVMOBKRNEbc?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
-17. [How I Setup a New Development Machine - Using Scripts to Automate Installs and Save Time](https://www.youtube.com/watch?v=kIdiWut8eD8&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&index=5.)   
+1. [Linux/Mac Terminal Tutorials: List](https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
+2. [Linux/Mac Terminal Tutorial: How To Use The rsync Command - Sync Files Locally and Remotely](https://youtu.be/qE77MbDnljA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
+7. [Linux/Mac Tutorial: Cron Jobs - How to Schedule Commands with crontab](https://youtu.be/QZJ1drMQz1A?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
+8. [Customizing Your Terminal: .bash_profile and .bashrc files](https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
+9. [Customizing Your Terminal: Adding Color and Information to Your Prompt](https://youtu.be/LXgXV7YmSiU?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
+10. [Customizing Your Terminal: How To Use and Modify Dotfiles](https://youtu.be/c5RZWDLqifA?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
+11. [Mac OS X Terminal Tutorial: Time-Saving Keyboard Shortcuts](https://youtu.be/TXzrk3b9sKM?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
+12. [Easily Resize Multiple Images Using the Mac Terminal](https://youtu.be/HVMOBKRNEbc?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
+17. [How I Setup a New Development Machine - Using Scripts to Automate Installs and Save Time](https://www.youtube.com/watch?v=kIdiWut8eD8&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&index=5){target="_blank"}   
 
 ****************************************************************************    
 
 
 ## Linux/Mac Terminal Tutorials: List.  
-[Link to site](https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+[Link to site](https://youtu.be/j6vKLJxAKfw?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
 
 Command | Result | Example |
 :--- | :--- | :---|
@@ -368,7 +368,7 @@ Not finished.... finish this later.
 
 
 ## Customizing Your Terminal: .bash_profile and .bashrc files   
-[Link to article](https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c).  
+[Link to article](https://youtu.be/vDOVEDl2z84?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c){target="_blank"}.  
 
 You can modify Terminal temporally.  ex. By typing in Terminal. 
 ```
@@ -411,7 +411,7 @@ Open with Atom.
 
 
 ## How to Install Windows 10 on a Mac using VirtualBox (2020 Tutorial).  
-[Link to site](https://youtu.be/HEL9Uw3AR9s).  
+[Link to site](https://youtu.be/HEL9Uw3AR9s){target="_blank"}.  
 
 
 ****************************************************************************    

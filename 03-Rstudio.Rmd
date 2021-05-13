@@ -21,7 +21,7 @@ xcode-select --install (this solved the git tab missing problem)
 1. **Install xcode app**, from the App Store.  
 1. Oppen xcope app and follow setting instructions.   
 1. **IMPORTANT**  *In MBP20 there is a constant error of packages not updating:  
-1.[Git is not working after macOS Update](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-update-xcrun-error-invalid-active-developer-pa) **xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools.**   
+1.[Git is not working after macOS Update](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-update-xcrun-error-invalid-active-developer-pa){target="_blank"} **xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools.**   
 
 > The problem is that Xcode Command-line Tools needs to be updated.  
 
@@ -44,13 +44,13 @@ After that, **restart your terminal**
 Alternatively, IF that fails, and it very well might.... you'll get a pop-up box saying "Software not found on server", see below!
 
 **Solution #2**
-See link [here](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-update-xcrun-error-invalid-active-developer-pa).  
+See link [here](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-update-xcrun-error-invalid-active-developer-pa){target="_blank"}.  
 
 
 ## Rstudio global settings Export/Import. Configurations and settings..  
 After Installing R and Rstudio with homebrew, R studio settings are need. Doing it manually takes time and usually all changes are not performed.  
 
-For more information on RStudio [Link to site](https://blog.rstudio.com/2020/02/18/rstudio-1-3-preview-configuration/).  
+For more information on RStudio [Link to site](https://blog.rstudio.com/2020/02/18/rstudio-1-3-preview-configuration/){target="_blank"}.  
 From RStudio 1.3, the settings and configuration were overhaul.  
 
 **User Preferences**  
@@ -67,7 +67,7 @@ The example above instructs RStudio to use the bash shell for the Terminal tab, 
 
 By default, this file lives in AppData/Roaming/RStudio on Windows, and **~/.config/rstudio** on other systems. While RStudio writes this file whenever you change a setting, you can also edit it yourself to change settings. You can back it up, or put it in a version control system. You’re in control!  
 
-If you’re editing this file by hand, you’ll probably want a reference. A full list of RStudio’s settings, along with their data types, allowable values, etc., can be found in the [Session User Settings](https://docs.rstudio.com/ide/server-pro/1.3.820-1/session-user-settings.html) section of the RStudio Server Professional Administration Guide.  
+If you’re editing this file by hand, you’ll probably want a reference. A full list of RStudio’s settings, along with their data types, allowable values, etc., can be found in the [Session User Settings](https://docs.rstudio.com/ide/server-pro/1.3.820-1/session-user-settings.html){target="_blank"} section of the RStudio Server Professional Administration Guide.  
 
 $\color{red}{\text{How to get to the file?}}$  
 1. If file is hidden by attibute, Unhide all files with `Command-Shift-PERIOD`. (To hide the files again, press the same key shortcut).  
@@ -101,8 +101,8 @@ output: word_document
 ## Copy/Transfer the packages installed on one computer or R version to another using Scripts. 
 
 ### Method 1: (!THE ONLY METHOD THAT WORKED) USE THIS ONE!!!!!].  
-[Link to site](https://gist.github.com/florianhartig/10527319)   
-Originally from [here] (http://stackoverflow.com/questions/1401904/painless-way-to-install-a-new-version-of-r-on-windows)
+[Link to site](https://gist.github.com/florianhartig/10527319){target="_blank"}   
+Originally from [here] (http://stackoverflow.com/questions/1401904/painless-way-to-install-a-new-version-of-r-on-windows){target="_blank"}  
 
 1. Run on old computer / r version (2015MBP)
 
@@ -140,7 +140,7 @@ Check <- installed.packages()
 ****************************************************************************  
 
 ### Method 2:  Quick Way of Installing all your old R libraries on a New Device. DOES NOT WORK!!    
-[Link here](https://www.r-bloggers.com/2017/07/quick-way-of-installing-all-your-old-r-libraries-on-a-new-device/).  To install all the libraries that I had installed in my previous laptop. I did the following:
+[Link here](https://www.r-bloggers.com/2017/07/quick-way-of-installing-all-your-old-r-libraries-on-a-new-device/){target="_blank"}.  To install all the libraries that I had installed in my previous laptop. I did the following:
 
 **Step 1:** Save a list of packages installed in your old computing device (from your old device).  **!Warning** Before saving file make sure you are in the right `working directory` and make sure you KNOW WHERE THE FILE IS STORED.  
 
@@ -231,12 +231,12 @@ install.packages(toInstall)
 ```
 
 ### Old method used to transfer (DISCONTINUE).  
-[Link to site](http://hlplab.wordpress.com/2012/06/01/transferring-installed-packages-between-different-installations-of-r/)  
+[Link to site](http://hlplab.wordpress.com/2012/06/01/transferring-installed-packages-between-different-installations-of-r/){target="_blank"}  
 
 ****************************************************************************  
 
 ## Interactive Plots using R Markdown Notebook.  
-[Link to site](https://bookdown.org/flavioadsm/untitled2/Untitled2.html#113_interactive_plots)  
+[Link to site](https://bookdown.org/flavioadsm/untitled2/Untitled2.html#113_interactive_plots){target="_blank"}  
 
 Using Normal ggplot graphics, is possible to add 3d interaction with the **plotly** package.  
 
@@ -267,8 +267,8 @@ ggplotly(a)
 
 > Plotly example
 
-Here a [Plotly R Open Source Graphing Library](https://plotly.com/r/).  
-And [R Figure Reference: Single Page. How are Plotly attributes organized?](https://plotly.com/r/reference/)
+Here a [Plotly R Open Source Graphing Library](https://plotly.com/r/){target="_blank"}.  
+And [R Figure Reference: Single Page. How are Plotly attributes organized?](https://plotly.com/r/reference/){target="_blank"}  
 
 ```{r }
 # Using plotly
@@ -297,7 +297,7 @@ fig2 <- fig2 %>% layout(scene = list(xaxis = list(title = 'Weight'),
 fig2
 ```
 
-[Export Plotly graphs into MS PowerPoint](https://community.rstudio.com/t/export-plotly-graphs-into-ms-powerpoint/33789).  
+[Export Plotly graphs into MS PowerPoint](https://community.rstudio.com/t/export-plotly-graphs-into-ms-powerpoint/33789){target="_blank"}.  
 
 ****************************************************************************  
 
@@ -330,13 +330,13 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 1.	Install markdown from CRAN and use.  
 2.	See for markdown syntax cheat sheets.  
 
-Here a [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/).  
+Here a [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target="_blank"}.  
 Includes information of Bookdown in chapter 12 and blogdown in chapter 10. 
-[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/).  
-[Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/).  
-[Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/).  
-[Themes for R Markdown](https://prettydoc.statr.me/).  
-[Using R Markdown Notebook](https://bookdown.org/flavioadsm/untitled2/Untitled2.html#113_interactive_plots).  
+[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/){target="_blank"}.  
+[Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/){target="_blank"}.  
+[Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/){target="_blank"}.  
+[Themes for R Markdown](https://prettydoc.statr.me/){target="_blank"}.  
+[Using R Markdown Notebook](https://bookdown.org/flavioadsm/untitled2/Untitled2.html#113_interactive_plots){target="_blank"}.  
 
 Markdown has different options available:  
 
@@ -411,7 +411,7 @@ violets are $\color{blue}{\text{lovely blue}}$.
 ****************************************************************************    
 
 ### Keyboard Shortcuts 
-from <https://www.dataquest.io/blog/r-markdown-tips-tricks-and-shortcuts/> page.  
+from <[r-markdown](https://www.dataquest.io/blog/r-markdown-tips-tricks-and-shortcuts/){target="_blank"}> page.  
 Knowing R Markdown keyboard shortcuts will save lots of time when creating reports.  
 Here are some of the essential R Markdown shortcuts: **_``_**
 
@@ -443,7 +443,7 @@ Run the current chunk                   | **_`Command + Option + C`_** or **_`Co
 Run the next chunk                      | **_`Command + Option + N`_** | **_`Ctrl + Alt + N`_** |  
 Run all chunks                          | **_`Command + Option + R or`_** **_`Command + A + Enter`_** | **_`Ctrl + Alt + R`_** or **_`Ctrl + A + Enter`_**|
 
-[knitr](http://yihui.name/knitr/) can execute code in many languages besides R. Some of the available language engines include:
+[knitr](http://yihui.name/knitr/){target="_blank"} can execute code in many languages besides R. Some of the available language engines include:
 **_`Code chunks with brackets {} will be run by R while kniting to display results. `_**  
 
 *  R
@@ -517,7 +517,7 @@ summary(cars)
 >  **Solution** Change the "name of the code chunk": {r cars} to {r cars1.}  
 
 **Chunk Options**  
-Chunk output can be customized with [knitr options](http://yihui.name/knitr/options/), arguments set in the {} of a chunk header. Above, we use five arguments:
+Chunk output can be customized with [knitr options](http://yihui.name/knitr/options/){target="_blank"}, arguments set in the {} of a chunk header. Above, we use five arguments:
 
 *  **include = FALSE** prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.
 *  **echo = FALSE** prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.
@@ -525,7 +525,7 @@ Chunk output can be customized with [knitr options](http://yihui.name/knitr/opti
 *  **warning = FALSE** prevents warnings that are generated by code from appearing in the finished.
 *  **fig.cap = "..."** adds a caption to graphical results.  
 
-See the [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.165887543.809923720.1609919756-125756219.1609328321) for a complete list of knitr chunk options.
+See the [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.165887543.809923720.1609919756-125756219.1609328321){target="_blank"} for a complete list of knitr chunk options.
 
 
 ****************************************************************************    
@@ -534,12 +534,12 @@ See the [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/
 ### Bonus: R Markdown Cheatsheet
 RStudio has published numerous cheatsheets for working with R, including a detailed cheatsheet on using R Markdown! The R Markdown cheatsheet can be accessed from within RStudio by selecting Help > Cheatsheets > R Markdown Cheat Sheet.
 
-* <https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf>.
+* <https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf{target="_blank"}>.
 * <https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>.
 * <https://rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf>.
 * <https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf>.
-* [17.1 Use RStudio keyboard shortcuts](<https://bookdown.org/yihui/rmarkdown-cookbook/rstudio-shortcuts.html#rstudio-shortcuts>).  
-* [R Markdown](https://ismayc.github.io/rbasics-book/4-rmarkdown.html).  
+* [17.1 Use RStudio keyboard shortcuts](<https://bookdown.org/yihui/rmarkdown-cookbook/rstudio-shortcuts.html#rstudio-shortcuts>){target="_blank"}.  
+* [R Markdown](https://ismayc.github.io/rbasics-book/4-rmarkdown.html){target="_blank"}.  
 
 
 ****************************************************************************    **********
