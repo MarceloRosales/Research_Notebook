@@ -30,7 +30,7 @@ You can search for the formulae and cask of a program in the homebrew webpage.
 
 > At the end of the installation, I will make a list of all the essencial programs (and some of the program settings like R and Atom) I need in a computer, and whenever I need to set up a new machine; Then, I will not have to install all the programs one by one again.   
 
-Install [Homebrew](https://brew.sh).   
+Install [Homebrew](https://brew.sh){target="_blank"}.   
 https://www.youtube.com/watch?v=1uvr9-zUB3w.    
 https://www.youtube.com/watch?v=-VP2NVv3LHg.  
 
