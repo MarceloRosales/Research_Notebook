@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Final Words | All Research Notes</title>
+  <title>Chapter 7 Additional Notes. | All Research Notes</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Final Words | All Research Notes" />
+  <meta property="og:title" content="Chapter 7 Additional Notes. | All Research Notes" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Final Words | All Research Notes" />
+  <meta name="twitter:title" content="Chapter 7 Additional Notes. | All Research Notes" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="applications.html"/>
-<link rel="next" href="additional-notes-.html"/>
+<link rel="prev" href="final-words.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -286,18 +286,169 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="final-words" class="section level1" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Final Words</h1>
-<p>We have finished a nice book.</p>
+<div id="additional-notes." class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Additional Notes.</h1>
+<div id="commands-in-terminal" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Commands in Terminal</h2>
+<p>† Command = #; control = ^; option = Opt, Space bar = Spc.</p>
+<p><strong>To clear the terminal completely:</strong><br />
+- <strong>Opt + # + K:</strong> (clear the scroll back, Yosemite /older)<br />
+- <strong># + K:</strong> for newer keyboards</p>
+<p>clear command: ‘clears’ the current screen, but it does this just by printing lots of newlines - the cleared contents just get scrolled up.</p>
+<ul>
+<li>“#” + L: delete the last output only<br />
+</li>
+<li>“#” + K: clear terminal completely</li>
+</ul>
+<p><strong>To clear entered text:</strong><br />
+1. # + A: Jump to left<br />
+1. ^ + K: clear the right side of cursor (caret)</p>
+<p><strong>Mac Terminal commands:</strong><br />
+* pwd (present working directory)<br />
+* cd (change directory)<br />
+* ls (list the files in a directory)<br />
+<code>Sub-commands:</code><br />
+* ls -a (listing with all the files including hidden files)<br />
+* ls -l (listing in a long form, shows permission too)<br />
+* chmod (to change permission to users, see video)<br />
+* man chmod (is the manual for chmod, uses pager, spacebar = next page, v?p? = goes back to the first page, q = exit)<br />
+* brew install tldr (a extended manual with examples)<br />
+Ex. tldr chmod</p>
+<p><strong><em>To turn on/off sound at start up.</em></strong></p>
+<div class="sourceCode" id="cb129"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb129-1"><a href="additional-notes-.html#cb129-1" aria-hidden="true" tabindex="-1"></a>sudo nvram <span class="dt">StartupMute</span><span class="kw">=</span><span class="ot">%</span>00 </span>
+<span id="cb129-2"><a href="additional-notes-.html#cb129-2" aria-hidden="true" tabindex="-1"></a>sudo nvram <span class="dt">StartupMute</span><span class="kw">=</span><span class="ot">%</span>01 </span></code></pre></div>
+<p>(00=False, or mute = false, turns off the mute, Sound is On)<br />
+(01=True, or mute = true, turns on the mute, Sound is Off)</p>
+</div>
+<div id="setting-a-new-macbook-preferences." class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Setting a New MacBook Preferences.</h2>
+<p>† Line: start= # + &lt;–; end= # + –&gt;<br />
+† Word: start= opt + &lt;–; end= opt + –&gt;</p>
+<div id="system-preferences" class="section level3" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> System preferences:</h3>
+<p><strong>Keyboards:</strong></p>
+<pre><code>Preferences &gt; Input sources &gt; Japanese.
+Japanese preferences: √romaji, and delete ABC.  
+Preferences &gt; Input sources &gt; Chinese Traditional &gt; Handwriting - Traditional.  </code></pre>
+<p>Emoji/character key shortcut: <strong>Opt + # + Spc.</strong></p>
+<p><strong>3 finger drag: </strong><br />
+BigSur<br />
+System preferences&gt; Accessibility&gt; Pointer Control&gt; Mouse &amp; Trackpad&gt; ..[].. Trackpad Options &gt; √ “Enable Dragging”: Three finger drag.</p>
+<p><strong>Touch bar zoom.</strong><br />
+System preferences&gt; Accessibility&gt; Zoom&gt; Enable Touch bar zoom.</p>
+<p><strong>Setup Voice Control In macOS Big Sur:</strong><br />
+System preferences&gt; Accessibility&gt; Voice control&gt; √ Enable voice control<br />
+Add languages by selecting from dropdown menu.<br />
+See <a href="https://youtu.be/XSQ6A6D7OaU" target="_blank">video</a> on how to use.</p>
+<p>BUT.. <strong>For dictation on word or other programs go:</strong><br />
+System preferences&gt; keyboard&gt; dictation&gt; dictation&gt; dictation: ON, Select shortcut: Fn twice</p>
+<p><a href="https://apple.stackexchange.com/questions/158975/how-do-i-get-a-backslash-when-in-japanese-input-mode-in-macos">How do I get a backslash when in Japanese input mode in MacOS?</a>{target= "_blank"}.</p>
+</div>
+</div>
+<div id="install-homebrew-1" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Install Homebrew</h2>
+<p>brew install wget<br />
+brew update (updates homebrew)<br />
+brew outdated (show all outdated packs)<br />
+brew upgrade (upgrade apps and casks)<br />
+brew cleanup (remove all updated packs)<br />
+brew doctor (Check if brew installed correctly)<br />
+brew install mas (Install-update apps from app store)<br />
+brew upgrade mas<br />
+brew install bash-completions (auto completion)<br />
+brew bundle (Gathers info for a brew-file)<br />
+brew bundle dump –describe (makes brew-file)<br />
+cat Brewfile (To see whats in the file, all apps with a small description)<br />
+ls Brewfile (To save the Brewfile).<br />
+ls -l Brewfile (Ls with long listing of Brewfile)</p>
+<p><strong>To update the system. Catalina -&gt; Big Sur, etc.</strong></p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb131-1"><a href="additional-notes-.html#cb131-1" aria-hidden="true" tabindex="-1"></a>sudo softwareupdate <span class="kw">-</span>ia</span></code></pre></div>
+<p>(-i: gives information on everything installed)<br />
+(-a: mean whatever needs to be update, update)<br />
+(–verbose: as running tell me what’s been done)</p>
+<p><strong>I can then concatenate other commands like:</strong></p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb132-1"><a href="additional-notes-.html#cb132-1" aria-hidden="true" tabindex="-1"></a>sudo softwareupdate <span class="kw">-</span>ia <span class="kw">-</span>verbose; brew bundle <span class="kw">-</span>v; brew cleanup; brew doctor <span class="kw">-</span>verbose    </span></code></pre></div>
+<p>(brew bundle -v: will install everything in the brewfile)<br />
+(brew cleanup: will delete all unused libraries)<br />
+(brew doctor -verbose: to check if there are other issues in the system and tell me.)</p>
+<p><strong>Homebrew tutorial.</strong><br />
+† apps = packages = packs</p>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="additional-notes-.html#cb133-1" aria-hidden="true" tabindex="-1"></a>xcode<span class="sc">-</span>select <span class="sc">--</span>install   </span></code></pre></div>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Command</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">brew search</td>
+<td align="left">(list of all packages in brew)</td>
+</tr>
+<tr class="even">
+<td align="left"><code>brew search | wc -l</code></td>
+<td align="left">(packages, [word count]- as a list, resutl= # of packages)</td>
+</tr>
+<tr class="odd">
+<td align="left">brew search tree</td>
+<td align="left">(search for packs installed)</td>
+</tr>
+<tr class="even">
+<td align="left">brew help</td>
+<td align="left">(for help or to check install)</td>
+</tr>
+<tr class="odd">
+<td align="left">brew install tree</td>
+<td align="left">(to install packs)</td>
+</tr>
+<tr class="even">
+<td align="left">which tree</td>
+<td align="left">(shows path of the packs )</td>
+</tr>
+<tr class="odd">
+<td align="left">output: /usr/local/bin/tree.</td>
+<td align="left">(This is not the folder, this is just a symbolic link).</td>
+</tr>
+<tr class="even">
+<td align="left">ls -la /usr/local/bin/tree</td>
+<td align="left">(shows real location)</td>
+</tr>
+</tbody>
+</table>
+<p>Output:<br />
+<code>lrwxr-xr-x  1 marcelorosales  admin  29 Dec 29 20:36/usr/local/bin/tree -&gt; ../Cellar/tree/1.8.0/bin/tree (real location)</code><br />
+brew info tree (more info on the pack)<br />
+brew uninstall tree <br />
+grep –version (already installed, native in OS)</p>
+<p>If there is already a native package on the operating system, for instance macOS grep. Then the new package installed will have a “g” prefix. <br />
+brew install grep (install a GNU version)<br />
+ggrep –version (version of the GNU ver of pack)</p>
+<p>brew cask install firefox (install appstore app)</p>
+<p>To open the webpages of the application directly brew home rstudio<br />
+brew home r<br />
+brew home pycharm</p>
+<p>List of all packages installed using Homebrew<br />
+brew list<br />
+brew list –cask<br />
+List of all your installed Homebrew packages.</p>
+<p>How to check what’s been installed on your mac.<br />
+And there’s always:<br />
+apt-cache policy <package-name> (no sudo needed).</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="applications.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="additional-notes-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="final-words.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

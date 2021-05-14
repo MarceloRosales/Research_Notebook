@@ -69,3 +69,8 @@ how-to-insert-an-image-with-visual-markdown-editor
 example-two
 linear-regression-with-formula
 final-words
+additional-notes.
+commands-in-terminal
+setting-a-new-macbook-preferences.
+system-preferences
+install-homebrew-1

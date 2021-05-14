@@ -1,0 +1,146 @@
+# Additional Notes.
+
+## Commands in Terminal  
+† Command = #; control = ^; option = Opt, Space bar = Spc.
+
+**To clear the terminal completely:**  
+- **Opt + # + K:**  (clear the scroll back, Yosemite /older)  
+- **# + K:**  for newer keyboards  
+
+clear command: 'clears' the current screen, but it does this just by printing lots of newlines - the cleared contents just get scrolled up.  
+
+- "#" + L: delete the last output only  
+- "#" + K: clear terminal completely  
+
+**To clear entered text:**  
+1. # + A: Jump to left  
+1. ^ + K: clear the right side of cursor (caret)  
+
+**Mac Terminal commands:**   
+* pwd (present working directory)   
+* cd (change directory)   
+* ls  (list the files in a directory)  
+`Sub-commands:`   
+* ls -a (listing  with all the files including hidden files)   
+* ls -l (listing in a long form, shows permission too)   
+* chmod (to change permission to users, see video)   
+* man chmod (is the manual for chmod, uses pager, spacebar = next page, v?p? = goes back to the first page, q = exit)  
+* brew install tldr (a extended manual with examples)  
+  Ex. tldr chmod   
+
+**_To turn on/off sound at start up._**  
+```{ruby, eval=F}
+sudo nvram StartupMute=%00 
+sudo nvram StartupMute=%01 
+```
+(00=False, or mute = false, turns off the mute, Sound is On)  
+(01=True, or mute = true, turns on the mute, Sound is Off)  
+
+## Setting a New MacBook Preferences.   
+† Line:  start= # + <--; end= # + -->  
+† Word: start= opt + <--; end= opt + -->   
+ 
+### System preferences:  
+**Keyboards:**  
+```
+Preferences > Input sources > Japanese.
+Japanese preferences: √romaji, and delete ABC.  
+Preferences > Input sources > Chinese Traditional > Handwriting - Traditional.  
+```
+Emoji/character key shortcut: **Opt + # + Spc.**  
+
+**3 finger drag: **  
+BigSur  
+System preferences> Accessibility> Pointer Control> Mouse & Trackpad> ..[].. Trackpad Options > √ "Enable Dragging": Three finger drag.  
+
+**Touch bar zoom.**  
+System preferences> Accessibility> Zoom> Enable Touch bar zoom.   
+
+**Setup Voice Control In macOS Big Sur:**  
+System preferences> Accessibility> Voice control> √ Enable voice control   
+Add languages by selecting from dropdown menu.  
+See [video](https://youtu.be/XSQ6A6D7OaU){target="_blank"} on how to use.  
+
+BUT..  **For dictation on word or other programs go:**  
+System preferences> keyboard> dictation> dictation> dictation: ON,  Select shortcut: Fn twice    
+
+[How do I get a backslash when in Japanese input mode in MacOS?](https://apple.stackexchange.com/questions/158975/how-do-i-get-a-backslash-when-in-japanese-input-mode-in-macos){target= "_blank"}.  
+
+
+
+## Install Homebrew  
+
+brew install wget  
+brew update (updates homebrew)  
+brew outdated (show all outdated packs)  
+brew upgrade (upgrade apps and casks)  
+brew cleanup (remove all updated packs)    
+brew doctor (Check if brew installed correctly)  
+brew install mas (Install-update apps from app store)  
+brew upgrade mas   
+brew install bash-completions (auto completion)  
+brew bundle (Gathers info for a brew-file)  
+brew bundle dump --describe (makes brew-file)    
+cat Brewfile (To see whats in the file, all apps with a small description)  
+ls Brewfile (To save the Brewfile).  
+ls -l Brewfile (Ls with long listing of Brewfile)  
+
+**To update the system. Catalina -> Big Sur, etc.**  
+```{ruby, eval=F}
+sudo softwareupdate -ia
+```
+
+(-i: gives information on everything installed)  
+(-a: mean whatever needs to be update, update)  
+(--verbose: as running tell me what's been done)  
+
+**I can then concatenate other commands like:**  
+```{ruby, eval=F}
+sudo softwareupdate -ia -verbose; brew bundle -v; brew cleanup; brew doctor -verbose    
+```
+
+(brew bundle -v: will install everything in the brewfile)  
+(brew cleanup: will delete all unused libraries)   
+(brew doctor -verbose: to check if there are other issues in the system and tell me.)  
+
+**Homebrew tutorial.**   
+† apps = packages = packs   
+```{r,eval=FALSE}
+xcode-select --install   
+```
+
+Command |   |  
+:-- | :--| 
+brew search | (list of all packages in brew)|   
+`brew search | wc -l` | (packages, [word count]- as a list, resutl= # of packages)|   
+brew search tree |  (search for packs installed)  
+brew help | (for help or to check install)  
+brew install tree | (to install packs)  
+which tree | (shows path of the packs )   
+output: /usr/local/bin/tree. | (This is not the folder, this is just a symbolic link).   
+ls -la /usr/local/bin/tree | (shows real location)  
+Output:  
+`lrwxr-xr-x  1 marcelorosales  admin  29 Dec 29 20:36/usr/local/bin/tree -> ../Cellar/tree/1.8.0/bin/tree (real location)`  
+brew info tree (more info on the pack)  
+brew uninstall tree   
+grep --version (already installed, native in OS)  
+
+If there is already a native package on the operating system, for instance macOS grep. Then the new package installed will have a “g” prefix.   
+brew install grep (install a GNU version)  
+ggrep --version (version of the GNU ver of pack)  
+
+brew cask install firefox (install appstore app)  
+
+To open the webpages of the application directly brew home rstudio  
+brew home r  
+brew home pycharm  
+
+
+List of all packages installed using Homebrew  
+brew list  
+brew list --cask   
+List of all your installed Homebrew packages.  
+
+How to check what’s been installed on your mac.  
+And there's always:  
+apt-cache policy <package-name> (no sudo needed).  
