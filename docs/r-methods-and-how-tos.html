@@ -33,7 +33,7 @@
   
 <link rel="prev" href="r-and-rstudio.html"/>
 <link rel="next" href="applications.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
@@ -295,31 +295,31 @@ div.csl-indent {
 * Easy to integrate in RMarkdown documents.<br />
 * Includes an RStudio addin to insert lorem ipsum into the current document.</p>
 <p>First install</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="r-methods-and-how-tos.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.package(&quot;devtools&quot;)</span></span>
-<span id="cb107-2"><a href="r-methods-and-how-tos.html#cb107-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;gadenbuie/lorem&quot;</span>)</span>
-<span id="cb107-3"><a href="r-methods-and-how-tos.html#cb107-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb107-4"><a href="r-methods-and-how-tos.html#cb107-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If devtools can not be installed. </span></span>
-<span id="cb107-5"><a href="r-methods-and-how-tos.html#cb107-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install in terminal: </span></span>
-<span id="cb107-6"><a href="r-methods-and-how-tos.html#cb107-6" aria-hidden="true" tabindex="-1"></a><span class="co"># brew install libgit2</span></span>
-<span id="cb107-7"><a href="r-methods-and-how-tos.html#cb107-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb107-8"><a href="r-methods-and-how-tos.html#cb107-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Then in R</span></span>
-<span id="cb107-9"><a href="r-methods-and-how-tos.html#cb107-9" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;devtools&quot;)</span></span>
-<span id="cb107-10"><a href="r-methods-and-how-tos.html#cb107-10" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;usethis&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="r-methods-and-how-tos.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.package(&quot;devtools&quot;)</span></span>
+<span id="cb109-2"><a href="r-methods-and-how-tos.html#cb109-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;gadenbuie/lorem&quot;</span>)</span>
+<span id="cb109-3"><a href="r-methods-and-how-tos.html#cb109-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb109-4"><a href="r-methods-and-how-tos.html#cb109-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If devtools can not be installed. </span></span>
+<span id="cb109-5"><a href="r-methods-and-how-tos.html#cb109-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install in terminal: </span></span>
+<span id="cb109-6"><a href="r-methods-and-how-tos.html#cb109-6" aria-hidden="true" tabindex="-1"></a><span class="co"># brew install libgit2</span></span>
+<span id="cb109-7"><a href="r-methods-and-how-tos.html#cb109-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb109-8"><a href="r-methods-and-how-tos.html#cb109-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Then in R</span></span>
+<span id="cb109-9"><a href="r-methods-and-how-tos.html#cb109-9" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;devtools&quot;)</span></span>
+<span id="cb109-10"><a href="r-methods-and-how-tos.html#cb109-10" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;usethis&quot;)</span></span></code></pre></div>
 <p><strong>Usage</strong>: The addin allows you to specify the number of desired paragraphs and sentences.</p>
 <p>R Markdown<br />
 <strong>Call lorem::ipsum() in an inline R chunk in R Markdown.</strong></p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="r-methods-and-how-tos.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(paragraphs = 2)</span><span class="st">`</span>  </span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="r-methods-and-how-tos.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(paragraphs = 2)</span><span class="st">`</span>  </span></code></pre></div>
 <p><strong>Place the scrip with “``” (inline code) to call the function. ex.</strong></p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="r-methods-and-how-tos.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(paragraphs = 1)</span><span class="st">`</span>  </span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="r-methods-and-how-tos.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(paragraphs = 1)</span><span class="st">`</span>  </span></code></pre></div>
 <p><strong>You can control the number of paragraphs and sentences per paragraph.</strong></p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="r-methods-and-how-tos.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))</span><span class="st">`</span>  </span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="r-methods-and-how-tos.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))</span><span class="st">`</span>  </span></code></pre></div>
 <p>You can also adjust the avg_words_per_sentence to create long or short paragraphs.</p>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="r-methods-and-how-tos.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(2, avg_words_per_sentence = 3)</span><span class="st">`</span>  </span>
-<span id="cb111-2"><a href="r-methods-and-how-tos.html#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(1, avg_words_per_sentence = 20)</span><span class="st">`</span>  </span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="r-methods-and-how-tos.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(2, avg_words_per_sentence = 3)</span><span class="st">`</span>  </span>
+<span id="cb113-2"><a href="r-methods-and-how-tos.html#cb113-2" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r lorem::ipsum(1, avg_words_per_sentence = 20)</span><span class="st">`</span>  </span></code></pre></div>
 <p><strong>Everywhere Else</strong><br />
 Generate lorem ipsum anywhere else using lorem::ipsum() or lorem::ipsum_words().</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="r-methods-and-how-tos.html#cb112-1" aria-hidden="true" tabindex="-1"></a>ipsum_items <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">5</span>, lorem<span class="sc">::</span><span class="fu">ipsum_words</span>(<span class="dv">5</span>))</span>
-<span id="cb112-2"><a href="r-methods-and-how-tos.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste</span>(<span class="st">&quot;-&quot;</span>, ipsum_items), <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="r-methods-and-how-tos.html#cb114-1" aria-hidden="true" tabindex="-1"></a>ipsum_items <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">5</span>, lorem<span class="sc">::</span><span class="fu">ipsum_words</span>(<span class="dv">5</span>))</span>
+<span id="cb114-2"><a href="r-methods-and-how-tos.html#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste</span>(<span class="st">&quot;-&quot;</span>, ipsum_items), <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="how-to-insert-colummns-in-r-markdown." class="section level2" number="4.2">
@@ -329,18 +329,18 @@ Generate lorem ipsum anywhere else using lorem::ipsum() or lorem::ipsum_words().
 <blockquote>
 <p><strong>It is better to add directly to the style.css file for it to work properly.</strong></p>
 </blockquote>
-<div class="sourceCode" id="cb113"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb113-1"><a href="r-methods-and-how-tos.html#cb113-1" aria-hidden="true" tabindex="-1"></a>&lt;style<span class="op">&gt;</span></span>
-<span id="cb113-2"><a href="r-methods-and-how-tos.html#cb113-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.col2</span> {</span>
-<span id="cb113-3"><a href="r-methods-and-how-tos.html#cb113-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">columns</span>: <span class="dv">2</span> <span class="dv">200</span><span class="dt">px</span><span class="op">;</span>         <span class="co">/* number of columns and width in pixels*/</span></span>
-<span id="cb113-4"><a href="r-methods-and-how-tos.html#cb113-4" aria-hidden="true" tabindex="-1"></a>    -webkit-columns: <span class="dv">2</span> <span class="dv">200</span><span class="dt">px</span><span class="op">;</span> <span class="co">/* chrome, safari */</span></span>
-<span id="cb113-5"><a href="r-methods-and-how-tos.html#cb113-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">-moz-columns</span>: <span class="dv">2</span> <span class="dv">200</span><span class="dt">px</span><span class="op">;</span>    <span class="co">/* firefox */</span></span>
-<span id="cb113-6"><a href="r-methods-and-how-tos.html#cb113-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb113-7"><a href="r-methods-and-how-tos.html#cb113-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.col3</span> {</span>
-<span id="cb113-8"><a href="r-methods-and-how-tos.html#cb113-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">columns</span>: <span class="dv">3</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb113-9"><a href="r-methods-and-how-tos.html#cb113-9" aria-hidden="true" tabindex="-1"></a>    -webkit-columns: <span class="dv">3</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb113-10"><a href="r-methods-and-how-tos.html#cb113-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">-moz-columns</span>: <span class="dv">3</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb113-11"><a href="r-methods-and-how-tos.html#cb113-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb113-12"><a href="r-methods-and-how-tos.html#cb113-12" aria-hidden="true" tabindex="-1"></a>&lt;/style<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb115-1"><a href="r-methods-and-how-tos.html#cb115-1" aria-hidden="true" tabindex="-1"></a>&lt;style<span class="op">&gt;</span></span>
+<span id="cb115-2"><a href="r-methods-and-how-tos.html#cb115-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.col2</span> {</span>
+<span id="cb115-3"><a href="r-methods-and-how-tos.html#cb115-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">columns</span>: <span class="dv">2</span> <span class="dv">200</span><span class="dt">px</span><span class="op">;</span>         <span class="co">/* number of columns and width in pixels*/</span></span>
+<span id="cb115-4"><a href="r-methods-and-how-tos.html#cb115-4" aria-hidden="true" tabindex="-1"></a>    -webkit-columns: <span class="dv">2</span> <span class="dv">200</span><span class="dt">px</span><span class="op">;</span> <span class="co">/* chrome, safari */</span></span>
+<span id="cb115-5"><a href="r-methods-and-how-tos.html#cb115-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">-moz-columns</span>: <span class="dv">2</span> <span class="dv">200</span><span class="dt">px</span><span class="op">;</span>    <span class="co">/* firefox */</span></span>
+<span id="cb115-6"><a href="r-methods-and-how-tos.html#cb115-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb115-7"><a href="r-methods-and-how-tos.html#cb115-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.col3</span> {</span>
+<span id="cb115-8"><a href="r-methods-and-how-tos.html#cb115-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">columns</span>: <span class="dv">3</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb115-9"><a href="r-methods-and-how-tos.html#cb115-9" aria-hidden="true" tabindex="-1"></a>    -webkit-columns: <span class="dv">3</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb115-10"><a href="r-methods-and-how-tos.html#cb115-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">-moz-columns</span>: <span class="dv">3</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb115-11"><a href="r-methods-and-how-tos.html#cb115-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb115-12"><a href="r-methods-and-how-tos.html#cb115-12" aria-hidden="true" tabindex="-1"></a>&lt;/style<span class="op">&gt;</span></span></code></pre></div>
 <style type="text/css">
 <style>
   .col2 {
@@ -358,31 +358,31 @@ Generate lorem ipsum anywhere else using lorem::ipsum() or lorem::ipsum_words().
 <div id="columns-loremipsum-example" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> 3 Columns + loremipsum example</h3>
 <p>Code:</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb114-1"><a href="r-methods-and-how-tos.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;</span>div <span class="cf">class</span><span class="kw">=</span><span class="st">&quot;col3&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb114-2"><a href="r-methods-and-how-tos.html#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">1</span><span class="kw">.</span> paragraphs <span class="kw">=</span> <span class="dv">1</span><span class="kw">**</span>   </span>
-<span id="cb114-3"><a href="r-methods-and-how-tos.html#cb114-3" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum()`</span>  </span>
-<span id="cb114-4"><a href="r-methods-and-how-tos.html#cb114-4" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">2</span><span class="kw">.</span> paragraphs <span class="kw">=</span> <span class="dv">3</span>, sentences <span class="kw">=</span> c(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)<span class="kw">**</span>    </span>
-<span id="cb114-5"><a href="r-methods-and-how-tos.html#cb114-5" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))`</span>  </span>
-<span id="cb114-6"><a href="r-methods-and-how-tos.html#cb114-6" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">3</span><span class="kw">.</span> paragraphs <span class="kw">=</span> <span class="dv">2</span>, avg_words_per_sentence <span class="kw">=</span> <span class="dv">3</span><span class="kw">**</span>     </span>
-<span id="cb114-7"><a href="r-methods-and-how-tos.html#cb114-7" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(2, avg_words_per_sentence = 3)`</span>  </span>
-<span id="cb114-8"><a href="r-methods-and-how-tos.html#cb114-8" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">4</span><span class="kw">.**</span> four<span class="kw">.</span>    </span>
-<span id="cb114-9"><a href="r-methods-and-how-tos.html#cb114-9" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">5</span><span class="kw">.**</span> five<span class="kw">.</span>      </span>
-<span id="cb114-10"><a href="r-methods-and-how-tos.html#cb114-10" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">6</span><span class="kw">.**</span> six<span class="kw">.</span>      </span>
-<span id="cb114-11"><a href="r-methods-and-how-tos.html#cb114-11" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">7</span><span class="kw">.**</span> seven<span class="kw">.</span>     </span>
-<span id="cb114-12"><a href="r-methods-and-how-tos.html#cb114-12" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">8</span><span class="kw">.**</span> eight<span class="kw">.</span>    </span>
-<span id="cb114-13"><a href="r-methods-and-how-tos.html#cb114-13" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">9</span><span class="kw">.**</span> nine<span class="kw">.</span>     </span>
-<span id="cb114-14"><a href="r-methods-and-how-tos.html#cb114-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;</span><span class="ss">/div&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb116-1"><a href="r-methods-and-how-tos.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;</span>div <span class="cf">class</span><span class="kw">=</span><span class="st">&quot;col3&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb116-2"><a href="r-methods-and-how-tos.html#cb116-2" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">1</span><span class="kw">.</span> paragraphs <span class="kw">=</span> <span class="dv">1</span><span class="kw">**</span>   </span>
+<span id="cb116-3"><a href="r-methods-and-how-tos.html#cb116-3" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum()`</span>  </span>
+<span id="cb116-4"><a href="r-methods-and-how-tos.html#cb116-4" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">2</span><span class="kw">.</span> paragraphs <span class="kw">=</span> <span class="dv">3</span>, sentences <span class="kw">=</span> c(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)<span class="kw">**</span>    </span>
+<span id="cb116-5"><a href="r-methods-and-how-tos.html#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))`</span>  </span>
+<span id="cb116-6"><a href="r-methods-and-how-tos.html#cb116-6" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">3</span><span class="kw">.</span> paragraphs <span class="kw">=</span> <span class="dv">2</span>, avg_words_per_sentence <span class="kw">=</span> <span class="dv">3</span><span class="kw">**</span>     </span>
+<span id="cb116-7"><a href="r-methods-and-how-tos.html#cb116-7" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(2, avg_words_per_sentence = 3)`</span>  </span>
+<span id="cb116-8"><a href="r-methods-and-how-tos.html#cb116-8" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">4</span><span class="kw">.**</span> four<span class="kw">.</span>    </span>
+<span id="cb116-9"><a href="r-methods-and-how-tos.html#cb116-9" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">5</span><span class="kw">.**</span> five<span class="kw">.</span>      </span>
+<span id="cb116-10"><a href="r-methods-and-how-tos.html#cb116-10" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">6</span><span class="kw">.**</span> six<span class="kw">.</span>      </span>
+<span id="cb116-11"><a href="r-methods-and-how-tos.html#cb116-11" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">7</span><span class="kw">.**</span> seven<span class="kw">.</span>     </span>
+<span id="cb116-12"><a href="r-methods-and-how-tos.html#cb116-12" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">8</span><span class="kw">.**</span> eight<span class="kw">.</span>    </span>
+<span id="cb116-13"><a href="r-methods-and-how-tos.html#cb116-13" aria-hidden="true" tabindex="-1"></a><span class="kw">**</span><span class="dv">9</span><span class="kw">.**</span> nine<span class="kw">.</span>     </span>
+<span id="cb116-14"><a href="r-methods-and-how-tos.html#cb116-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;</span><span class="ss">/div&gt;</span></span></code></pre></div>
 <p>Result</p>
 <div class="col3">
 <p><strong>1. paragraphs = 1</strong><br />
-Elit felis congue praesent eleifend quis lobortis sem curabitur nullam tempus sodales! Dignissim suspendisse facilisis tellus class duis magnis montes. Fermentum luctus platea tempor feugiat facilisi fusce netus consequat posuere.<br />
+Dolor accumsan senectus fringilla torquent vitae dictum dictumst conubia est penatibus dis! Leo proin ultricies taciti sollicitudin sed imperdiet auctor dictum facilisis ad mattis! Aptent blandit tortor luctus arcu fames diam euismod curae et pharetra eleifend? Na eleifend.<br />
 <strong>2. paragraphs = 3, sentences = c(1, 2, 3)</strong><br />
-Dolor scelerisque molestie euismod sollicitudin aptent fames nostra taciti sem potenti ornare!</p>
-<p>Elit tempus suspendisse dictumst nulla. Penatibus scelerisque eget malesuada sodales hac parturient convallis eleifend interdum dictumst sem conubia ornare.</p>
-<p>Lorem aliquam donec vitae donec donec donec sodales. Porttitor imperdiet semper consequat donec cubilia congue morbi ac. Parturient nisl ante rhoncus himenaeos nisi rutrum class magnis hendrerit auctor ut cursus et non semper habitasse.<br />
+Dolor class fringilla ante himenaeos metus quam ultrices commodo dapibus.</p>
+<p>Elit morbi parturient fermentum porta et dapibus nisl in ornare pretium volutpat. Aliquet sed ac platea aliquet fermentum.</p>
+<p>Elit rutrum maecenas vivamus curae convallis posuere aptent consequat? Auctor facilisis per curabitur purus sed porttitor. Pellentesque litora lobortis nibh curae urna urna condimentum accumsan curae libero imperdiet nulla eu odio quis porta!<br />
 <strong>3. paragraphs = 2, avg_words_per_sentence = 3</strong><br />
-Elit sollicitudin fusce. Gravida morbi justo. Morbi dictum vivamus imperdiet. Rhoncus etiam litora tortor. Na tortor.</p>
-<p>Elit ac sapien mollis. Iaculis condimentum potenti penatibus? Mi velit dis congue. Augue mollis fusce ultricies pharetra? Sociis curae commodo mus ad. Na ad.<br />
+Consectetur lacinia neque tortor ac euismod eget lacus.</p>
+<p>Dolor luctus conubia rutrum dignissim non tortor. Et netus.<br />
 <strong>4.</strong> four.<br />
 <strong>5.</strong> five.<br />
 <strong>6.</strong> six.<br />
@@ -394,13 +394,13 @@ Elit sollicitudin fusce. Gravida morbi justo. Morbi dictum vivamus imperdiet. Rh
 <div id="columns-examples." class="section level3" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> 2 Columns examples.</h3>
 <p>Code: (Erase the “()” in the {} section, it should be <strong>{r}</strong> only)</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb115-1"><a href="r-methods-and-how-tos.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;</span>div <span class="cf">class</span><span class="kw">=</span><span class="st">&quot;col2&quot;</span><span class="kw">&gt;</span>  </span>
-<span id="cb115-2"><a href="r-methods-and-how-tos.html#cb115-2" aria-hidden="true" tabindex="-1"></a>head(mtcars)</span>
-<span id="cb115-3"><a href="r-methods-and-how-tos.html#cb115-3" aria-hidden="true" tabindex="-1"></a>tail(mtcars)<span class="in">```  </span></span>
-<span id="cb115-4"><a href="r-methods-and-how-tos.html#cb115-4" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/div&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb117-1"><a href="r-methods-and-how-tos.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;</span>div <span class="cf">class</span><span class="kw">=</span><span class="st">&quot;col2&quot;</span><span class="kw">&gt;</span>  </span>
+<span id="cb117-2"><a href="r-methods-and-how-tos.html#cb117-2" aria-hidden="true" tabindex="-1"></a>head(mtcars)</span>
+<span id="cb117-3"><a href="r-methods-and-how-tos.html#cb117-3" aria-hidden="true" tabindex="-1"></a>tail(mtcars)<span class="in">```  </span></span>
+<span id="cb117-4"><a href="r-methods-and-how-tos.html#cb117-4" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/div&gt;</span></span></code></pre></div>
 <p>Result:</p>
 <div class="col2">
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="r-methods-and-how-tos.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="r-methods-and-how-tos.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code></pre></div>
 <pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs        am gear carb
 ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0    Manual    4    4
 ## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0    Manual    4    4
@@ -408,7 +408,7 @@ Elit sollicitudin fusce. Gravida morbi justo. Morbi dictum vivamus imperdiet. Rh
 ## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1 Automatic    3    1
 ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0 Automatic    3    2
 ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1 Automatic    3    1</code></pre>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="r-methods-and-how-tos.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(mtcars)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="r-methods-and-how-tos.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(mtcars)</span></code></pre></div>
 <pre><code>##                 mpg cyl  disp  hp drat    wt qsec vs     am gear carb
 ## Porsche 914-2  26.0   4 120.3  91 4.43 2.140 16.7  0 Manual    5    2
 ## Lotus Europa   30.4   4  95.1 113 3.77 1.513 16.9  1 Manual    5    2
@@ -428,11 +428,11 @@ Elit sollicitudin fusce. Gravida morbi justo. Morbi dictum vivamus imperdiet. Rh
 <p><strong>Description</strong><br />
 Filters out the indices of lines between code block fences such as ``` (could be three or four or more backticks).</p>
 <p><strong>Usage</strong></p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="r-methods-and-how-tos.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xfun)</span>
-<span id="cb120-2"><a href="r-methods-and-how-tos.html#cb120-2" aria-hidden="true" tabindex="-1"></a><span class="do">## ??xfun</span></span>
-<span id="cb120-3"><a href="r-methods-and-how-tos.html#cb120-3" aria-hidden="true" tabindex="-1"></a><span class="fu">prose_index</span>(<span class="st">&quot;```&quot;</span>, <span class="at">warn =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb120-4"><a href="r-methods-and-how-tos.html#cb120-4" aria-hidden="true" tabindex="-1"></a><span class="fu">prose_index</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;```&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;```&quot;</span>, <span class="st">&quot;c&quot;</span>))</span>
-<span id="cb120-5"><a href="r-methods-and-how-tos.html#cb120-5" aria-hidden="true" tabindex="-1"></a><span class="fu">prose_index</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;````&quot;</span>, <span class="st">&quot;```r&quot;</span>, <span class="st">&quot;1+1&quot;</span>, <span class="st">&quot;```&quot;</span>, <span class="st">&quot;````&quot;</span>, <span class="st">&quot;c&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="r-methods-and-how-tos.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xfun)</span>
+<span id="cb122-2"><a href="r-methods-and-how-tos.html#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="do">## ??xfun</span></span>
+<span id="cb122-3"><a href="r-methods-and-how-tos.html#cb122-3" aria-hidden="true" tabindex="-1"></a><span class="fu">prose_index</span>(<span class="st">&quot;```&quot;</span>, <span class="at">warn =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb122-4"><a href="r-methods-and-how-tos.html#cb122-4" aria-hidden="true" tabindex="-1"></a><span class="fu">prose_index</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;```&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;```&quot;</span>, <span class="st">&quot;c&quot;</span>))</span>
+<span id="cb122-5"><a href="r-methods-and-how-tos.html#cb122-5" aria-hidden="true" tabindex="-1"></a><span class="fu">prose_index</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;````&quot;</span>, <span class="st">&quot;```r&quot;</span>, <span class="st">&quot;1+1&quot;</span>, <span class="st">&quot;```&quot;</span>, <span class="st">&quot;````&quot;</span>, <span class="st">&quot;c&quot;</span>))</span></code></pre></div>
 <p><strong>Value:</strong> An integer vector of indices of lines that are prose in Markdown. <strong>Note:</strong> If the code fences are not balanced (e.g., a starting fence without an ending fence), this function will treat all lines as prose.</p>
 <p>Still DO NOT UNDERSTAND HOW IT WORKS AND WHAT THE OUTCOME MEANS.</p>
 <hr />
