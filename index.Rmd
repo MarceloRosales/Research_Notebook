@@ -1,8 +1,9 @@
 --- 
 title: "All Research Notes"
-author: "Marcelo Rosales"
-date: '2021-02-10'
-Update: "`r Sys.Date()`"
+author: "**Marcelo Rosales**"
+date: '**Created:** 2021-02-10;  **Update:** 2021-08-19; **Date:** `r Sys.Date()`' 
+#date: "`r Sys.Date()`"
+#date: '`r format(Sys.time(), "%d %B, %Y")`'
 site: bookdown::bookdown_site
 documentclass: book
 bibliography:
