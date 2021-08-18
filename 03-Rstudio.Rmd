@@ -29,6 +29,11 @@ If fail, another option is to download xcode from the apple store. This is a big
 Install xcode from Apple Store. (For Git conection, is this necessary?)    
 ```
 
+Important.  remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: unable to access 'https://github.com/MarceloRosales/Research_Notebook.git/': The requested URL returned error: 403
+
+
 1. Set up Github account.  
 1. Import rstudio global settings (See 3.2)  
 1. Update packages, then copy / transfer packages from older computer/rstudio ( See 3.3 method 1)  
