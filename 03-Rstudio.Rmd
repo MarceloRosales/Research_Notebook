@@ -10,9 +10,23 @@ brew install --cask rstudio
 
 brew install git   
 brew install --cask github  
+```
 
-Install xcode from Apple Store. (For Git conection, is this necessary?)  
-xcode-select --install (this solved the git tab missing problem)
+For new projects, sometimes the git tab does not appear. In those ocations. Install:
+```
+xcode-select --install 
+```
+This solves the git tab missing problem. In case still the tab is missing. go to:  
+`// Tools > Version control > Project Setup > ...[]... > Git/SVN > Version control system > Git`  
+
+Also check:  
+`// Tools > Version control > Project Setup > ...[]... > Git/SVN > Build Tools > Project build tools > Website`    
+
+> After setting, closing and restarting project will deploy the git tab and functionality. 
+
+If fail, another option is to download xcode from the apple store. This is a big app, it takes some time to download and 
+```
+Install xcode from Apple Store. (For Git conection, is this necessary?)    
 ```
 
 1. Set up Github account.  

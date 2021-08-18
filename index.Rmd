@@ -2,6 +2,7 @@
 title: "All Research Notes"
 author: "Marcelo Rosales"
 date: '2021-02-10'
+Update: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography:
