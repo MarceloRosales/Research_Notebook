@@ -13,11 +13,13 @@ customizing-your-terminal-.bash_profile-and-.bashrc-files
 how-to-install-windows-10-on-a-mac-using-virtualbox-2020-tutorial.
 r-and-rstudio
 r-rstudio-git-and-github-install.
+git-and-github-tabs-and-commits.
+rstudio-access-to-git-and-github.
+commit-trouble-shooting
 rstudio-global-settings-exportimport.-configurations-and-settings..
 copytransfer-the-packages-installed-on-one-computer-or-r-version-to-another-using-scripts.
 method-1-the-only-method-that-worked-use-this-one.
 method-2-quick-way-of-installing-all-your-old-r-libraries-on-a-new-device.-does-not-work
-since-the-code-above-is-not-interactive-i-modify-to-suit-my-needs.does-not-work-neither
 old-method-used-to-transfer-discontinue.
 interactive-plots-using-r-markdown-notebook.
 r-markdown

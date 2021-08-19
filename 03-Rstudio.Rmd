@@ -12,11 +12,16 @@ brew install git
 brew install --cask github  
 ```
 
-For new projects, sometimes the git tab does not appear. In those ocations. Install:
+
+## Git and Github tabs and commits. 
+
+For new projects, sometimes the git tab does not appear. In those occasions. Install:
 ```
 xcode-select --install 
 ```
-This solves the git tab missing problem. In case still the tab is missing. go to:  
+This solves the git tab missing problem. 
+
+In case the tab is still missing and theres a need to do it manually. Check settings by going to:  
 `// Tools > Version control > Project Setup > ...[]... > Git/SVN > Version control system > Git`  
 
 Also check:  
@@ -24,10 +29,11 @@ Also check:
 
 > After setting, closing and restarting project will deploy the git tab and functionality. 
 
-If fail, another option is to download xcode from the apple store. This is a big app, it takes some time to download and 
+If fails, another option is to download xcode from the apple store. This is a big app, it takes some time to download and 
 ```
-Install xcode from Apple Store. (For Git conection, is this necessary?)    
+Install xcode from Apple Store. (nor nessesary, but if everything else fails.. try it.)    
 ```
+### RStudio access to Git and Github.  
 
 **Important.**  Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.   
 See [here](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/) for more information.   
@@ -43,11 +49,14 @@ Then follow below method based on your machine:
 **For Windows OS**   
 Go to Credential Manager from Control Panel => Windows Credentials => find git:https://github.com => Edit => On Password replace with with your Github Personal Access Token => You are Done.   
 **For MAC OS**    
-Click on the Spotlight icon (magnifying glass) on the right side of the menu bar. Type Keychain access then press the Enter key to launch the app => In Keychain Access, search for github.com => Find the internet password entry for github.com => Edit or delete the entry accordingly => You are done. [for linux and more info.](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to)   
+Click on the Spotlight icon (magnifying glass) on the right side of the menu bar. Type Keychain access then press the Enter key to launch the app => In Keychain Access, search for github.com => Find the internet password entry for github.com => Edit or delete the entry accordingly, (delete old password and copy/paste Token number instead) => You are done. [for linux and more info.](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to)   
 
-> Commits will be saved in github but will not be reflected in githun pages. For pages to be updated, first build book (bookdow::gitbook) by clicking on "build Book" in the "Build" tab, this creates/updates hmtl files, THEN go to the git tab and commit to github. Reload page in browser and changes will be applied.    
+#### **Commit trouble shooting:**
+Saving and committing changes to github but github Page not updating?   
+> Commits will be saved in github but will not be reflected in githun pages. For pages to be updated, **first build book (bookdow::gitbook) by clicking on "build Book" in the "Build" tab**, this creates/updates hmtl files, THEN go to the git tab and commit to github. Reload page in browser and changes will be applied.    
 
 
+**Old summary of steps**   
 
 1. Set up Github account.  
 1. Import rstudio global settings (See 3.2)  
@@ -218,7 +227,7 @@ That’s it. Save yourself the trouble installing packages one-by-one all over a
 ****************************************************************************  
 
 
-### Since the code above is not interactive, I modify to suit my needs.**(DOES NOT WORK NEITHER)**  
+Since the code above is not interactive, I modify to suit my needs.**(DOES NOT WORK NEITHER)**  
 Since the function choose.dir is only for Windows and not for Mac. I created a custom dir.choose function 
 
 > Run this script in the old computer.  
