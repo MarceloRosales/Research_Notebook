@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Applications | All Research Notes</title>
+  <title>Chapter 6 Others | All Research Notes</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Applications | All Research Notes" />
+  <meta property="og:title" content="Chapter 6 Others | All Research Notes" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Applications | All Research Notes" />
+  <meta name="twitter:title" content="Chapter 6 Others | All Research Notes" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-methods-and-how-tos.html"/>
-<link rel="next" href="others.html"/>
+<link rel="prev" href="applications.html"/>
+<link rel="next" href="additional-notes-.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -292,84 +292,74 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="applications" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Applications</h1>
-<p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
-<div id="how-to-insert-an-image-with-visual-markdown-editor" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> How to insert an image (with visual markdown editor)</h2>
-<p><a href="https://marcelorosales.github.io/Research_Notebook/r-methods-and-how-tos.html#how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances."><img src="images/RakuPanda.png" title="Panda avatar" width="200" alt="RakuPanda" /></a></p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb123-1"><a href="applications.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span>!<span class="kw">[</span><span class="dt">RakuPanda</span><span class="kw">]</span>(images<span class="kw">/</span><span class="dt">RakuPanda</span><span class="at">.png</span> <span class="st">&quot;Panda avatar&quot;</span>)<span class="kw">{</span>width<span class="kw">=</span><span class="st">&quot;200&quot;</span><span class="kw">}]</span>(https:<span class="ss">//m</span>arcelorosales<span class="at">.github.io</span><span class="kw">/</span><span class="dt">Research_Notebook</span><span class="kw">/</span>r<span class="kw">-</span>methods<span class="kw">-</span><span class="cf">and</span><span class="kw">-</span>how<span class="kw">-</span>tos<span class="at">.html</span><span class="co">#how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.)</span></span></code></pre></div>
-</div>
-<div id="example-two" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Example two</h2>
-<div class="">
-  <h1>Hello world!!</h1>
-</div>
-</div>
-<div id="linear-regression-with-formula" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Linear Regression with formula</h2>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="applications.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Linear regression plot full example</span></span>
-<span id="cb124-2"><a href="applications.html#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb124-3"><a href="applications.html#cb124-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb124-4"><a href="applications.html#cb124-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Dummy data frame</span></span>
-<span id="cb124-5"><a href="applications.html#cb124-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>))</span>
-<span id="cb124-6"><a href="applications.html#cb124-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> df<span class="sc">$</span>x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">40</span>)</span>
-<span id="cb124-7"><a href="applications.html#cb124-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb124-8"><a href="applications.html#cb124-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear regression</span></span>
-<span id="cb124-9"><a href="applications.html#cb124-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(y <span class="sc">~</span> x, df)</span></code></pre></div>
-<pre><code>## 
-## Call:
-## lm(formula = y ~ x, data = df)
-## 
-## Coefficients:
-## (Intercept)            x  
-##       6.861        2.965</code></pre>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="applications.html#cb126-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, df) <span class="co"># Gives Intercept and the slope only.</span></span>
-<span id="cb126-2"><a href="applications.html#cb126-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit) <span class="co">#Gives a detail summary or the regression.</span></span></code></pre></div>
-<pre><code>## 
-## Call:
-## lm(formula = y ~ x, data = df)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -83.761 -24.187   0.227  21.461 105.468 
-## 
-## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)   6.8610     7.5213   0.912    0.364    
-## x             2.9645     0.1293  22.927   &lt;2e-16 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 37.32 on 98 degrees of freedom
-## Multiple R-squared:  0.8429, Adjusted R-squared:  0.8413 
-## F-statistic: 525.6 on 1 and 98 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="applications.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="co"># y =  a + b*x. a= Intercept, b = Slope. </span></span>
-<span id="cb128-2"><a href="applications.html#cb128-2" aria-hidden="true" tabindex="-1"></a><span class="co"># y = mx + b is the same as above where m = slope and b= intercept </span></span>
-<span id="cb128-3"><a href="applications.html#cb128-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb128-4"><a href="applications.html#cb128-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb128-5"><a href="applications.html#cb128-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">formula =</span> y <span class="sc">~</span> x) <span class="sc">+</span></span>
-<span id="cb128-6"><a href="applications.html#cb128-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb128-7"><a href="applications.html#cb128-7" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
-<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="applications.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GET EQUATION AND R-SQUARED AS STRING</span></span>
-<span id="cb129-2"><a href="applications.html#cb129-2" aria-hidden="true" tabindex="-1"></a><span class="co"># SOURCE: https://groups.google.com/forum/#!topic/ggplot2/1TgH-kG5XMA</span></span>
-<span id="cb129-3"><a href="applications.html#cb129-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb129-4"><a href="applications.html#cb129-4" aria-hidden="true" tabindex="-1"></a>lm_eqn <span class="ot">&lt;-</span> <span class="cf">function</span>(df){</span>
-<span id="cb129-5"><a href="applications.html#cb129-5" aria-hidden="true" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, df);</span>
-<span id="cb129-6"><a href="applications.html#cb129-6" aria-hidden="true" tabindex="-1"></a>  eq <span class="ot">&lt;-</span> <span class="fu">substitute</span>(<span class="fu">italic</span>(y) <span class="sc">==</span> a <span class="sc">+</span> b <span class="sc">%.%</span> <span class="fu">italic</span>(x)<span class="sc">*</span><span class="st">&quot;,&quot;</span><span class="sc">~</span><span class="er">~</span><span class="fu">italic</span>(r)<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span><span class="st">&quot;=&quot;</span><span class="sc">~</span>r2, </span>
-<span id="cb129-7"><a href="applications.html#cb129-7" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">list</span>(<span class="at">a =</span> <span class="fu">format</span>(<span class="fu">unname</span>(<span class="fu">coef</span>(m)[<span class="dv">1</span>]), <span class="at">digits =</span> <span class="dv">3</span>),</span>
-<span id="cb129-8"><a href="applications.html#cb129-8" aria-hidden="true" tabindex="-1"></a>                        <span class="at">b =</span> <span class="fu">format</span>(<span class="fu">unname</span>(<span class="fu">coef</span>(m)[<span class="dv">2</span>]), <span class="at">digits =</span> <span class="dv">3</span>),</span>
-<span id="cb129-9"><a href="applications.html#cb129-9" aria-hidden="true" tabindex="-1"></a>                        <span class="at">r2 =</span> <span class="fu">format</span>(<span class="fu">summary</span>(m)<span class="sc">$</span>r.squared, <span class="at">digits =</span> <span class="dv">3</span>)))</span>
-<span id="cb129-10"><a href="applications.html#cb129-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.character</span>(<span class="fu">as.expression</span>(eq));</span>
-<span id="cb129-11"><a href="applications.html#cb129-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb129-12"><a href="applications.html#cb129-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb129-13"><a href="applications.html#cb129-13" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="at">x =</span> <span class="dv">25</span>, <span class="at">y =</span> <span class="dv">300</span>, <span class="at">label =</span> <span class="fu">lm_eqn</span>(df), <span class="at">parse =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb129-14"><a href="applications.html#cb129-14" aria-hidden="true" tabindex="-1"></a>p1</span></code></pre></div>
-<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-100-2.png" width="672" /></p>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="applications.html#cb130-1" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="dv">23</span>, <span class="at">y =</span> <span class="dv">250</span>, <span class="at">label =</span> <span class="fu">lm_eqn</span>(df), <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">parse=</span>T)</span>
-<span id="cb130-2"><a href="applications.html#cb130-2" aria-hidden="true" tabindex="-1"></a>p2</span></code></pre></div>
-<p><img src="Research_Notebook_files/figure-html/unnamed-chunk-100-3.png" width="672" /></p>
+<div id="others" class="section level1" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Others</h1>
+<div id="niigata-university-microsoft-office-install" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Niigata university Microsoft Office Install</h2>
+<p><a href="https://www.cais.niigata-u.ac.jp/ees/">Comprehensive Contract for Microsoft Educational Institutions (EES) Niigata University Information Infrastructure</a> …<br />
+<a href="www.cais.niigata-u.ac.jp">www.cais.niigata-u.ac.jp</a> ›</p>
+<p>From September 15, 2017 , University started to provide services for personal computers to faculty and staff. Niigata University students, faculty and staff can use Office 365 ProPlus on their own PCs / tablets / smartphones . For more information, personal</p>
+<p><strong>About electronic application for Microsoft 365 account</strong><br />
+We have started electronic application for Microsoft 365 accounts for those who do not have a staff number (academic fellows, research fellows of the Japan Society for the Promotion of Science, dispatched staff, contractors, part-time lecturers).<br />
+An account will be issued by the person in charge of acceptance applying on behalf of the information infrastructure center.</p>
+<ul>
+<li><a href="https://eaply.cais.niigata-u.ac.jp/projects/microsoft365/issues/new">Electronic application form</a> .<br />
+</li>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/option.html#users">Please check this page for the target users</a> .</li>
+</ul>
+<p>If you have a staff number, please apply for an account from the <a href="https://www.cais.niigata-u.ac.jp/gateway/ees/option.html#users">usage application site</a> as before.</p>
+<p><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/main.html">Niigata University Management PC Service</a><br />
+(A new window will open)</p>
+<ul>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/main.html#download">Software download</a> &gt;<br />
+Login ユーザID: EmpNub<br />
+パスワード:••••••••••••</li>
+</ul>
+<p>Options:</p>
+<ul>
+<li>Office products &gt; Office Standard 2019 for Mac download &gt; <a href="https://www.cais.niigata-u.ac.jp/gateway/ees/manual_office_2019_mac.html#inst">Installation method</a>.<br />
+</li>
+<li>WindowsOS products<br />
+</li>
+<li>Antivirus products: Install!!!!!</li>
+</ul>
+<p><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/option.html">Services for personal computers</a> &gt;<br />
+(A new window will open)</p>
+<ul>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/option.html#advantage">EES benefits and usage</a>
+<ul>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/stad.html">Click here for how to use student benefits</a><br />
+</li>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html">Click here for how to use faculty and staff benefits</a> &gt;
+<ul>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#apply">Issuance of user account</a><br />
+Log in to the information infrastructure center <a href="https://download.cais.niigata-u.ac.jp/office365/login.html">usage application site</a> &gt;<br />
+</li>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#portal">Microsoft portal site</a><br />
+</li>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#signin">Sign in</a><br />
+</li>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#signout">Sign out</a><br />
+</li>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#office">Install Office 365 ProPlus</a><br />
+</li>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#manage">Install device management</a><br />
+</li>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#passwd">How to change password</a><br />
+</li>
+<li><a href="https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#recovery">How to recover your password</a> (when you forget your password)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>MS Office 365 account</strong><br />
+The account application is complete.<br />
+The account will be available from 9am tomorrow (even if you register early in the morning, it will be the next day).<br />
+Click the logout button to exit.<br />
+Login ID <a href="mailto:marcelo.dent@niigatau.onmicrosoft.com" class="email">marcelo.dent@niigatau.onmicrosoft.com</a><br />
+password NN<span class="math inline">\(6\)</span>Sq4?35f<br />
+Please log in to the following Office 365 ProPlus portal site and use the software.<br />
+<a href="https://portal.office.com/" class="uri">https://portal.office.com/</a><br />
+You can check the initial password by logging in to this portal site.</p>
 
 </div>
 </div>
@@ -378,8 +368,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="r-methods-and-how-tos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="others.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="applications.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="additional-notes-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
