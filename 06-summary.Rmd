@@ -4,39 +4,55 @@
 [Comprehensive Contract for Microsoft Educational Institutions (EES) Niigata University Information Infrastructure](https://www.cais.niigata-u.ac.jp/ees/) ...   
 [www.cais.niigata-u.ac.jp](www.cais.niigata-u.ac.jp) ›   
 
-From September 15, 2017 , University started to provide services for personal computers to faculty and staff. Niigata University students, faculty and staff can use Office 365 ProPlus on their own PCs / tablets / smartphones . For more information, personal   
+Niigata University has signed an Enrollment for Education Solutions (EES) contract with Microsoft for educational institutions. You can use products such as Windows OS (upgrade only) and Office on a computer managed by Niigata University. In addition, Office 365 ProPlus products can be used on personal computers owned by students and faculty members of Niigata University. For more details, please click below.  
+
+There are 2 options:    
+1. [Niigata University Management PC Service](https://www.cais.niigata-u.ac.jp/gateway/ees/main.html) For PCs purchased by uni, ex. Kakenhi, etc.    
+2. [Services for personal computers](https://www.cais.niigata-u.ac.jp/gateway/ees/option.html)  >     
+
+
+1. [Niigata University Management PC Service](https://www.cais.niigata-u.ac.jp/gateway/ees/main.html)   
+Read contents, especially the "Target user" and then click "Software downloads".  This install Office Standard 2019 for Mac (stand alone) version.   
+  * [Software download](https://www.cais.niigata-u.ac.jp/gateway/ees/main.html#download) >   
+    Login ユーザID: EmpNub   
+    パスワード:••••••••••••    
+  * Check all boxes to agree to the terms and click in "Accept".  
+  * Select the Office製品  
+  * Choose Office for your operating system and download.  
+  * Follow instruction for installation.   
+    * Office products > Office Standard 2019 for Mac download > [Installation method](https://www.cais.niigata-u.ac.jp/gateway/ees/manual_office_2019_mac.html#inst).   
+There is also for install:
+  * WindowsOS products and    
+  * Antivirus products: Install!!!!!   
+
+
+2. [Services for personal computers](https://www.cais.niigata-u.ac.jp/gateway/ees/option.html)  >   
+
+From September 15, 2017 , University started to provide services for personal computers to faculty and staff. Niigata University students, faculty and staff can use Office 365 ProPlus on their own PCs / tablets / smartphones .   
+
+* Read the "EES benefits and usage" > Service overview & Other available services.   
+* In "How to use" section after "Other available services" there are 2 options.   
+  + [Click here for how to use student benefits](https://www.cais.niigata-u.ac.jp/gateway/ees/stad.html).   and
+  +  **"[Click here for how to use faculty and staff benefits](https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html)"** (Click here).   
 
 **About electronic application for Microsoft 365 account**  
-We have started electronic application for Microsoft 365 accounts for those who do not have a staff number (academic fellows, research fellows of the Japan Society for the Promotion of Science, dispatched staff, contractors, part-time lecturers).   
+
+_If you are not a "Target user" (university staff member or student) and do not have an account:_    
+Univ has started electronic application for Microsoft 365 accounts for those who do not have a staff number (academic fellows, research fellows of the Japan Society for the Promotion of Science, dispatched staff, contractors, part-time lecturers).   
 An account will be issued by the person in charge of acceptance applying on behalf of the information infrastructure center.   
 
 * [Electronic application form](https://eaply.cais.niigata-u.ac.jp/projects/microsoft365/issues/new) .   
 * [Please check this page for the target users](https://www.cais.niigata-u.ac.jp/gateway/ees/option.html#users) .   
 
-If you have a staff number, please apply for an account from the [usage application site](https://www.cais.niigata-u.ac.jp/gateway/ees/option.html#users) as before.   
+If you have a staff number, please apply for an account from the [usage application site](https://www.cais.niigata-u.ac.jp/gateway/ees/option.html#users).   
 
-[Niigata University Management PC Service](https://www.cais.niigata-u.ac.jp/gateway/ees/main.html)   
-(A new window will open)   
+Scroll down to [EES benefits and usage](https://www.cais.niigata-u.ac.jp/gateway/ees/option.html#advantage)   
 
-* [Software download](https://www.cais.niigata-u.ac.jp/gateway/ees/main.html#download) >   
-  Login ユーザID: EmpNub   
-  パスワード:••••••••••••    
-
-Options:   
-
-* Office products > Office Standard 2019 for Mac download > [Installation method](https://www.cais.niigata-u.ac.jp/gateway/ees/manual_office_2019_mac.html#inst).   
-* WindowsOS products   
-* Antivirus products: Install!!!!!   
-
-
-[Services for personal computers](https://www.cais.niigata-u.ac.jp/gateway/ees/option.html)  >   
-(A new window will open)   
-
-- [EES benefits and usage](https://www.cais.niigata-u.ac.jp/gateway/ees/option.html#advantage)   
   * [Click here for how to use student benefits](https://www.cais.niigata-u.ac.jp/gateway/ees/stad.html)   
-  * [Click here for how to use faculty and staff benefits](https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html) >   
+  * [Click here for how to use faculty and staff benefits](https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html) > **Click here.**
+  Follow the instructions.:  
     + [Issuance of user account](https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#apply)    
-Log in to the information infrastructure center [usage application site](https://download.cais.niigata-u.ac.jp/office365/login.html) >    
+Log in to the information infrastructure center [usage application site](https://download.cais.niigata-u.ac.jp/office365/login.html) > check ID: @niigatau.onmicrosoft.com.      
     + [Microsoft portal site](https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#portal)    
     + [Sign in](https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#signin)    
     + [Sign out](https://www.cais.niigata-u.ac.jp/gateway/ees/tcad.html#signout)    
@@ -47,13 +63,18 @@ Log in to the information infrastructure center [usage application site](https:/
 
 **MS Office 365 account**    
 The account application is complete.   
-The account will be available from 9am tomorrow (even if you register early in the morning, it will be the next day).   
-Click the logout button to exit.   
-Login ID	marcelo.dent@niigatau.onmicrosoft.com   
-password	NN$6$Sq4?35f    
-Please log in to the following Office 365 ProPlus portal site and use the software.   
+The account will be available from 9am tomorrow (even if you register early in the morning, it will be the next day).　　  
+Click the logout button to exit.   　
+Please log in to the following Office 365 ProPlus portal site and use the software.   　　　
 https://portal.office.com/   
-You can check the initial password by logging in to this portal site.   
+You can check the initial password by logging in to this portal site.   　　
+Login ID	@niigatau.onmicrosoft.com   
+Change the password.    
+
+Login to your new office 365 account.(@niigatau.onmicrosoft.com )   
+In the right corner click on **Install Office**. This will install lates office on computer. 
+
+
 
 
 
