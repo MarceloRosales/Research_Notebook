@@ -192,6 +192,7 @@ The only way Discard is by:
 // File > New project > ..[].. > New Directory > Book Project using bookdown >   
 // Tools > Project options (Or: // [Git] > Project Setup ) > Git/SVN > Version control System: Git >   
 1. Open GitHub > Add > Select Project forlder in ~Documents/GitHub  > Publish branch >   
+1. Open Github in brawser > Settings > Pages > Git Pages > Source > » Master > »/docs > Saves.   
 
 In the Projects files.    
 
