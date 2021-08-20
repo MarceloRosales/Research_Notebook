@@ -183,3 +183,34 @@ The only way Discard is by:
 3.  Select all the changed files (command + A)\
 4.  Right click over the selected changes.\
 5.  Select **discard selected changes** and click on OK.
+
+
+## How to create an r bookdown and link with github paages.  
+
+README.md   
+R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Bioinformatics RNA-seq project.     
+
+_bookdown.yml   
+```{r, eval=FALSE}
+book_filename: "Bioinformatics_RNA-seq"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter 1"
+
+```
+
+_output.yml.   
+```{r eval=FALSE}
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">Bio-Informatics</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    download: ["pdf", "epub"]
+
+```
+

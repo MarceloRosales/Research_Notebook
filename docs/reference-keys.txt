@@ -66,6 +66,7 @@ columns-loremipsum-example
 columns-examples.
 how-to-find-the-indices-of-lines-in-markdown-that-are-prose-not-balanced.
 how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.
+how-to-create-an-r-bookdown-and-link-with-github-paages.
 applications
 how-to-insert-an-image-with-visual-markdown-editor
 example-two
