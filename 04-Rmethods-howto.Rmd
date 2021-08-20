@@ -185,18 +185,31 @@ The only way Discard is by:
 5.  Select **discard selected changes** and click on OK.
 
 
-## How to create an r bookdown and link with github paages.  
+## How to create an r bookdown and link with github paages.   
+
+1. Create a bookdown project in R.    
+// Session > New session >    
+// File > New project > ..[].. > New Directory > Book Project using bookdown >   
+// Tools > Project options (Or: // [Git] > Project Setup ) > Git/SVN > Version control System: Git >   
+1. Open GitHub > Add > Select Project forlder in ~Documents/GitHub  > Publish branch >   
+
+In the Projects files.    
 
 README.md   
 R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Bioinformatics RNA-seq project.     
 
-_bookdown.yml   
+_bookdown.yml:   
+**Important**:   
+> Here is very important to **add the "output_dir: "docs".**
+
 ```{r, eval=FALSE}
 book_filename: "Bioinformatics_RNA-seq"
 delete_merged_file: true
+output_dir: "docs"
 language:
   ui:
-    chapter_name: "Chapter 1"
+    chapter_name: "Chapter 01"
+
 
 ```
 
@@ -214,3 +227,29 @@ bookdown::gitbook:
 
 ```
 
+Index.Rmd:   
+```{r eval=FALSE}
+--- 
+title: "Bioinformatics_RNA-seq"
+author: "J. Marcelo Rosales R."
+date: '**Created:** 2021-08-10;  **Update:** 2021-08-20; **Date:** `r Sys.Date()`' 
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "RNA-seq notes and trials"
+---
+```
+
+Also in Index.Rmd. 
+**Important**: To avoid the  **File packages.bib not found in resource path** error.  
+Paste the following code after the md heading.  knitr expects all paths to be either absolute or relative to your current R working directory.    
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```  

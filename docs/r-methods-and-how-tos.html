@@ -382,14 +382,14 @@ Generate lorem ipsum anywhere else using lorem::ipsum() or lorem::ipsum_words().
 <p>Result</p>
 <div class="col3">
 <p><strong>1. paragraphs = 1</strong><br />
-Adipiscing pretium cum at neque conubia. Eu sollicitudin tempor conubia mollis tortor non habitant vivamus accumsan ultrices porttitor. Varius phasellus ac curae tristique eget faucibus penatibus tortor non in laoreet ligula. Tempus molestie fermentum maecenas lectus nisl varius justo tincidunt? Quisque lectus eleifend hendrerit mus iaculis volutpat sociis vel nisl enim. Lacinia mollis malesuada molestie molestie nascetur hendrerit sed nullam est luctus blandit fames facilisis.<br />
+Ipsum accumsan mattis ac tristique sem faucibus turpis nam. Eu taciti aliquet facilisi nunc luctus nam blandit blandit. Aliquam senectus nunc suspendisse condimentum mi potenti ut nam dignissim. Facilisi ornare at etiam ante torquent sed primis posuere curabitur. Na curabitur.<br />
 <strong>2. paragraphs = 3, sentences = c(1, 2, 3)</strong><br />
-Dolor augue tincidunt quisque turpis aliquam tempus risus fermentum sociosqu donec vel.</p>
-<p>Elit lacinia primis ac interdum pulvinar. Luctus ultrices eu parturient blandit tellus scelerisque mollis molestie conubia aliquam aptent feugiat porttitor orci turpis.</p>
-<p>Amet imperdiet varius molestie torquent parturient aenean sed libero rhoncus condimentum nisl! Sociosqu platea pellentesque pellentesque ornare faucibus mi ante lectus. Vehicula risus porta neque scelerisque ante enim non posuere quam vestibulum?<br />
+Lorem feugiat congue mus consequat dictum cras vulputate habitasse fames tempor cubilia etiam?</p>
+<p>Elit morbi nam malesuada nullam potenti! Porta pharetra consequat non molestie phasellus molestie hac dictum orci id praesent cursus mi.</p>
+<p>Sit odio ultricies justo facilisis tempus tristique lacus nibh nullam dis curae vestibulum. Feugiat fusce facilisis neque a suscipit aptent dignissim vel luctus vel! Placerat scelerisque velit in montes ornare.<br />
 <strong>3. paragraphs = 2, avg_words_per_sentence = 3</strong><br />
-Consectetur non senectus hendrerit! Tellus nullam id mus. Cubilia eu rhoncus condimentum. Eros nascetur in suspendisse. Risus metus pellentesque enim. Na enim.</p>
-<p>Elit vehicula nisi. Bibendum curae orci? Fusce inceptos praesent metus. Netus maecenas aliquet eu. Imperdiet id mi sed. Habitant ultrices litora cum? Na cum.<br />
+Ipsum diam cursus. Enim fames natoque. Maecenas est arcu mi! Sociosqu justo imperdiet tellus. Na tellus?</p>
+<p>Lorem a sollicitudin nec suscipit potenti sociis.<br />
 <strong>4.</strong> four.<br />
 <strong>5.</strong> five.<br />
 <strong>6.</strong> six.<br />
@@ -462,14 +462,26 @@ Filters out the indices of lines between code block fences such as ``` (could be
 </div>
 <div id="how-to-create-an-r-bookdown-and-link-with-github-paages." class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> How to create an r bookdown and link with github paages.</h2>
+<ol style="list-style-type: decimal">
+<li>Create a bookdown project in R.<br />
+// Session &gt; New session &gt;<br />
+// File &gt; New project &gt; ..[].. &gt; New Directory &gt; Book Project using bookdown &gt;<br />
+// Tools &gt; Project options (Or: // [Git] &gt; Project Setup ) &gt; Git/SVN &gt; Version control System: Git &gt;<br />
+</li>
+<li>Open GitHub &gt; Add &gt; Select Project forlder in ~Documents/GitHub &gt; Publish branch &gt;</li>
+</ol>
+<p>In the Projects files.</p>
 <p>README.md<br />
 R Markdown and <strong>bookdown</strong> (<a href="https://github.com/rstudio/bookdown" class="uri">https://github.com/rstudio/bookdown</a>). Bioinformatics RNA-seq project.</p>
-<p>_bookdown.yml</p>
+<p>_bookdown.yml:<br />
+<strong>Important</strong>:<br />
+&gt; Here is very important to <strong>add the “output_dir:”docs”.</strong></p>
 <div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="r-methods-and-how-tos.html#cb123-1" aria-hidden="true" tabindex="-1"></a>book_filename<span class="sc">:</span> <span class="st">&quot;Bioinformatics_RNA-seq&quot;</span></span>
 <span id="cb123-2"><a href="r-methods-and-how-tos.html#cb123-2" aria-hidden="true" tabindex="-1"></a>delete_merged_file<span class="sc">:</span> true</span>
-<span id="cb123-3"><a href="r-methods-and-how-tos.html#cb123-3" aria-hidden="true" tabindex="-1"></a>language<span class="sc">:</span></span>
-<span id="cb123-4"><a href="r-methods-and-how-tos.html#cb123-4" aria-hidden="true" tabindex="-1"></a>  ui<span class="sc">:</span></span>
-<span id="cb123-5"><a href="r-methods-and-how-tos.html#cb123-5" aria-hidden="true" tabindex="-1"></a>    chapter_name<span class="sc">:</span> <span class="st">&quot;Chapter 1&quot;</span></span></code></pre></div>
+<span id="cb123-3"><a href="r-methods-and-how-tos.html#cb123-3" aria-hidden="true" tabindex="-1"></a>output_dir<span class="sc">:</span> <span class="st">&quot;docs&quot;</span></span>
+<span id="cb123-4"><a href="r-methods-and-how-tos.html#cb123-4" aria-hidden="true" tabindex="-1"></a>language<span class="sc">:</span></span>
+<span id="cb123-5"><a href="r-methods-and-how-tos.html#cb123-5" aria-hidden="true" tabindex="-1"></a>  ui<span class="sc">:</span></span>
+<span id="cb123-6"><a href="r-methods-and-how-tos.html#cb123-6" aria-hidden="true" tabindex="-1"></a>    chapter_name<span class="sc">:</span> <span class="st">&quot;Chapter 01&quot;</span></span></code></pre></div>
 <p>_output.yml.</p>
 <div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="r-methods-and-how-tos.html#cb124-1" aria-hidden="true" tabindex="-1"></a>bookdown<span class="sc">::</span>gitbook<span class="sc">:</span></span>
 <span id="cb124-2"><a href="r-methods-and-how-tos.html#cb124-2" aria-hidden="true" tabindex="-1"></a>  css<span class="sc">:</span> style.css</span>
@@ -480,6 +492,21 @@ R Markdown and <strong>bookdown</strong> (<a href="https://github.com/rstudio/bo
 <span id="cb124-7"><a href="r-methods-and-how-tos.html#cb124-7" aria-hidden="true" tabindex="-1"></a>      after<span class="sc">:</span> <span class="er">|</span></span>
 <span id="cb124-8"><a href="r-methods-and-how-tos.html#cb124-8" aria-hidden="true" tabindex="-1"></a>        <span class="er">&lt;</span>li<span class="sc">&gt;</span><span class="er">&lt;</span>a href<span class="ot">=</span><span class="st">&quot;https://github.com/rstudio/bookdown&quot;</span> target<span class="ot">=</span><span class="st">&quot;blank&quot;</span><span class="sc">&gt;</span>Published with bookdown<span class="sc">&lt;</span><span class="er">/</span>a<span class="sc">&gt;</span><span class="er">&lt;/</span>li<span class="sc">&gt;</span></span>
 <span id="cb124-9"><a href="r-methods-and-how-tos.html#cb124-9" aria-hidden="true" tabindex="-1"></a>    download<span class="sc">:</span> [<span class="st">&quot;pdf&quot;</span>, <span class="st">&quot;epub&quot;</span>]</span></code></pre></div>
+<p>Index.Rmd:</p>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="r-methods-and-how-tos.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span> </span>
+<span id="cb125-2"><a href="r-methods-and-how-tos.html#cb125-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">&quot;Bioinformatics_RNA-seq&quot;</span></span>
+<span id="cb125-3"><a href="r-methods-and-how-tos.html#cb125-3" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">&quot;J. Marcelo Rosales R.&quot;</span></span>
+<span id="cb125-4"><a href="r-methods-and-how-tos.html#cb125-4" aria-hidden="true" tabindex="-1"></a>date<span class="sc">:</span> <span class="st">&#39;**Created:** 2021-08-10;  **Update:** 2021-08-20; **Date:** `r Sys.Date()`&#39;</span> </span>
+<span id="cb125-5"><a href="r-methods-and-how-tos.html#cb125-5" aria-hidden="true" tabindex="-1"></a>site<span class="sc">:</span> bookdown<span class="sc">::</span>bookdown_site</span>
+<span id="cb125-6"><a href="r-methods-and-how-tos.html#cb125-6" aria-hidden="true" tabindex="-1"></a>documentclass<span class="sc">:</span> book</span>
+<span id="cb125-7"><a href="r-methods-and-how-tos.html#cb125-7" aria-hidden="true" tabindex="-1"></a>bibliography<span class="sc">:</span> [book.bib, packages.bib]</span>
+<span id="cb125-8"><a href="r-methods-and-how-tos.html#cb125-8" aria-hidden="true" tabindex="-1"></a>biblio<span class="sc">-</span>style<span class="sc">:</span> apalike</span>
+<span id="cb125-9"><a href="r-methods-and-how-tos.html#cb125-9" aria-hidden="true" tabindex="-1"></a>link<span class="sc">-</span>citations<span class="sc">:</span> yes</span>
+<span id="cb125-10"><a href="r-methods-and-how-tos.html#cb125-10" aria-hidden="true" tabindex="-1"></a>description<span class="sc">:</span> <span class="st">&quot;RNA-seq notes and trials&quot;</span></span>
+<span id="cb125-11"><a href="r-methods-and-how-tos.html#cb125-11" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code></pre></div>
+<p>Also in Index.Rmd.
+<strong>Important</strong>: To avoid the <strong>File packages.bib not found in resource path</strong> error.<br />
+Paste the following code after the md heading. knitr expects all paths to be either absolute or relative to your current R working directory.</p>
 
 </div>
 </div>

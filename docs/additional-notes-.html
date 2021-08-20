@@ -322,8 +322,8 @@ div.csl-indent {
 * brew install tldr (a extended manual with examples)<br />
 Ex. tldr chmod</p>
 <p><strong><em>To turn on/off sound at start up.</em></strong></p>
-<div class="sourceCode" id="cb133"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb133-1"><a href="additional-notes-.html#cb133-1" aria-hidden="true" tabindex="-1"></a>sudo nvram <span class="dt">StartupMute</span><span class="kw">=</span><span class="ot">%</span>00 </span>
-<span id="cb133-2"><a href="additional-notes-.html#cb133-2" aria-hidden="true" tabindex="-1"></a>sudo nvram <span class="dt">StartupMute</span><span class="kw">=</span><span class="ot">%</span>01 </span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb134-1"><a href="additional-notes-.html#cb134-1" aria-hidden="true" tabindex="-1"></a>sudo nvram <span class="dt">StartupMute</span><span class="kw">=</span><span class="ot">%</span>00 </span>
+<span id="cb134-2"><a href="additional-notes-.html#cb134-2" aria-hidden="true" tabindex="-1"></a>sudo nvram <span class="dt">StartupMute</span><span class="kw">=</span><span class="ot">%</span>01 </span></code></pre></div>
 <p>(00=False, or mute = false, turns off the mute, Sound is On)<br />
 (01=True, or mute = true, turns on the mute, Sound is Off)</p>
 </div>
@@ -369,18 +369,18 @@ cat Brewfile (To see whats in the file, all apps with a small description)<br />
 ls Brewfile (To save the Brewfile).<br />
 ls -l Brewfile (Ls with long listing of Brewfile)</p>
 <p><strong>To update the system. Catalina -&gt; Big Sur, etc.</strong></p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb135-1"><a href="additional-notes-.html#cb135-1" aria-hidden="true" tabindex="-1"></a>sudo softwareupdate <span class="kw">-</span>ia</span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb136-1"><a href="additional-notes-.html#cb136-1" aria-hidden="true" tabindex="-1"></a>sudo softwareupdate <span class="kw">-</span>ia</span></code></pre></div>
 <p>(-i: gives information on everything installed)<br />
 (-a: mean whatever needs to be update, update)<br />
 (–verbose: as running tell me what’s been done)</p>
 <p><strong>I can then concatenate other commands like:</strong></p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb136-1"><a href="additional-notes-.html#cb136-1" aria-hidden="true" tabindex="-1"></a>sudo softwareupdate <span class="kw">-</span>ia <span class="kw">-</span>verbose; brew bundle <span class="kw">-</span>v; brew cleanup; brew doctor <span class="kw">-</span>verbose    </span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb137-1"><a href="additional-notes-.html#cb137-1" aria-hidden="true" tabindex="-1"></a>sudo softwareupdate <span class="kw">-</span>ia <span class="kw">-</span>verbose; brew bundle <span class="kw">-</span>v; brew cleanup; brew doctor <span class="kw">-</span>verbose    </span></code></pre></div>
 <p>(brew bundle -v: will install everything in the brewfile)<br />
 (brew cleanup: will delete all unused libraries)<br />
 (brew doctor -verbose: to check if there are other issues in the system and tell me.)</p>
 <p><strong>Homebrew tutorial.</strong><br />
 † apps = packages = packs</p>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="additional-notes-.html#cb137-1" aria-hidden="true" tabindex="-1"></a>xcode<span class="sc">-</span>select <span class="sc">--</span>install   </span></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="additional-notes-.html#cb138-1" aria-hidden="true" tabindex="-1"></a>xcode<span class="sc">-</span>select <span class="sc">--</span>install   </span></code></pre></div>
 <table>
 <colgroup>
 <col width="50%" />
