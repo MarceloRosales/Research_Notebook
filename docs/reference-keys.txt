@@ -16,6 +16,7 @@ r-rstudio-git-and-github-install.
 git-and-github-tabs-and-commits.
 rstudio-access-to-git-and-github.
 commit-trouble-shooting
+commits-are-not-been-attributed-to-me-and-does-not-appear-in-the-contributions-graph-in-github-page
 rstudio-global-settings-exportimport.-configurations-and-settings..
 copytransfer-the-packages-installed-on-one-computer-or-r-version-to-another-using-scripts.
 method-1-the-only-method-that-worked-use-this-one.
