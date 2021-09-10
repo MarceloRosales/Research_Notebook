@@ -1188,7 +1188,17 @@ github-repo: rstudio/bookdown-demo
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
 ```
+
+Examples and further reference [here](https://bookdown.org/alapo/learnr/making-your-first-reproducible-document.html#citations)
+
 ****************************************************************************    
+
+### Referencing a Figure
+
+See [here](https://bookdown.org/alapo/learnr/making-your-first-reproducible-document.html#referencing-a-figure) for details
+
+
+****************************************************************************   
 
 ### To automatically create a bib database for R packages
 ```{r, echo=TRUE, eval=FALSE}
