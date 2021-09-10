@@ -324,7 +324,7 @@ div.csl-indent {
 ## 
 ## Coefficients:
 ## (Intercept)            x  
-##       2.373        2.955</code></pre>
+##       9.741        2.859</code></pre>
 <div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="applications.html#cb130-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, df) <span class="co"># Gives Intercept and the slope only.</span></span>
 <span id="cb130-2"><a href="applications.html#cb130-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit) <span class="co">#Gives a detail summary or the regression.</span></span></code></pre></div>
 <pre><code>## 
@@ -333,18 +333,18 @@ div.csl-indent {
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -77.125 -21.224   1.575  25.403  84.812 
+## -90.743 -28.425   2.728  25.354  98.077 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)   2.3729     6.5357   0.363    0.717    
-## x             2.9545     0.1124  26.295   &lt;2e-16 ***
+## (Intercept)   9.7407     7.9806   1.221    0.225    
+## x             2.8593     0.1372  20.841   &lt;2e-16 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Residual standard error: 32.43 on 98 degrees of freedom
-## Multiple R-squared:  0.8759, Adjusted R-squared:  0.8746 
-## F-statistic: 691.4 on 1 and 98 DF,  p-value: &lt; 2.2e-16</code></pre>
+## Residual standard error: 39.6 on 98 degrees of freedom
+## Multiple R-squared:  0.8159, Adjusted R-squared:  0.814 
+## F-statistic: 434.3 on 1 and 98 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="applications.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="co"># y =  a + b*x. a= Intercept, b = Slope. </span></span>
 <span id="cb132-2"><a href="applications.html#cb132-2" aria-hidden="true" tabindex="-1"></a><span class="co"># y = mx + b is the same as above where m = slope and b= intercept </span></span>
 <span id="cb132-3"><a href="applications.html#cb132-3" aria-hidden="true" tabindex="-1"></a></span>

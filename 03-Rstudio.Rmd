@@ -1019,6 +1019,26 @@ install.packages('usethis')
 
 ## R and zotero for bibliography.   
 
+Install Zotero:
+
+`brew install --cask zotero    
+`
+### Zotfile
+
+1. Download the **zotfile-5.0.16-fx.xpi file** from [zotfile](http://zotfile.com/)  
+1. In //Zotero > Tools > Add-ons > ‘Extensions’  
+1. Click on the gear in the top-right corner and choose ‘Install Add-on From File…’  
+1. Choose zotfile-5.0.16-fx.xpi just downloaded, click ‘Install’  
+1. Restart Zotero  
+1. //Zotero > Tools > Zotfile Preferences ...[]...:
+* General Settings > Custom Location: "/Volumes/MAR-NG-U/Zotero Data Directory/Zotero PDF's"   
+* Renaming Rules: 
+- Renaming Rules original: {%a_}{%y_}{%t} changed to: {%a_}{%y}. Also {%b} which is used as a  Wildcard for **BetterBibTeX citekey (%b)**   
+- Delimiter between multiple authors: old: **&**, new **_**.  
+- {%a_}= author last name; {%y_}=year; {%t}= Title; {%j}= journal  
+
+****************************************************************************    
+
 [Guide/tutorial on using zotero in r](https://forums.zotero.org/discussion/73390/guide-or-tutorial-on-using-zotero-in-r)   
 
 Install the BetterBibTeX plugin **in** Zotero and then use the **citr** package in R.   
@@ -1035,7 +1055,10 @@ See here for General instructions on adding citations to an R Markdown document 
 
 ****************************************************************************    
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nm5BsfMfO9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### **Start here:  Zotero for R INSTALLATION**  
+
 [Installation instruction](https://retorque.re/zotero-better-bibtex/installation/)  
 
 1. Download the [latest release of zotero better bibtex](https://github.com/retorquere/zotero-better-bibtex/releases/latest ), make sure to save the XPI file, then in Zotero:  
@@ -1050,13 +1073,25 @@ _Note: the default setting of BBT will generate different citekeys that Zotero w
 
 
 **Once Zotero re-starts, set Configuration:**
-A welcome to better BibTex for Zotero will appear.  
+
+A welcome to better BibTex for Zotero will appear.(no longer appears junp to 1)  
 Select:  
  √ Use the BBT default format > Continue.  
  √ Enable darg-and-drop citations > Continue.  
  √ Unabbreviate journal names on import > Continue.  
  √ Expand @string journal names on imports > Continue.  
-All done.
+All done.  
+
+#### Update 2021
+1. Download the [latest release of zotero better bibtex](https://github.com/retorquere/zotero-better-bibtex/releases/latest ), make sure to save the XPI file, then in Zotero:  
+1. Open preferences: //Zotero > Preferences >...[]... Better BibTex.  
+1. Citation keys > 
+* Citation key format:[auth:lower][year]; 
+* Keep citation keys unique: across all libraries.  
+1. Exports > Quick-copy > Pandoc; √ Surround Pandoc citation with brackets. (Gitbook? or LaTeX citation?)
+1. Export > BibLaTex > √ Export unicode as plain-text latex commands.  
+1. Automatic export > √ On change.  
+
 
 ****************************************************************************    
 
@@ -1090,13 +1125,18 @@ Other Citation key format options:
 [auth:lower][year]: alford2015  . IF duplicated alford2015a  
 
 Then I changed to [auth:lower][year][month]  
-For more cite configurations, go:[Generating cite keys functions](https://retorque.re/zotero-better-bibtex/citing/#generating-citekeys).  
+For more cite configurations, go: [Generating cite keys functions](https://retorque.re/zotero-better-bibtex/citing/#generating-citekeys).  
+
+**How to update all BibTex citation keys at once?**  
+Select all, right-click, BBT->Refresh
+
 
 ****************************************************************************    
 
 ### To add Refereces/Bibliography to R bookdown. 
 
 Watch this [video](https://youtu.be/GAVXVkcpbG0) as guide:   
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GAVXVkcpbG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Steps**  
 

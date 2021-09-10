@@ -48,6 +48,7 @@ method-2.-book-down-and-github-pages.
 bookdown-trouble-shooting.
 r-and-zotero-for-bibliography.
 start-here-zotero-for-r-installation
+update-2021
 for-zotero-r-to-work-properly.
 to-add-referecesbibliography-to-r-bookdown.
 to-automatically-create-a-bib-database-for-r-packages
