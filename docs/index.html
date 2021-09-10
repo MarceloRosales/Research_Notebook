@@ -296,7 +296,7 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">All Research Notes</h1>
 <p class="author"><em><strong>Marcelo Rosales</strong></em></p>
-<p class="date" style="margin-top: 1.5em;"><em><strong>Created:</strong> 2021-02-10; <strong>Update:</strong> 2021-08-19; <strong>Date:</strong> 2021-09-09</em></p>
+<p class="date" style="margin-top: 1.5em;"><em><strong>Created:</strong> 2021-02-10; <strong>Update:</strong> 2021-08-19; <strong>Date:</strong> 2021-09-10</em></p>
 </div>
 <div id="research-notes" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter1</span> Research Notes</h1>
@@ -321,7 +321,7 @@ div.csl-indent {
 <span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
 <p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>.</p>
-<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="index.html#intro">1.1</a> <code>(\@ref(intro)</code> . If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="#methods"><strong>??</strong></a> <code>(\@ref(methods)</code>). To reference chapters use the <code>\@ref(name of the chapter)</code>, keep in mind that the <strong>name of the chapter</strong> is the first line <code># title</code> of the .Rmd file. Moreover, the back slash <code>\</code> character in the japanese keyboard is made with the keys <code>Alt/Option + ¥</code> (¥ is next to the erase/back key). Interestingly <code>\</code> works fine in R but does not seems to work for Word or other MS office applications.</p>
+<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="index.html#intro">1.1</a> <code>(\@ref(intro)</code> . If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="index.html#intro">1.1</a> <code>(\@ref(methods)</code>). To reference chapters use the <code>\@ref(name of the chapter)</code>, keep in mind that the <strong>name of the chapter</strong> is the first line <code># title</code> of the .Rmd file. Moreover, the back slash <code>\</code> character in the japanese keyboard is made with the keys <code>Alt/Option + ¥</code> (¥ is next to the erase/back key). Interestingly <code>\</code> works fine in R but does not seems to work for Word or other MS office applications.</p>
 <p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
 <span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
