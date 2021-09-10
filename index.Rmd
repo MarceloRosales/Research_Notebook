@@ -62,7 +62,7 @@ knitr::write_bib(c(
 ```  
    
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro) `(\@ref(intro)` . If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(intro) `(\@ref(methods)`). To reference chapters use the `\@ref(name of the chapter)`, keep in mind that the **name of the chapter** is the first line `# title` of the .Rmd file. Moreover, the back slash `\` character in the japanese keyboard is made with the keys `Alt/Option + ¥` (¥ is next to the erase/back key). Interestingly `\` works fine in R but does not seems to work for Word or other MS office applications. 
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro) `(\@ref(intro)` . If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(intro) `(\@ref(methods)`. To reference chapters use the `\@ref(name of the chapter)`, keep in mind that the **name of the chapter** is the first line `# title` of the .Rmd file. Moreover, the back slash `\` character in the japanese keyboard is made with the keys `Alt/Option + ¥` (¥ is next to the erase/back key). Interestingly `\` works fine in R but does not seems to work for Word or other MS office applications. 
 
 Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
 
@@ -82,3 +82,21 @@ knitr::kable(
 
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
 
+(For citation and figures: **Do Not use spaces, underscores or periods** )
+
+To create the citations you need to create a .bib file and a csl file. 
+The bib file is created with zotero, 
+1. create the library file for the book, 
+1. add all the articles and references, 
+1. Export the library
+// zotero > File > Export library > Format: BibText > √ keep updated > OK
+1. Save the file in the project, we direct the references to this file. 
+The csl file is create in [Visual CSL Editor](https://editor.citationstyles.org/visualEditor/) `I already created some csl files for kakenhi`. 
+
+**Workshop 03 - Installation and export**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ol-p-vkaMBo?start=797" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Workshop #4: RMarkdown: Citation**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g0VYp7QnlVQ?start=932" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+`For figures code references see 26:48` ()
