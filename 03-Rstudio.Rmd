@@ -1023,6 +1023,7 @@ Install Zotero:
 
 `brew install --cask zotero    
 `
+
 ### Zotfile
 
 1. Download the **zotfile-5.0.16-fx.xpi file** from [zotfile](http://zotfile.com/)  

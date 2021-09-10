@@ -47,6 +47,7 @@ method-1.-existing-project-github-first
 method-2.-book-down-and-github-pages.
 bookdown-trouble-shooting.
 r-and-zotero-for-bibliography.
+zotfile
 start-here-zotero-for-r-installation
 update-2021
 for-zotero-r-to-work-properly.
