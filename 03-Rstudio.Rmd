@@ -1134,21 +1134,30 @@ Select all, right-click, BBT->Refresh
 
 ****************************************************************************    
 
-### To add Refereces/Bibliography to R bookdown. 
+### To add Refereces/Bibliography to R bookdown.   
+
+1. Create a **references.bib** for the entire library (in zotero lib ) 
+1. Select //Zotero > Mylibrary   
+1. //Zotero > File > Export Library...[]... > Format: Better BibTeX†; Translator option:  Keep updated  > OK ...[]...  
+1. [Export] > Where: (MPB20-2021) /Volumes/MAR-NG-U/Zotero Data Directory/mylibrary.bib; Format: Better BibTeX > Save
+1. Zotero will create the file  
+1. //Zotero > Preferences > Better BibTeX > Automatic export > Automatic export: On change (will change every time a new ref is added to zotero, this migth take several seconds). Others **recomend Automatic export: Disable** (Update of library will be made manually)
+
+†Could also be BibLaTeX, see differences.  
 
 Watch this [video](https://youtu.be/GAVXVkcpbG0) as guide:   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GAVXVkcpbG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Steps**  
 
-1. Add the refences in the Markdown text with the quickcopy feature set above as in normal text. I advice to place all the related refecences in one folder in zotero, it doesnt matter if you don't use all the reference at the end.  ex.  
+1. Add the references in the Markdown text with the quickcopy feature set above as in normal text. I advice to place all the related references in one folder in zotero, it doesn't matter if you don't use all the reference at the end.  ex.  
 `
 [@almehmadi_vwc2_2018], [@rosales_rocabado_multi-factorial_2018].   
 `
 1. In Zotero (standalone), select all the references you want to add. 
 1. Zotero// File> Export library.  
 1. Select Format: √ Better BibLaTex.  
-1. Check √ Keep update if you need to modify the bibliography in zotero, otherwhise is not necessary.  
+1. Check √ Keep update if you need to modify the bibliography in zotero, otherwise is not necessary.  
 1. Click ok/  
 1. Choose the namefile.bib and save **inside the Bookdown Projects folder**.   
 1. Chose Better BibLaTex and click Save.  
