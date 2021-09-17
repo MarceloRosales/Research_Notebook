@@ -51,6 +51,9 @@ Go to Credential Manager from Control Panel => Windows Credentials => find git:h
 **For MAC OS**    
 Click on the Spotlight icon (magnifying glass) on the right side of the menu bar. Type Keychain access then press the Enter key to launch the app => In Keychain Access, search for github.com => Find the internet password entry for github.com => Edit or delete the entry accordingly, (delete old password and copy/paste Token number instead) => You are done. [for linux and more info.](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to)   
 
+
+
+
 #### **Commit trouble shooting:**
 Saving and committing changes to github but github Page not updating?   
 > Commits will be saved in github but will not be reflected in githun pages. For pages to be updated, **first build book (bookdow::gitbook) by clicking on "build Book" in the "Build" tab**, this creates/updates hmtl files, THEN go to the git tab and commit to github. Reload page in browser and changes will be applied.    
