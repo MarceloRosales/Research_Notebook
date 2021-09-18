@@ -65,7 +65,6 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -241,6 +240,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.13.2" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#displaying-code-and-plosts"><i class="fa fa-check"></i><b>3.13.2</b> Displaying Code and Plosts</a></li>
 <li class="chapter" data-level="3.13.3" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#how-to-addembed-videos-and-images."><i class="fa fa-check"></i><b>3.13.3</b> How to add/embed videos and images.</a></li>
 <li class="chapter" data-level="3.13.4" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#how-to-check-differences-between-rmarkdown-files"><i class="fa fa-check"></i><b>3.13.4</b> How to check Differences between rmarkdown files</a></li>
+<li class="chapter" data-level="3.13.5" data-path="r-and-rstudio.html"><a href="r-and-rstudio.html#creating-websites-in-r-with-out-blogdown."><i class="fa fa-check"></i><b>3.13.5</b> Creating websites in R with out blogdown.</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="r-methods-and-how-tos.html"><a href="r-methods-and-how-tos.html"><i class="fa fa-check"></i><b>4</b> R Methods and how “to`s”:</a>
@@ -384,14 +384,14 @@ Generate lorem ipsum anywhere else using lorem::ipsum() or lorem::ipsum_words().
 <p>Result</p>
 <div class="col3">
 <p><strong>1. paragraphs = 1</strong><br />
-Elit aliquet mauris aliquet molestie vestibulum sagittis quam! Ac placerat viverra class netus mus pulvinar elementum rhoncus vel integer. Purus feugiat mus mi ligula venenatis cum vel fringilla aenean porttitor enim.<br />
+Dolor accumsan senectus fringilla torquent vitae dictum dictumst conubia est penatibus dis! Leo proin ultricies taciti sollicitudin sed imperdiet auctor dictum facilisis ad mattis! Aptent blandit tortor luctus arcu fames diam euismod curae et pharetra eleifend? Na eleifend.<br />
 <strong>2. paragraphs = 3, sentences = c(1, 2, 3)</strong><br />
-Dolor nascetur cum feugiat vulputate et quisque volutpat lacus etiam volutpat integer?</p>
-<p>Adipiscing semper tristique tortor mus a in dapibus. Accumsan et varius inceptos faucibus mollis sodales aliquam magna?</p>
-<p>Elit condimentum natoque tortor congue tempor imperdiet posuere massa feugiat. Scelerisque potenti nascetur nunc ad habitant ligula. Pulvinar massa vivamus lobortis sociis commodo mus maecenas vivamus metus netus ultricies primis.<br />
+Dolor class fringilla ante himenaeos metus quam ultrices commodo dapibus.</p>
+<p>Elit morbi parturient fermentum porta et dapibus nisl in ornare pretium volutpat. Aliquet sed ac platea aliquet fermentum.</p>
+<p>Elit rutrum maecenas vivamus curae convallis posuere aptent consequat? Auctor facilisis per curabitur purus sed porttitor. Pellentesque litora lobortis nibh curae urna urna condimentum accumsan curae libero imperdiet nulla eu odio quis porta!<br />
 <strong>3. paragraphs = 2, avg_words_per_sentence = 3</strong><br />
-Elit viverra velit. Erat justo gravida. Litora nunc nulla habitasse? Diam dui lacus venenatis. Platea cras donec posuere. Non accumsan mi metus? Potenti cubilia luctus mattis! Na mattis?</p>
-<p>Sit ligula facilisi elementum! Vehicula curae erat proin? Consequat tincidunt aliquet at gravida? Senectus dictumst mi dictumst in? Na in.<br />
+Consectetur lacinia neque tortor ac euismod eget lacus.</p>
+<p>Dolor luctus conubia rutrum dignissim non tortor. Et netus.<br />
 <strong>4.</strong> four.<br />
 <strong>5.</strong> five.<br />
 <strong>6.</strong> six.<br />
@@ -479,7 +479,7 @@ Filters out the indices of lines between code block fences such as ``` (could be
 R Markdown and <strong>bookdown</strong> (<a href="https://github.com/rstudio/bookdown" class="uri">https://github.com/rstudio/bookdown</a>). Bioinformatics RNA-seq project.</p>
 <p>_bookdown.yml:<br />
 <strong>Important</strong>:<br />
-&gt; Here is very important to <strong>add the “output_dir:”docs”.</strong></p>
+&gt; Here is very important to <strong>add the “output_dir:”docs".</strong></p>
 <div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="r-methods-and-how-tos.html#cb124-1" aria-hidden="true" tabindex="-1"></a>book_filename<span class="sc">:</span> <span class="st">&quot;Bioinformatics_RNA-seq&quot;</span></span>
 <span id="cb124-2"><a href="r-methods-and-how-tos.html#cb124-2" aria-hidden="true" tabindex="-1"></a>delete_merged_file<span class="sc">:</span> true</span>
 <span id="cb124-3"><a href="r-methods-and-how-tos.html#cb124-3" aria-hidden="true" tabindex="-1"></a>output_dir<span class="sc">:</span> <span class="st">&quot;docs&quot;</span></span>

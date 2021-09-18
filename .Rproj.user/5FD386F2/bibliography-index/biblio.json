@@ -66,6 +66,59 @@
             "type": "book"
         },
         {
+            "URL": "https://CRAN.R-project.org/package=ggplot2",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Pedersen",
+                    "given": "Thomas Lin"
+                },
+                {
+                    "family": "Takahashi",
+                    "given": "Kohske"
+                },
+                {
+                    "family": "Wilke",
+                    "given": "Claus"
+                },
+                {
+                    "family": "Woo",
+                    "given": "Kara"
+                },
+                {
+                    "family": "Yutani",
+                    "given": "Hiroaki"
+                },
+                {
+                    "family": "Dunnington",
+                    "given": "Dewey"
+                }
+            ],
+            "id": "R-ggplot2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "R package version 3.3.5",
+            "title": "ggplot2: Create elegant data visualisations using the grammar of graphics",
+            "title-short": "ggplot2",
+            "type": "book"
+        },
+        {
             "URL": "https://yihui.org/knitr/",
             "author": [
                 {
@@ -84,6 +137,51 @@
             "note": "R package version 1.33",
             "title": "Knitr: A general-purpose package for dynamic report generation in r",
             "title-short": "Knitr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=plotly",
+            "author": [
+                {
+                    "family": "Sievert",
+                    "given": "Carson"
+                },
+                {
+                    "family": "Parmer",
+                    "given": "Chris"
+                },
+                {
+                    "family": "Hocking",
+                    "given": "Toby"
+                },
+                {
+                    "family": "Chamberlain",
+                    "given": "Scott"
+                },
+                {
+                    "family": "Ram",
+                    "given": "Karthik"
+                },
+                {
+                    "family": "Corvellec",
+                    "given": "Marianne"
+                },
+                {
+                    "family": "Despouy",
+                    "given": "Pedro"
+                }
+            ],
+            "id": "R-plotly",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "R package version 4.9.4.1",
+            "title": "Plotly: Create interactive web graphics via plotly.js",
+            "title-short": "Plotly",
             "type": "book"
         },
         {
@@ -167,6 +265,28 @@
             "type": "book"
         },
         {
+            "ISBN": "978-3-319-24277-4",
+            "URL": "https://ggplot2.tidyverse.org",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "ggplot22016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag New York",
+            "title": "ggplot2: Elegant graphics for data analysis",
+            "title-short": "ggplot2",
+            "type": "book"
+        },
+        {
             "URL": "https://yihui.org/knitr/",
             "author": [
                 {
@@ -225,6 +345,27 @@
             "title": "Knitr: A comprehensive tool for reproducible research in R",
             "title-short": "Knitr",
             "type": "chapter"
+        },
+        {
+            "ISBN": "9781138331457",
+            "URL": "https://plotly-r.com",
+            "author": [
+                {
+                    "family": "Sievert",
+                    "given": "Carson"
+                }
+            ],
+            "id": "plotly2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "title": "Interactive web-based data visualization with r, plotly, and shiny",
+            "type": "book"
         },
         {
             "URL": "https://bookdown.org/yihui/rmarkdown",

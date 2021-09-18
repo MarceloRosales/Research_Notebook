@@ -1277,7 +1277,7 @@ blogdown::install_hugo()
     https://github.com/login  
     MarceloRosales  
 ```{eval=FALSE, include=FALSE}
-pw:mrcd3
+pw:token (1 year)
 ```
     mail:@hotmail.com  
     
@@ -1487,6 +1487,22 @@ result <- diff_rmd(reference_file, "750ab4")
 ```
 
 
+****************************************************************************    
+
+### Creating websites in R with out blogdown.  
+
+[Emily C. Zarbor post](https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#Personal_websites) hass a nice guide.  
+Her [webpage](http://www.emilyzabor.com/index.html) and [Github](https://github.com/zabore) are here.   
 
 
+[Get Github Pages Site found in Google Search Results](https://stackoverflow.com/questions/49073043/get-github-pages-site-found-in-google-search-results)   
+You have to create a Google Search Console account and add your page, then typically you just drop a "marker" file in the root (Search Console generates this) so that Google can confirm you really own the page.   
 
+[Google Search Console](https://www.google.com/webmasters/tools/home)   
+[Instructions](https://support.google.com/webmasters/answer/6332964?hl=en&ref_topic=4564315)   
+
+
+https://aksakalli.github.io/jekyll-doc-theme/
+https://aksakalli.github.io/jekyll-doc-theme/docs/home/
+https://bootswatch.com/3/
+https://github.com/zabore/tutorials/blob/master/_site.yml
