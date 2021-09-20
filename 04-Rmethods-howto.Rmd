@@ -1,6 +1,6 @@
-# R Methods and how "to\`s":
+# R Methods and how "to\`s":   
 
-## How to add Lorem ipsum paragraphs in r markdow.
+## How to add Lorem ipsum paragraphs in r markdow.   
 
 **lorem::ipsum()** link [here](https://github.com/gadenbuie/lorem) to see all examples.\
 \* Quickly generate lorem ipsum placeholder text with **lorem::ipsum()**.\

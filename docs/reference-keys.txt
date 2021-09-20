@@ -57,13 +57,14 @@ to-automatically-create-a-bib-database-for-r-packages
 example-from-the-introduction-file-in-bookdown.
 blogdown.
 setting-netlify.
+creating-websites-in-r-with-or-with-out-blogdown-using-jekyll.
+creating-websites-in-r-with-blogdown-and-hugo.
 how-to-modify-site-in-rstudio
 useful-tips.
 math-formula-inputs.
 displaying-code-and-plosts
 how-to-addembed-videos-and-images.
 how-to-check-differences-between-rmarkdown-files
-creating-websites-in-r-with-out-blogdown.
 r-methods-and-how-tos
 how-to-add-lorem-ipsum-paragraphs-in-r-markdow.
 how-to-insert-colummns-in-r-markdown.
