@@ -1407,6 +1407,10 @@ https://aksakalli.github.io/jekyll-doc-theme/docs/home/
 https://bootswatch.com/3/
 https://github.com/zabore/tutorials/blob/master/_site.yml
 
+[Jekyll themes](http://themes.jekyllrc.org/demos/)  
+favorite theme:  
+[TeXt Theme](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
+
 ****************************************************************************    
 
 ### Creating websites in R with blogdown and Hugo. 
@@ -1415,13 +1419,17 @@ https://github.com/zabore/tutorials/blob/master/_site.yml
 
 [Hugogo.io](https://gohugo.io/)   
 
+Defautl page: 
+[lithium](https://themes.gohugo.io/themes/hugo-lithium-theme/), demo [git page](https://github.com/jrutheiser/hugo-lithium-theme)  
+
+
 Favorite Hugo themes:   
 [Book](https://themes.gohugo.io/themes/hugo-book/), demo [here](https://hugo-book-demo.netlify.app/)  
 [Bootstrap](location), demo [here](https://hbs.razonyang.com/en/) blog  
 [Airspace](https://themes.gohugo.io/themes/airspace-hugo/), demo [here](https://demo.gethugothemes.com/airspace/de/)  
-[Zdoc](https://themes.gohugo.io/themes/hugo-theme-zdoc/), demo [no](location)  
-[Academia Hugo](https://themes.gohugo.io/themes/academia-hugo/), demo [no](location)  
-[Dot](https://themes.gohugo.io/themes/dot-hugo-documentation-theme/), demo [no](location) see the Inner Pages  
+[Zdoc](https://themes.gohugo.io/themes/hugo-theme-zdoc/), demo [git page](https://github.com/zzossig/hugo-theme-zdoc)  
+[Academia Hugo](https://themes.gohugo.io/themes/academia-hugo/), demo [git page](https://github.com/themefisher/academia-hugo)  
+[Dot](https://themes.gohugo.io/themes/dot-hugo-documentation-theme/), demo [git page](https://github.com/themefisher/dot-hugo) see the Inner Pages  
 [Academic](https://themes.gohugo.io/themes/hugo-academic/), demo no, but see [Writing technical content in Academic](https://academic-demo.netlify.app/post/writing-technical-content/) Diagrams using mermaid, and sequence diagrams.   
 [Andromeda Light](https://themes.gohugo.io/themes/andromeda-light/), demo [here](https://demo.gethugothemes.com/andromeda-light/)  
 [Tella](https://themes.gohugo.io/themes/tella/), demo [here](https://tella.pages.dev/)  
@@ -1431,8 +1439,7 @@ Favorite Hugo themes:
 [Parsa](https://themes.gohugo.io/themes/parsa-hugo/), demo [here](https://demo.gethugothemes.com/parsa/about/)  
 [Infinity](https://themes.gohugo.io/themes/infinity-hugo/), demo [here](https://demo.gethugothemes.com/infinity/)  
 [Navigator](https://themes.gohugo.io/themes/navigator-hugo/), demo [here](https://demo.gethugothemes.com/navigator/en/)  
-[Learn](https://themes.gohugo.io/themes/hugo-theme-learn/), demo [no](location)  
-[label](location), demo [here](location)  
+[Learn](https://themes.gohugo.io/themes/hugo-theme-learn/), demo [git page](https://github.com/matcornic/hugo-theme-learn)  
 [label](location), demo [here](location)  
 [label](location), demo [here](location)  
 [label](location), demo [here](location)  
@@ -1442,7 +1449,89 @@ Favorite Hugo themes:
 
 ****************************************************************************  
 
-###  How to modify site in Rstudio
+###  How to set a Hugo site with blogdown, modify and deploy using Rstudio.  
+
+#### Old version  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9Jqvaoeh1W4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+Installs:  
+R  
+git  
+github  
+Rstudio  
+In Rstudio:  
+Blogdown  
+
+1. Create a git repository in github   
+1. Copy the clone or download repository key (https://github.com/....)  
+1. If git was successfully downloaded, a git tab should be present in the Rstudio environment section. If not after installing git, re-start Rstudio. 
+1.  In Rstudio > New Project > Git > Clone git Repository > Repository URL:; Project directory name:  > Create project.  
+1. Check the git tab is present.  
+1. Install blogdown package  
+1. Install devtools if necessary  
+1. Install Hugo themes  `blogdown::install_hugo()`  
+1. Check Hugo version. **blogdown.hugo.version = "0.88.1**   
+1. Choose Hugo theme [Hugogo.io](https://gohugo.io/) see above for favorites.  
+1. Copy the theme's github repository name  
+1. run `blogdown::new_site(theme="name/ofrepository"`  
+1. Hit enter and a new site will be created  
+1. Ones theme installed, the http://000.0.0.1:000 address will be created and displayed. Copy/Paste on browser and the site will be running on a local virtual host. 
+1.  Type `servr::daemon_stop(1)` to stop virtual host.  
+Commit and stage changes to git  
+1. Build page  
+1. set git version username `git config --global user.name "github account name"`  
+1. ser git version email `git config --global user.email "github email address"` (this will make sure your commits are registered under your name and appears in the panes in github)  
+1. Stage all files form build, type `git add -A`   
+1. In Rstudio click > "commit", add comment > Push.  1. 
+1. Sign in Nitfly.
+1.  Create a new site  
+1. In **Basic build settings** make sure Build command = hugo > Publish directory = public.
+1. Show advance > New variable > type: HUGO_VERSION > value: ...0.88.1   
+1. If you don't know value, Go back to Rstudio and in console type: `**blogdown::hubo_version()**` #**0.88.1**, copy/paste in value...   
+1. Deploy site (Netlify).  
+1. Netlify will build the site (Rstudion is not building the site), Netlify will search github for changes automatically  
+1. Then in Netlify set the domain or subdomain.   
+1. Then in Rstudio (build site), in the config.toml, search for the baseurl= "name of your domain", build, save, commit and deploy, the site will be up and running.   
+
+#### New Versions  
+##### **Installing the blogdown default (simple) website in minutes**  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oXFPOOrkogA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+Create site.  
+ 1. Install all dependencies.  Blogdown, devtools,  blogdow::install_hubo(), git, etc.  
+ 1. In rstudio > file > new project > new Directory > New Project > Directory name:... > create project as subdirectory of: ... browse.. > create project.   
+1. in console type `blogdown::new_site()`    
+1. website is created, build and deployed in browser  
+1. 
+
+Modify site.  
+1. In the site files go to config.toml, you can make chages to the site here.   
+1. Create all new material in rmd files and save in the **"content"** folder.  
+1. Do not change public folder... unless you really know what you are doing.   
+
+##### **Installing blogdown site using other hugo themes**  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fImF3Rd1GBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+
+1. Install dependencies and choose hugo theme (copy theme's github repository name)
+1. In rstudio > file > new project > new Directory > Website using blogdown > Directory name:... > create project as subdirectory of: ... browse.. >
+1. **Uncheck the "convert all metadata to YAML" so we have the config.toml file instead**  >
+1. Hugo theme:... (paste  theme's github repository name) > Create Project.
+1. Click on *Build* to create the file of the website.  
+1. Serve/deploy the site with the code **`blogdown::serve_site`** 
+1. Once served, in console, a message with the site's local ip is displayed. Copy/paste the address on a web browser if needed.   
+1. If there are issues with the site, stop the serving with the code **`servr::daemon_stop(1)`**.  
+1. To modify content, go to site files and access the **content** folder and look for the rmd file of each page.   
+1. If you modify contents, press refresh on the brawser once to see changes, usually one refrech is need and after all changes are done automatically, making it really convenient while working on the content.  
+1. 
+
+##### **Modify blogdown hugo themes**  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/338jZbCVXcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+
+
+
 
 
 ********************************************************************************

@@ -59,7 +59,12 @@ blogdown.
 setting-netlify.
 creating-websites-in-r-with-or-with-out-blogdown-using-jekyll.
 creating-websites-in-r-with-blogdown-and-hugo.
-how-to-modify-site-in-rstudio
+how-to-set-a-hugo-site-with-blogdown-modify-and-deploy-using-rstudio.
+old-version
+new-versions
+installing-the-blogdown-default-simple-website-in-minutes
+installing-blogdown-site-using-other-hugo-themes
+modify-blogdown-hugo-themes
 useful-tips.
 math-formula-inputs.
 displaying-code-and-plosts
