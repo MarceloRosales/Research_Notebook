@@ -1529,6 +1529,278 @@ Modify site.
 ##### **Modify blogdown hugo themes**  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/338jZbCVXcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+********************************************************************************
+
+
+##### Hugo structure  
+
+**Blogdown site structure** (as created with Rstudio)  
+
+* **`config`**: > **_default**:  config.toml should be also here but it's in root.  To see the code documentation see [here](https://zzo-docs.vercel.app/zdoc/configuration/configfiles/).   
+  * params.toml
+  * menus.ko.toml
+  * menus.en.toml
+  * languages.toml
+
+* **`content`**: All the content to be diplay in the website comes in this folder.    
+* layouts  
+* public  
+* R  
+* resources  
+* static  
+* `themes`: Here is were the Hugo template theme is going to be downloaded.  
+* index.Rmd  
+* `ZdocTest1.Rproj`: The name of the project and to open the project in Rstudio  
+* `config.toml`: This is the settings for the website.   
+* netlify.toml  
+
+********************************************************************************
+
+**Hugo Theme structure** basically same as Hugo site created in R project
+
+* **`archetypes`**: Data that helps you to find data about your content, ex. keyword or meta data.   
+* assets
+* **`data`**: Act as a data base for your site. ex. jason files, etc.   
+* exampleSite
+* i18n
+* **`layouts`**: Here is were the information (HTML code) of how the website is going to look in general. Ex. footer for all pages (every single page). This folder contains:   
+  * index.html
+  * **`_default`**:  
+  
+  * blog
+  * **`partials`**:   
+      * comments
+      * drawer
+      * footer
+      * head
+      * header
+      * main
+      * navbar
+      * script
+      * svgs
+  * shortcodes
+  * robots.txt
+  * 404.html
+  * index.json
+* `static`: All the elements that do not change in webpage, ex. imges. 
+* LICENSE.md
+* README.md
+* theme.toml
+
+└── themes   
+    └── hugo-theme-zdoc     
+        ├── LICENSE.md    
+        ├── README.md  
+        ├── archetypes  
+        │   ├── default.md  
+        │   ├── post.md  
+        │   └── section.md  
+        ├── assets   
+        │   ├── js   
+        │   └── sass   
+        │       ├── abstracts    
+        │       ├── layout  
+        │       │   ├── _footer.scss   
+        │       │   ├── _grid.scss   
+        │       │   ├── _header.scss   
+        │       │   ├── _main.scss   
+        │       │   └── _navbar.scss   
+        │       ├── main.scss   
+        │       ├── pages   
+        │       │   ├── _blog.scss   
+        │       │   ├── _home.scss   
+        │       │   ├── _list.scss   
+        │       │   └── _single.scss   
+        │       ├── syntax   
+        │       └── themes   
+        │           ├── _dark.scss   
+        │           ├── _darkcode.scss   
+        │           ├── _light.scss   
+        │           ├── _lightcode.scss   
+        │           └── _theme.scss   
+        ├── data   
+        ├── exampleSite   
+        │   ├── config   
+        │   │   └── _default   
+        │   │       ├── config.toml     
+        │   │       ├── languages.toml  
+        │   │       ├── menus.en.toml   
+        │   │       ├── menus.ko.toml   
+        │   │       └── params.toml   
+        │   ├── content   
+        │   │   ├── en   
+        │   │   │   ├── _index.md   
+        │   │   │   ├── blog  
+        │   │   │   │   ├── _index.md  
+        │   │   │   │   ├── emoji-support.md   
+        │   │   │   │   ├── markdown-syntax.md   
+        │   │   │   │   ├── placeholder-text.md   
+        │   │   │   │   └── rich-content.md   
+        │   │   │   ├── docs   
+        │   │   │   │   ├── _index.md   
+        │   │   │   │   ├── contentfortmats.md   
+        │   │   │   │   ├── contentmanagement   
+        │   │   │   │   │   ├── _index.md    
+        │   │   │   │   │   ├── frontmatter.md    
+        │   │   │   │   │   ├── sections.md    
+        │   │   │   │   │   └── shortcodes.md   
+        │   │   │   │   ├── depth1    
+        │   │   │   │   │   ├── _index.md   
+        │   │   │   │   │   ├── depth2   
+        │   │   │   │   │   │   ├── _index.md   
+        │   │   │   │   │   │   ├── depth3   
+        │   │   │   │   │   │   │   ├── _index.md   
+        │   │   │   │   │   │   │   └── test3.md   
+        │   │   │   │   │   │   └── test2.md   
+        │   │   │   │   │   ├── test1.md    
+        │   │   │   │   │   └── ttttest.md    
+        │   │   │   │   ├── gettingstarted    
+        │   │   │   │   │   ├── _index.md    
+        │   │   │   │   │   ├── basicusage.md    
+        │   │   │   │   │   ├── configuration.md    
+        │   │   │   │   │   ├── installation.md   
+        │   │   │   │   │   └── quickstart.md    
+        │   │   │   │   ├── imageprocessing.md    
+        │   │   │   │   ├── pagebundles.md    
+        │   │   │   │   ├── pageresources.md    
+        │   │   │   │   └── relatedcontent.md   
+        │   │   │   └── updates   
+        │   │   │       ├── 2019_april.md    
+        │   │   │       ├── 2019_february.md    
+        │   │   │       ├── 2019_january.md    
+        │   │   │       ├── 2019_march.md     
+        │   │   │       ├── 2019_may.md    
+        │   │   │       └── _index.md    
+        │   │   └── ko    
+        │   ├── resources   
+        │   │   └── _gen    
+        │   │       └── assets   
+        │   │           └── scss     
+        │   │               └── sass    
+        │   └── static     
+        │       ├── favicon    
+        │       ├── images    
+        │       │   ├── landscape.jpg    
+        │       │   ├── mountain.jpg   
+        │       │   └── mountains.jpg    
+        │       ├── logo.png     
+        │       └── manifest.json     
+        ├── i18n    
+        │   ├── en.toml   
+        │   └── ko.toml    
+        ├── layouts     
+        │   ├── 404.html    
+        │   ├── _default    
+        │   │   ├── _markup    
+        │   │   │   ├── render-image.html   
+        │   │   │   └── render-link.html    
+        │   │   ├── baseof.html    
+        │   │   ├── rss.xml   
+        │   │   ├── section.html    
+        │   │   ├── single.html    
+        │   │   ├── sitemap.xml    
+        │   │   ├── summary.html   
+        │   │   └── taxonomy.html   
+        │   ├── blog    
+        │   │   ├── section.html   
+        │   │   └── single.html   
+        │   ├── index.html    
+        │   ├── index.json    
+        │   ├── partials    
+        │   │   ├── comments    
+        │   │   ├── drawer    
+        │   │   ├── footer   
+        │   │   ├── head    
+        │   │   │   ├── meta.html    
+        │   │   │   ├── meta_json_ld.html   
+        │   │   │   ├── scripts.html   
+        │   │   │   ├── services.html    
+        │   │   │   └── styles.html    
+        │   │   ├── header    
+        │   │   │   ├── blog-header-img.html   
+        │   │   │   ├── blog-header-text.html    
+        │   │   │   ├── blog-header.html    
+        │   │   │   ├── custom-header.html    
+        │   │   │   └── site-header.html    
+        │   │   ├── main    
+        │   │   │   ├── component   
+        │   │   │   │   ├── article-meta.html   
+        │   │   │   │   ├── breadcrumb.html    
+        │   │   │   │   ├── edit-this-page.html    
+        │   │   │   │   ├── pagination-single.html    
+        │   │   │   │   ├── pagination.html    
+        │   │   │   │   ├── tag-cloud.html   
+        │   │   │   │   ├── toc.html    
+        │   │   │   │   ├── toggle-menu.html   
+        │   │   │   │   └── toggle-sidebar.html   
+        │   │   │   ├── header.html   
+        │   │   │   ├── home.html   
+        │   │   │   ├── landing    
+        │   │   │   │   ├── home-landing.html    
+        │   │   │   │   ├── home-sections.html    
+        │   │   │   │   ├── home-social.html    
+        │   │   │   │   ├── section-card.html   
+        │   │   │   │   └── section-normal.html   
+        │   │   │   ├── list.html   
+        │   │   │   ├── sections     
+        │   │   │   │   ├── list-main.html    
+        │   │   │   │   ├── list-menu.html    
+        │   │   │   │   ├── list-section.html    
+        │   │   │   │   └── single-menu.html    
+        │   │   │   └── single.html    
+        │   │   ├── navbar    
+        │   │   │   ├── icons    
+        │   │   │   │   ├── light-dark-toggle.html   
+        │   │   │   │   ├── navbar-icons.html    
+        │   │   │   │   └── select-lang.html    
+        │   │   │   ├── logo    
+        │   │   │   │   ├── navbar-logo-mobile.html    
+        │   │   │   │   ├── navbar-logo-tablet.html    
+        │   │   │   │   └── navbar-logo.html    
+        │   │   │   ├── menu    
+        │   │   │   │   ├── navbar-menu-collapse.html    
+        │   │   │   │   ├── navbar-menu-mobile.html    
+        │   │   │   │   └── navbar-menu.html    
+        │   │   │   ├── navbar.html    
+        │   │   │   └── search    
+        │   │   │       ├── site-search-mobile.html    
+        │   │   │       └── site-search.html   
+        │   │   ├── script    
+        │   │   │   ├── codeblock-script.html    
+        │   │   │   └── single-script.html    
+        │   │   └── svgs   
+        │   ├── robots.txt    
+        │   └── shortcodes    
+        ├── static   
+        │   ├── fonts    
+        │   ├── images    
+        │   │   ├── header    
+        │   │   │   └── background.jpg    
+        │   │   ├── landscape.jpg   
+        │   │   ├── mountain.jpg   
+        │   │   ├── mountains.jpg   
+        │   │   └── section   
+        │   │       ├── keyboard.png   
+        │   │       ├── processor.png   
+        │   │       └── root-server.png   
+        │   ├── logo.png     
+        │   └── manifest.json     
+        └── theme.toml    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

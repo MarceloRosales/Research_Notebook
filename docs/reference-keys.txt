@@ -65,6 +65,7 @@ new-versions
 installing-the-blogdown-default-simple-website-in-minutes
 installing-blogdown-site-using-other-hugo-themes
 modify-blogdown-hugo-themes
+hugo-structure
 useful-tips.
 math-formula-inputs.
 displaying-code-and-plosts
