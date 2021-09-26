@@ -66,6 +66,7 @@ installing-the-blogdown-default-simple-website-in-minutes
 installing-blogdown-site-using-other-hugo-themes
 modify-blogdown-hugo-themes
 hugo-structure
+creating-a-hugo-theme-from-scratxh.
 useful-tips.
 math-formula-inputs.
 displaying-code-and-plosts

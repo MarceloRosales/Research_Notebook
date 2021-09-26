@@ -1529,6 +1529,11 @@ Modify site.
 ##### **Modify blogdown hugo themes**  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/338jZbCVXcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+
+
+
+
+
 ********************************************************************************
 
 
@@ -1587,6 +1592,7 @@ Modify site.
 * README.md
 * theme.toml
 
+```
 └── themes   
     └── hugo-theme-zdoc     
         ├── LICENSE.md    
@@ -1787,8 +1793,47 @@ Modify site.
         │   └── manifest.json     
         └── theme.toml    
         
+```
+********************************************************************************
+
+#### Creating a Hugo Theme from scratxh.  
+
+See the original page [here](https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/)  
+
+```{bash, eval=FALSE }
+# Create a new Hugo site
+hugo new site example
+
+# Create a new theme
+hugo new theme exampleTheme
+
+# starting the server
+hugo server
+
+# start the server including content marked as draft
+hugo server -D
+
+# Web Server is available at 
+http://localhost:1313/ (bind address 127.0.0.1)
+
+# to stop the server
+Press Ctrl+C 
+
+# create new file
+touch filename
+
+# delete file
+rm filename
+
+#  Create nes folder
+mkdr dirname
+
+# Delete folder
+rm -r dirname
 
 
+
+```
 
 
 
