@@ -10,7 +10,7 @@
 First install
 
 ```{r eval=FALSE}
-# install.package("devtools")
+install.package("devtools")
 devtools::install_github("gadenbuie/lorem")
 
 # If devtools can not be installed. 
@@ -22,6 +22,11 @@ devtools::install_github("gadenbuie/lorem")
 # install.packages("usethis")
 
 ```
+
+If error: 
+` Error: Failed to install 'lorem' from GitHub:
+  ERROR: failed to lock directory ‘/Library/Frameworks/R.framework/Versions/4.1/Resources/library’ for modifying
+**Try removing ‘/Library/Frameworks/R.framework/Versions/4.1/Resources/library/00LOCK’** `
 
 **Usage**: The addin allows you to specify the number of desired paragraphs and sentences.
 
@@ -254,3 +259,70 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```  
+
+
+
+## How to change the created date or modify the date on MAC.  
+
+Creation Date / Modified Date
+If you are changing the creation date attribute will also change the modified date attribute.
+
+1.  to open Terminal application (/Applications/Utilities/Terminal.app)
+      ( cmd + space ) to open “Spotlight Search”
+      Type in “Terminal” press enter
+
+2. Explain what is for creation date and modified date
+       -t = for created date 
+       -mt = for modified date
+
+Replace YYYYMMDDhhmm with the desired date information:
+
+“touch -t YYYYMMDDhhmm “
+“touch -mt YYYYMMDDhhmm ”
+( copy without the question marks!! )
+
+
+3. Type the following in the command line “Do not press enter/return” !
+
+Example:  22nd May 1986 2:24 pm ( 14:24 ) or 22.05.1986 2:24 pm
+
+-“touch -t 198605221424 “
+
+-“touch -mt 198605221424 “
+
+ *UPDATE* 
+If It's not working then try this out
+creation date:   (angle Bracket right)  Setfile -d '08/31/2019 11:00:00' (angle bracket left)file.txt(angle Bracket right)
+
+SetFile -d 'MM/DD/YYYY' drag and drop file here (changing Creation date of file)
+touch -t is used to change the modification date now onwards
+
+Do not forget the space otherwise you get a message 
+( touch: out of range or illegal time specification: [[CC]YY]MMDDhhmm[.SS] )
+
+
+4. Open Finder locate the file you wish to modify. 
+    Drag and drop the file into the Terminal window, the file, and path will be added to the end of the line.
+
+Here is an example of what the line should look like: 
+
+Option 1: Single file
+touch -t 198605221424 /Users/maikkleinert/Desktop/How\ to\ modify\ date\ or\ time/all\ in\ one\ pdf_by_MaikKleinert.com.pdf
+
+
+Option 2: Multiple file
+touch -t 198605221424 /Users/maikkleinert/Desktop/How\ to\ modify\ date\ or\ time/Concert-Online-Course_by_MaikKleinert.com.jpg /Users/maikkleinert/Desktop/How\ to\ modify\ date\ or\ time/Film\ Photo\ Collective_by_MaikKleinert.com.png /Users/maikkleinert/Desktop/How\ to\ modify\ date\ or\ time/Instagram\ @MaikKleinert.png
+
+Option 3: Folder ( Do not forget  the /*)
+touch -t 198605221424 /Users/maikkleinert/Desktop/How\ to\ modify\ date\ or\ time\ FOLDER /*
+
+Then press enter!
+Done 
+
+To check the date ( right click on file and “Get Info” ) or press ( cmd+I )
+
+
+Also you can Add /* to the end of the command. If you’re only targeting a specific file type include its extension (e.g. /*.jpg).
+Example:
+touch -t 198605221424 /Users/maikkleinert/Desktop/How\ to\ modify\ date\ or\ time\ FOLDER/*.jpgor 
+touch -t 198605221424 /Users/maikkleinert/Desktop/How\ to\ modify\ date\ or\ time\ FOLDER/*.pdf
