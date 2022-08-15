@@ -81,6 +81,8 @@ how-to-find-the-indices-of-lines-in-markdown-that-are-prose-not-balanced.
 how-to-discharge-git-commits-to-avoid-conflicts-special-circumstances.
 how-to-create-an-r-bookdown-and-link-with-github-paages.
 how-to-change-the-created-date-or-modify-the-date-on-mac.
+update
+how-to-copy-all-files-with-a-certain-extension-from-all-subdirectories
 applications
 how-to-insert-an-image-with-visual-markdown-editor
 example-two
