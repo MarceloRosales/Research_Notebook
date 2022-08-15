@@ -248,6 +248,7 @@ description: "RNA-seq notes and trials"
 ---
 ```
 
+
 Also in Index.Rmd. 
 **Important**: To avoid the  **File packages.bib not found in resource path** error.  
 Paste the following code after the md heading.  knitr expects all paths to be either absolute or relative to your current R working directory.    
@@ -263,6 +264,47 @@ knitr::write_bib(c(
 
 
 ## How to change the created date or modify the date on MAC.  
+
+Resume
+```{bash, eval=FALSE}
+# To see the manual of the touch command:
+man touch
+
+# To see the metadata of the file use:
+mdls Path/file # for path darg and drop file from finder to terminal
+
+# modify creation date with touch -flag YYYYMMDDhhmm
+# t for creation date, but it changes modified date
+touch -t 201911252028 GH010193.MP4 
+touch -m 201911252028 GH010193.MP4 # Changes modified date to current date not input
+touch -mt 201911252028 GH010193.MP4 # Changes modified date only, not created date
+
+# Entire Folder
+touch -t 201911252028 /*
+
+# Only the folder (not file in folder)
+touch -t 201908131200  /Volumes/homes/RosalesJM/SynDS220/Media\ Libraries/Video/GoProH7/untitled\ folder 
+# If folder is created for the first time, then -t flag will change both, created and modified dates
+
+# To change created date using SetFile 
+man SetFile
+# Changind created date of one file. 
+SetFile -d "11/10/2019 18:22"  GH010185.MP4 # if pwd is same as files
+SetFile -d "11/10/2019 18:22" /Volumes/homes/RosalesJM/SynDS220/Media\ Libraries/Video/GoProH7/GH010185.MP4  # pwd does not matter.
+
+# Changing created date of several  files at the same time. 
+SetFile -d "11/10/2019 18:22"  GH010185.MP4 GH010186.MP4 GH010187.MP4 # etc..
+
+SetFile -d "11/10/2019 18:44" /Volumes/HD-PCFSU3-A/Movies/VideosU/gopro\ H7/20191110-Leica\ Microscope/GH010191.MP4 /Volumes/HD-PCFSU3-A/Movies/VideosU/gopro\ H7/20191110-Leica\ Microscope/GH010192.MP4 /Volumes/homes/RosalesJM/SynDS220/Media\ Libraries/Video/GoProH7/GH010191.MP4 # etc..
+
+
+# If gray-out and been used by OS
+SetFile -c "" -t "" path/to/file.mov * # *: all files in the pwd
+```
+
+Videos:
+https://www.youtube.com/watch?v=b33ir6FZMlY
+
 
 Creation Date / Modified Date
 If you are changing the creation date attribute will also change the modified date attribute.
@@ -290,11 +332,13 @@ Example:  22nd May 1986 2:24 pm ( 14:24 ) or 22.05.1986 2:24 pm
 
 -“touch -mt 198605221424 “
 
- *UPDATE* 
-If It's not working then try this out
-creation date:   (angle Bracket right)  Setfile -d '08/31/2019 11:00:00' (angle bracket left)file.txt(angle Bracket right)
+To see the manual of the touch command:
+`man touch`
 
-SetFile -d 'MM/DD/YYYY' drag and drop file here (changing Creation date of file)
+To see the metadata of the file use:
+`mdls Path/file`
+
+
 touch -t is used to change the modification date now onwards
 
 Do not forget the space otherwise you get a message 
@@ -321,8 +365,58 @@ Done
 
 To check the date ( right click on file and “Get Info” ) or press ( cmd+I )
 
-
 Also you can Add /* to the end of the command. If you’re only targeting a specific file type include its extension (e.g. /*.jpg).
 Example:
 touch -t 198605221424 /Users/maikkleinert/Desktop/How\ to\ modify\ date\ or\ time\ FOLDER/*.jpgor 
 touch -t 198605221424 /Users/maikkleinert/Desktop/How\ to\ modify\ date\ or\ time\ FOLDER/*.pdf
+
+### *Update* 
+If It's not working then try this out
+creation date:   (angle Bracket right)  Setfile -d '08/31/2019 11:00:00' (angle bracket left)file.txt(angle Bracket right)
+
+SetFile -d 'MM/DD/YYYY' drag and drop file here (changing Creation date of file)
+
+EXAMPLES
+This command line sets the creation date of all .MP4 files in the "present" folder" (first go to the folder were the files are located with `cd path/to/folder`then type:
+`SetFile -d "05/25/2021 10:00" *.MP4`
+
+This command line sets the modification date of "myFile":
+`SetFile -m "8/4/2001 16:13" myFile`
+
+**If file in external HD, greyed out and won't open: "this item is used by Mac OS X"**
+The file won't open, with QuickTime, with the following error message:
+
+Item "file.mov" is used by Mac OS X and cannot be opened.
+This is a common issue which happens when the file's type and creator attributes are modified by Finder when its writing files, if these attributes aren't restored back to the original values by Finder at the end of its write action, those files won't be accessible to the user.
+
+Running this command will remove the creator and type attributes set by Finder,
+
+SetFile -c "" -t "" path/to/file.mov
+Note: If the above command is not found, try installing Xcode command line tool and try the above command again,
+
+## How to copy all files with a certain extension from all subdirectories  
+
+```{bash, eval=FALSE}
+# Go to the folder containing the subfolders and files.
+cd /Volumes/1TBRedBuffal/new\ vids/DVF/HDVF
+
+# Copy all the files with extension M2T
+cp **/*.M2T /Volumes/homes/RosalesJM/SynDS220/Media\ Libraries/Video/20211014-ProArch_IG/Raw-M2T
+
+```
+
+
+Option 1:  
+
+`find . -name \*.xls -exec cp {} newDir \;`  
+
+in which cp is executed for each filename that find finds, and passed the filename correctly. Here's more info on this technique.  
+
+Option 2:  
+Instead of all the above, you could use zsh and simply type  
+
+`cp **/*.xls target_directory`  
+zsh can expand wildcards to include subdirectories and makes this sort of thing very easy.  
+
+
+

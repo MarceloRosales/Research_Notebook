@@ -217,6 +217,35 @@ for (p in setdiff(packages, installed.packages()[,"Package"]))
 Check <- installed.packages()
 ```
 
+Transfer of packages to MBP20 on 220812.  
+
+```{r, echo=TRUE, eval=FALSE}
+# Set working directory
+getwd() # "/Users/marcelorosales/Box Sync/Niigata Uni Box/Experiments/Photoconvertible FP/Experiment Notebooks"
+setwd("~/Box Sync/Documents/R/Rmarkdown") # "/Users/marcelorosales/Box Sync/Documents/R/Rmarkdown"
+getwd()
+
+#Load list of packages and install.
+load("RpackagesMBP20_220812")
+for (p in setdiff(packagesMBP20_220812, installed.packages()[,"Package"]))
+  install.packages(p)
+
+Check <- installed.packages()
+
+# update, without prompts for permission/clarification
+update.packages(ask = FALSE)
+
+# Set working directory
+getwd()
+setwd() # "/Users/Marcelo-Rosales/Box Sync/Documents/R/Rmarkdown/"
+getwd()
+
+# List all packages and save in a file. save() command
+packagesMBP20_220812_1333 <- installed.packages()[,"Package"]
+save(packagesMBP20_220812_1333, file="RpackagesMBP20_220812_1333")
+```
+
+
 ****************************************************************************  
 
 ### Method 2:  Quick Way of Installing all your old R libraries on a New Device. DOES NOT WORK!!    
